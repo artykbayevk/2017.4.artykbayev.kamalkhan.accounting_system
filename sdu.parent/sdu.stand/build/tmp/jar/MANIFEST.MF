@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Implementation-Title: sdu.stand
+Built-At: 2017-09-28/11:33:17
+Implementation-Version: 001
+Built-By: Kamalkhan
+Implementation-Vendor: greetgo!
+
