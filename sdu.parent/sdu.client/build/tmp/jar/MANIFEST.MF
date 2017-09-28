@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Implementation-Title: sdu.client
+Built-At: 2017-09-29/00:42:48
+Implementation-Version: 001
+Built-By: Kamalkhan
+Implementation-Vendor: greetgo!
+

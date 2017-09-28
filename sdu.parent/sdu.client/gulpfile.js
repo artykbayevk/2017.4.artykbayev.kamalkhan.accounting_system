@@ -112,5 +112,3 @@ task('start', ser(
         gulp.watch('front/less/**/*.less', ser('less'));
     }
 ));
-
-

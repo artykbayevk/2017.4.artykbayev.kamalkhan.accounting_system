@@ -12,7 +12,7 @@ allprojects {
 	sourceCompatibility = 1.8
 	targetCompatibility = 1.8
 
-	group = "kz.sdu"
+	group = "kz.greetgo.education"
 
 	compileJava.options.debugOptions.debugLevel = "source, lines, vars"
 	compileJava.options.encoding = "UTF-8"
@@ -43,13 +43,13 @@ subprojects {
 
 	sourceSets {
 		main {
-			java.srcDirs = ["src/main/java"]
-			resources.srcDirs = ["src/main/java", "src/main/resources"]
+			java.srcDirs = ["main/java"]
+			resources.srcDirs = ["main/java", "main/resources"]
 			output.resourcesDir = "build/classes/main"
 		}
 		test {
-			java.srcDirs = ["src/test/java"]
-			resources.srcDirs = ["src/test/java", "src/test/resources"]
+			java.srcDirs = ["test/java"]
+			resources.srcDirs = ["test/java", "test/resources"]
 			output.resourcesDir = "build/classes/test"
 		}
 	}

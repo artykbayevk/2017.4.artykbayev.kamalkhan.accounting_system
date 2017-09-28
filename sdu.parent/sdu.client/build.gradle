@@ -1,9 +1,10 @@
-dependencies {
-    compile project(':sdu.controller')
-
-    compile "kz.greetgo.depinject:greetgo.depinject.gen:$greetgoDepInjectVersion"
-    compile "kz.greetgo.mvc:greetgo.mvc:$greetgoMvcVersion"
-    compile "kz.greetgo.mvc:greetgo.mvc.jetty:$greetgoMvcVersion"
-
-    compile "com.google.guava:guava:$guavaVersion"
+plugins {
+    id "com.moowork.node" version "1.1.1"
+    id "com.moowork.gulp" version "1.1.1"
 }
+
+clean.dependsOn gulp_clean
+build.dependsOn npm_install
+build.dependsOn gulp_build
+
+gulp_build.shouldRunAfter npm_install
