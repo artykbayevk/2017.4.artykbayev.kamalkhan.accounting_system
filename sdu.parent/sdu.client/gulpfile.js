@@ -51,7 +51,7 @@ task('webpack', function (callback) {
             filename: '[name].js',
             sourceMapFilename: '[name].js.map',
         },
-        watch: true,
+        watch: false,
         devtool: 'cheap-module-inline-source-map',
         module: {
             loaders: [{
@@ -88,11 +88,11 @@ task('webpack', function (callback) {
         }
 
         // task never errs in watch mode, it waits and recompile
-        // if (!options.watch && err) {
-        //     callback(err);
-        // } else {
-        //     callback();
-        // }
+        if (!options.watch && err) {
+            callback(err);
+        } else {
+            callback();
+        }
 
     });
 });
