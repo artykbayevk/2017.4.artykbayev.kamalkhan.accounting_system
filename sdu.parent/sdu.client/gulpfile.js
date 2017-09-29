@@ -88,11 +88,11 @@ task('webpack', function (callback) {
         }
 
         // task never errs in watch mode, it waits and recompile
-        if (!options.watch && err) {
-            callback(err);
-        } else {
-            callback();
-        }
+        // if (!options.watch && err) {
+        //     callback(err);
+        // } else {
+        //     callback();
+        // }
 
     });
 });
