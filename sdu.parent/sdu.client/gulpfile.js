@@ -105,6 +105,11 @@ task('server', function (back) {
     back();
 });
 
+task('build', ser(
+    'clean', "assets", 'copy', "webpack"
+));
+
+
 task('start', ser(
     'clean', 'assets', 'copy', 'webpack', 'server',
     function () {
