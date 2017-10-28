@@ -14,8 +14,9 @@ public class UserStandModel {
     public String companyId;
     public boolean isManager;
     public String regDate;
+    public boolean isAccepted;
 
-    public UserStandModel(String id, String surname, String name, String password, String age, String email, String tel_number, String companyId, boolean isManager){
+    public UserStandModel(String id, String surname, String name, String password, String age, String email, String tel_number, String companyId, boolean isManager, boolean isAccepted){
         this.id = id;
         this.surname = surname;
         this.name = name;
@@ -26,9 +27,18 @@ public class UserStandModel {
         this.companyId = companyId;
         this.isManager = isManager;
         this.regDate = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
+        this.isAccepted = isAccepted;
     }
 
     public UserStandModel(){
 
+    }
+
+    public boolean isAccepted() {
+        return isAccepted;
+    }
+
+    public void setAccepted(boolean accepted) {
+        isAccepted = accepted;
     }
 }

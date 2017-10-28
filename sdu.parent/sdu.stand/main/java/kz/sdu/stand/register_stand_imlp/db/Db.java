@@ -23,6 +23,7 @@ public class Db implements HasAfterInject{
     public final Map<String, List<String>> roleFuncMapping = new HashMap<>();
     public final Map<String, String> personRoleMapping = new HashMap<>();
     public final Map<String, UserStandModel> clientsList = new HashMap<>();
+    public final Map<Long,String> linkStorage = new HashMap<>();
 
 
     public final AtomicLong clientSeq=new AtomicLong(1);
@@ -30,8 +31,8 @@ public class Db implements HasAfterInject{
 
     @Override
     public void afterInject() throws Exception {
-        UserStandModel c1 = new UserStandModel("1","Artykbayev", "Kamalkhan","qwe","20","kama@gmail.com","870222","55523",true);
-        UserStandModel c2 = new UserStandModel("2","Zigangirov", "Anatoliy","qwe","21","tolik@gmail.com","124124","1244",false);
+        UserStandModel c1 = new UserStandModel("1","Artykbayev", "Kamalkhan","qwe","20","kama@gmail.com","870222","55523",true,true);
+        UserStandModel c2 = new UserStandModel("2","Zigangirov", "Anatoliy","qwe","21","tolik@gmail.com","124124","1244",false,true);
 
         clientsList.put("1",c1);
         clientsList.put("2",c2);

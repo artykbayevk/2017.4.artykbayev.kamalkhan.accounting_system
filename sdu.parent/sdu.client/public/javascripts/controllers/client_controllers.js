@@ -142,6 +142,9 @@ angular.module('MyApp')
                 if(out[0] == 'found'){
                     $rootScope.type_id= out[1];
                     $state.go("userPage");
+                }else if(out[0] == 'not activated'){
+
+                    alert('Your account not activated');
                 }else{
                     alert('Not found');
                 }

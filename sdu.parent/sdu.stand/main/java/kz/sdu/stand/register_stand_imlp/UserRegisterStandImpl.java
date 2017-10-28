@@ -15,6 +15,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.UUID;
 
 @Bean
@@ -63,18 +64,24 @@ public class UserRegisterStandImpl implements UserRegister {
         }
         if (uuid.length() == 0) {
             uuid = UUID.randomUUID().toString();
-            UserStandModel x = new UserStandModel(uuid, surname, name, password, age, email, tel_number, companyId, isManager);
+            UserStandModel x = new UserStandModel(uuid, surname, name, password, age, email, tel_number, companyId, isManager,false);
             db.get().clientsList.put(uuid, x);
+
+
+            String body = "This is your link for registration:\n http://localhost:1313/sdu/api/email/"+urlGenerator(email);
+
             Email emailSend = new Email();
-            emailSend.setFrom("kamalkhan.sdu@gmail.com");
+            emailSend.setFrom("checker@gmail.com");
             emailSend.setTo(email);
-            emailSend.setSubject("This is subj from my life");
-            emailSend.setBody("Hi bro");
+            emailSend.setSubject("Registration Finish");
+            emailSend.setBody(body);
+
+
             emailSenderBeanGetter.get().send(emailSend);
             emailSenderControllerBeanGetter.get().sendAllExistingEmails();
             return "Ok, saved and sent email";
         } else {
-            UserStandModel x = new UserStandModel(uuid, surname, name, password, age, email, tel_number, companyId, isManager);
+            UserStandModel x = new UserStandModel(uuid, surname, name, password, age, email, tel_number, companyId, isManager,false);
             db.get().clientsList.put(uuid, x);
             db.get().clientsList.put(uuid, x);
             return "Ok, updated";
@@ -91,9 +98,40 @@ public class UserRegisterStandImpl implements UserRegister {
             UserStandModel cl = db.get().clientsList.get(id);
             if(cl.email.equals(email ) && cl.password.equals(password)){
                 String tmp = cl.isManager == true?"1":"2";
-                return "found,"+tmp;
+                System.out.println(cl.isAccepted);
+                if (cl.isAccepted){
+                    return "found,"+tmp;
+                }else{
+                    return "not activated";
+                }
+
             }
         }
         return found;
+    }
+
+
+    public String urlGenerator(String username){
+        long lowerLimit = 123456712L;
+        long upperLimit = 234567892L;
+        Random r = new Random();
+        long number = lowerLimit+((long)(r.nextDouble()*(upperLimit-lowerLimit)));
+        db.get().linkStorage.put(number, username);
+        String strLong = Long.toString(number);
+        return strLong;
+    }
+
+
+
+    @Override
+    public String acceptUser(String genNumber){
+        String username = db.get().linkStorage.get(Long.valueOf(genNumber));
+        for (String id : db.get().clientsList.keySet()) {
+            UserStandModel cl = db.get().clientsList.get(id);
+            if(cl.email.equals(username)){
+                cl.setAccepted(true);
+            }
+        }
+        return username;
     }
 }
