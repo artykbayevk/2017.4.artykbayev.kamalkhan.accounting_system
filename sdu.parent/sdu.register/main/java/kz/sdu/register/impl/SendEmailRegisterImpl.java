@@ -23,7 +23,7 @@ public class SendEmailRegisterImpl implements SendEmailRegister {
     public void prepareSendEmail(){
         Email email = new Email();
         email.setFrom("kamalkhan.sdu@gmail.com");
-        email.setTo("dandibobo537@gmail.com");
+        email.setTo("kamalkhan.artykbaev@is.sdu.edu.kz");
         email.setSubject("This is subj");
         email.setBody("Hi bro");
         emailSender.get().send(email);
