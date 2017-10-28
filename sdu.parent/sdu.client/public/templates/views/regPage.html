@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RegPage</title>
+</head>
+<body>
+<h4 ng-click="backToMain()">Back to main page</h4>
+<br>
+<h2>RegPage</h2>
+<br>
+        <input type="text" placeholder="Name" ng-model="name"><br>
+        <input type="text" placeholder="Surname" ng-model="surname"><br>
+        <input type="password" placeholder="Password" ng-model="password"><br>
+        <input type="text" placeholder="Email" ng-model="email"><br>
+        <input type="text" placeholder="Age" ng-model="age"><br>
+        <input type="text" placeholder="CompanyID"  ng-model="compID"><br>
+        <input type="text" placeholder="Telephone Number"  ng-model="number"><br>
+        <select ng-model = "clientType">
+            <option ng-repeat="x in clientTypeList" ng-value="x.abbrev" >
+                {{x.abbrev}}
+            </option>
+        </select>
+        <input type="button" value="Save" ng-click="save()">
+</body>
+</html>

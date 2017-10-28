@@ -1,0 +1,39 @@
+<div>
+    <h3>Clients List</h3>
+    <h3 ng-click="goToLog()">LoginPage</h3>
+    <h3 ng-click="goToReg()">RegistrationPage</h3>
+    <h4 ng-hide="showSelected">You select: {{name}}</h4>
+    <h5 ng-click="delete()"> DELETE </h5>
+    <h5 ng-click="addNewFunc()"> NEW </h5>
+
+
+    <table>
+        <tr class="noTr">
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Age</th>
+            <th>Company ID</th>
+            <th>Telephone</th>
+            <th>Email</th>
+        </tr>
+        <tr ng-repeat="n in data" ng-click="selectFunc(n.id)">
+            <td>{{n.name}}</td>
+            <td>{{n.surname}}</td>
+            <td>{{n.age}}</td>
+            <td>{{n.companyId}}</td>
+            <td>{{n.tel_number}}</td>
+            <td>{{n.email}}</td>
+        </tr>
+    </table>
+</div>
+
+<div ng-hide="showSelected">
+    <h3>Form</h3>
+    <input type="text" placeholder="Name" ng-model="name"><br>
+    <input type="text" placeholder="Surname" ng-model="surname"><br>
+    <input type="text" placeholder="Age" ng-model="age"><br>
+    <input type="text" placeholder="CompanyID"  ng-model="compID"><br>
+    <input type="text" placeholder="Telephone Number"  ng-model="number"><br>
+    <input type="text" placeholder="Email" ng-model="email"><br>
+    <input type="button" value="Save" ng-click="save()">
+</div>

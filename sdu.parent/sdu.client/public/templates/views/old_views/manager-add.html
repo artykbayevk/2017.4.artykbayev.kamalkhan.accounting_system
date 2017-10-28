@@ -1,0 +1,21 @@
+<div class="main-add-content-inner">
+  <p class="header-title inner-header inner-header-login" >
+    Новая заявка
+  </p>
+  <form class="" ng-submit="addLead()">
+    <label for="input-main" class="label label-main label-modified" >Описание заявки</label>
+    <input type="text" name="name" class="input input-main input-modified" value="" placeholder="" ng-model="description">
+    <label for="input-main" class="label label-main label-modified">Cумма заявки в тг.</label>
+    <input type="number" name="name" class="input input-main input-modified" value="" placeholder="" ng-model="cost">
+    <label for="input-main" class="label label-main label-modified">Принадлежность заявки</label>
+    <select class="select-model" ng-model="category">
+      <option selected>Бухгалтерский отсчет</option>
+      <option>Налоги</option>
+      <option>Счет-фактура</option>
+    </select><br>
+    <div class="inner-form">
+      <button class ="button button-login button-login-modified" type="submit">Добавить заявку<i class="icon-plus"></i></button>
+    </div>
+
+  </form>
+</div>

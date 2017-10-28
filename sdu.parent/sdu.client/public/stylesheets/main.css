@@ -1,0 +1,44 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr:hover{
+    background-color: #535D66;
+}
+.noTr:hover{
+    background-color: white;
+}
+
+h4{
+    float: left;
+}
+
+h5{
+    float: right;
+    width: 5%;
+    color:indianred;
+}
+
+h5:hover{
+    color: orangered;
+    box-shadow: #2ecc71;
+    width: 5%;
+    cursor: pointer;
+}
+
+input{
+    margin:5px;
+}
