@@ -54,7 +54,9 @@ gulp.task('controllers', function() {
         }));
 });
 
-//
+
+
+
 gulp.task('html', function() {
     return gulp.src('./public/templates/**/*.html')
         .pipe(gulp.dest('./dist/'))
@@ -62,9 +64,22 @@ gulp.task('html', function() {
             stream: true
         }));
 });
-//
+
+
+gulp.task('fonts',function(){
+    return gulp.src(['./public/fonts/**/*'])
+        .pipe(gulp.dest('./dist/fonts/'));
+})
+
+
+gulp.task('css-lib',function(){
+    return gulp.src(['./public/stylesheets/lib/**/*'])
+        .pipe(gulp.dest('./dist/css/'));
+})
+
+
 gulp.task('build', function() {
-    gulp.start(['angular','controllers','app','css','html'])
+    gulp.start(['angular','controllers','app','css','css-lib','html','fonts'])
 });
 
 gulp.task('browser-sync', function() {
