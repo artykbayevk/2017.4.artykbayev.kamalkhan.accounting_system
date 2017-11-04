@@ -54,11 +54,11 @@ public class SendEmailServerFactory {
                     final String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
 
                     Properties props = System.getProperties();
-                    props.setProperty("mail.smtps.host", "smtp.gmail.com");
+                    props.setProperty("mail.smtps.host", myConfig.smtpHost());
                     props.setProperty("mail.smtp.socketFactory.class", SSL_FACTORY);
                     props.setProperty("mail.smtp.socketFactory.fallback", "false");
-                    props.setProperty("mail.smtp.port", "465");
-                    props.setProperty("mail.smtp.socketFactory.port", "465");
+                    props.setProperty("mail.smtp.port", myConfig.smtpPort());
+                    props.setProperty("mail.smtp.socketFactory.port", myConfig.smtpPort());
                     props.setProperty("mail.smtps.auth", "true");
 
                     props.put("mail.smtps.quitwait", "false");
@@ -77,7 +77,7 @@ public class SendEmailServerFactory {
 
                     SMTPTransport t = (SMTPTransport) session.getTransport("smtp");
 
-                    t.connect("smtp.gmail.com", myConfig.loginAccount(), myConfig.accountPassword());
+                    t.connect(myConfig.smtpHost(), myConfig.loginAccount(), myConfig.accountPassword());
                     t.sendMessage(msg, msg.getAllRecipients());
 
                     t.close();

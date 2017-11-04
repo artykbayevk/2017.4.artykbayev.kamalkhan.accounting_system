@@ -19,6 +19,16 @@ public interface MyConfig {
     String accountPassword();
 
 
+    @DefaultStrValue("smtp.gmail.com")
+    @Description("Host почты")
+    String smtpHost();
+
+
+    @DefaultStrValue("465")
+    @Description("Port почты")
+    String smtpPort();
+
+
     @DefaultBoolValue(false)
     @Description("Нужно ли отправлять Email?")
     boolean needToSendEmail();
