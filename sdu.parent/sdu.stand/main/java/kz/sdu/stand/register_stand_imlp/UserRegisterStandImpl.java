@@ -104,7 +104,6 @@ public class UserRegisterStandImpl implements UserRegister {
                 }else{
                     return "not activated";
                 }
-
             }
         }
         return found;
