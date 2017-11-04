@@ -1,6 +1,7 @@
 package kz.sdu.stand.register_stand_imlp;
 
 import com.google.common.base.Strings;
+import kz.greetgo.depinject.Depinject;
 import kz.greetgo.depinject.core.Bean;
 import kz.greetgo.depinject.core.BeanGetter;
 import kz.greetgo.email.Email;
@@ -9,6 +10,7 @@ import kz.greetgo.email.EmailSenderController;
 import kz.sdu.controller.model.UserCtrlModel;
 import kz.sdu.controller.model.UserInfo;
 import kz.sdu.controller.register.UserRegister;
+import kz.sdu.stand.bean_containers.StandBeanContainer;
 import kz.sdu.stand.register_stand_imlp.db.Db;
 import kz.sdu.stand.register_stand_imlp.model.UserStandModel;
 import org.json.JSONObject;
@@ -24,7 +26,7 @@ public class UserRegisterStandImpl implements UserRegister {
 
     public BeanGetter<EmailSender> emailSenderBeanGetter;
 
-    public BeanGetter<EmailSenderController> emailSenderControllerBeanGetter;
+
 
     @Override
     public UserInfo getUserInfo(String personId) {
@@ -70,6 +72,8 @@ public class UserRegisterStandImpl implements UserRegister {
 
             String body = "This is your link for registration:\n http://localhost:1313/sdu/api/email/"+urlGenerator(email);
 
+
+
             Email emailSend = new Email();
             emailSend.setFrom("checker@gmail.com");
             emailSend.setTo(email);
@@ -78,8 +82,7 @@ public class UserRegisterStandImpl implements UserRegister {
 
 
             emailSenderBeanGetter.get().send(emailSend);
-            emailSenderControllerBeanGetter.get().sendAllExistingEmails();
-            return "Ok, saved and sent email";
+            return "Ok, saved and prepare for sending your email";
         } else {
             UserStandModel x = new UserStandModel(uuid, surname, name, password, age, email, tel_number, companyId, isManager,false);
             db.get().clientsList.put(uuid, x);

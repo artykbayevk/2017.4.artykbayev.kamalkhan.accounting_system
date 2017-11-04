@@ -1,6 +1,7 @@
 package kz.sdu.register.beans.all.any_db;
 
 import com.sun.mail.smtp.SMTPTransport;
+import kz.greetgo.depinject.Depinject;
 import kz.greetgo.depinject.core.Bean;
 import kz.greetgo.email.Email;
 import kz.greetgo.email.EmailSaver;
