@@ -7,6 +7,8 @@ import kz.greetgo.email.EmailSender;
 import kz.greetgo.email.EmailSenderController;
 import kz.sdu.controller.register.SendEmailRegister;
 
+import java.util.logging.Logger;
+
 @Bean
 public class SendEmailRegisterImpl implements SendEmailRegister {
 

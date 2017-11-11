@@ -2,19 +2,7 @@ const gulp = require('gulp');
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 
-
-// Some pointless comments for our project.
-
 var devMode = false;
-
-gulp.task('css-lib', function() {
-    gulp.src("./public/stylesheets/**/*.css")
-        .pipe(concat('lib.css'))
-        .pipe(gulp.dest('dist/css'))
-        .pipe(browserSync.reload({
-            stream: true
-        }));
-});
 
 gulp.task('css', function() {
     gulp.src("./public/stylesheets/main.css")
@@ -25,7 +13,6 @@ gulp.task('css', function() {
         }));
 });
 
-
 gulp.task('angular', function() {
     gulp.src(["./public/javascripts/vendors/angular.js","./public/javascripts/vendors/angular-ui-router.min.js"])
         .pipe(concat('angular.js'))
@@ -34,7 +21,6 @@ gulp.task('angular', function() {
             stream: true
         }));
 });
-
 
 gulp.task('app', function() {
     gulp.src("./public/javascripts/app.js")
@@ -54,9 +40,6 @@ gulp.task('controllers', function() {
         }));
 });
 
-
-
-
 gulp.task('html', function() {
     return gulp.src('./public/templates/**/*.html')
         .pipe(gulp.dest('./dist/'))
@@ -65,18 +48,15 @@ gulp.task('html', function() {
         }));
 });
 
-
 gulp.task('fonts',function(){
     return gulp.src(['./public/fonts/**/*'])
         .pipe(gulp.dest('./dist/fonts/'));
 })
 
-
 gulp.task('css-lib',function(){
     return gulp.src(['./public/stylesheets/lib/**/*'])
-        .pipe(gulp.dest('./dist/css/'));
+        .pipe(gulp.dest('./dist/css/lib/'));
 })
-
 
 gulp.task('build', function() {
     gulp.start(['angular','controllers','app','css','css-lib','html','fonts'])
@@ -97,6 +77,6 @@ gulp.task('start', function() {
     gulp.watch(['./public/stylesheets/main.css'], ['css']);
     gulp.watch(['./public/javascripts/controllers/*.js'], ['controllers']);
     gulp.watch(['./public/javascripts/*.js'], ['app']);
-    // gulp.watch(['./public/templates/views/*.html'], ['html']);
-    // gulp.watch(['./public/templates/*.html'], ['html']);
+    gulp.watch(['./public/templates/views/*.html'], ['html']);
+    gulp.watch(['./public/templates/*.html'], ['html']);
 });
