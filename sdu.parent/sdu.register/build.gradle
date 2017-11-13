@@ -8,7 +8,7 @@ dependencies {
     compile group: 'org.json', name: 'json', version: '20160810'
     compile "com.google.guava:guava:$guavaVersion"
 
-
+    compile "postgresql:postgresql:$postgreSqlVersion"
 
     testCompile "kz.greetgo.depinject:greetgo.depinject.testng:$greetgoDepInjectVersion"
 }

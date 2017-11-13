@@ -40,7 +40,7 @@ public class MyTask implements HasScheduled{
         //Nothing for check
     }
 
-    @Scheduled("повторять каждые 10 сек")
+    @Scheduled("повторять каждые 1000 сек")
     public void doSchedule() throws InterruptedException, IOException {
         LOG.info("[SCHEDULED__001] Начало процесса");
         Thread.sleep(500);

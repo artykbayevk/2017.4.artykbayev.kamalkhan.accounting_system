@@ -36,6 +36,7 @@ subprojects {
 		ext.greetGoEmailVersion = '0.0.10'
 		ext.greetgoConfVersion = '0.1.5'
         ext.greetgoScheduling = '2.0.0'
+		ext.postgreSqlVersion = '9.1-901-1.jdbc4'
 
 		testCompile 'org.testng:testng:6.5.1'
 		testCompile 'org.easytesting:fest-assert-core:2.0M10'
@@ -56,6 +57,7 @@ subprojects {
 			output.resourcesDir = "build/classes/test"
 		}
 	}
+
 
 	test.useTestNG()
 }
