@@ -1,4 +1,4 @@
-package kz.sdu.stand.register_stand_imlp;
+package kz.sdu.stand.register_stand_imlp.scheduler;
 
 import kz.greetgo.depinject.core.Bean;
 import kz.greetgo.depinject.core.BeanGetter;
@@ -19,10 +19,8 @@ public class MyTask implements HasScheduled{
     private static Logger LOG = Logger.getLogger(MyTask.class);
     private final Random random = new Random();
 
-//    kz.sdu.stand.register_stand_imlp.MyTask
-
     @FromConfig("Параметры запуска таска по файлам")
-    @Scheduled("repeat every 90 sec after pause in 30 sec")
+    @Scheduled("repeat every 90 sec")
     public void doAJob() throws IOException {
 //        File parentFile;
 //        File file = new File(""+System.getProperty("user.home") + "/education.d/" + System.currentTimeMillis());
@@ -31,8 +29,9 @@ public class MyTask implements HasScheduled{
 //            parentFile.mkdirs();
 //        }
 //        file.createNewFile();
-
+        LOG.info("[SCHEDULED__001] НАЧАЛО ПРОЦЕССА ОТПРАВКИ ПИСЬМА");
         emailSenderControllerBeanGetter.get().sendAllExistingEmails();
+        LOG.info("[SCHEDULED__002] КОНЕЦ ПРОЦЕССА ОТПРАВКИ ПИСЬМА");
     }
 
     @Scheduled("23:00")
@@ -40,18 +39,18 @@ public class MyTask implements HasScheduled{
         //Nothing for check
     }
 
-    @Scheduled("повторять каждые 1000 сек")
-    public void doSchedule() throws InterruptedException, IOException {
-        LOG.info("[SCHEDULED__001] Начало процесса");
-        Thread.sleep(500);
-        if(random.nextBoolean()){
-            LOG.error("[SCHEDULED__003] Ошибка в ходе выполнения операции");
-        }
-
-        if(LOG.isDebugEnabled())
-            LOG.debug("Сообщение "+ gun());
-        LOG.info("[SCHEDULED__002] Конец процесса");
-    }
+//    @Scheduled("повторять каждые 10000 сек")
+//    public void doSchedule() throws InterruptedException, IOException {
+//        LOG.info("[SCHEDULED__001] Начало процесса");
+//        Thread.sleep(500);
+//        if(random.nextBoolean()){
+//            LOG.error("[SCHEDULED__003] Ошибка в ходе выполнения операции");
+//        }
+//
+//        if(LOG.isDebugEnabled())
+//            LOG.debug("Сообщение "+ gun());
+//        LOG.info("[SCHEDULED__002] Конец процесса");
+//    }
 
 
     private String gun() throws IOException {

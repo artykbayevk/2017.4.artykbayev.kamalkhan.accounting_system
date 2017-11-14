@@ -7,7 +7,7 @@ import kz.greetgo.email.Email;
 import kz.greetgo.email.EmailSaver;
 import kz.greetgo.email.EmailSender;
 import kz.greetgo.email.EmailSenderController;
-import kz.sdu.stand.register_stand_imlp.MyConfig;
+import kz.sdu.stand.register_stand_imlp.scheduler.MyConfig;
 import kz.sdu.stand.util.StandCommonConstant;
 
 import javax.mail.Message;

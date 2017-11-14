@@ -1,10 +1,7 @@
-package kz.sdu.stand.register_stand_imlp;
+package kz.sdu.stand.register_stand_imlp.scheduler;
 
-import kz.greetgo.depinject.Depinject;
 import kz.greetgo.depinject.core.Bean;
-import kz.greetgo.depinject.gen.DepinjectUtil;
 import kz.greetgo.scheduling.*;
-import kz.sdu.stand.bean_containers.StandBeanContainer;
 
 import java.util.List;
 

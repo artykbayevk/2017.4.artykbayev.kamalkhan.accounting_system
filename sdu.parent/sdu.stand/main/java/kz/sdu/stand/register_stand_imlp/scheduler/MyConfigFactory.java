@@ -1,4 +1,4 @@
-package kz.sdu.stand.register_stand_imlp;
+package kz.sdu.stand.register_stand_imlp.scheduler;
 
 import kz.greetgo.conf.hot.HotConfigFactory;
 import kz.greetgo.depinject.core.Bean;

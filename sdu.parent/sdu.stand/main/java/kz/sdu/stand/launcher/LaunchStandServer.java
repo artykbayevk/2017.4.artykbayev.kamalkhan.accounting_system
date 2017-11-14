@@ -2,10 +2,9 @@ package kz.sdu.stand.launcher;
 
 import kz.greetgo.depinject.Depinject;
 import kz.greetgo.depinject.gen.DepinjectUtil;
-import kz.greetgo.scheduling.Scheduled;
 import kz.sdu.stand.bean_containers.StandBeanContainer;
-import kz.sdu.stand.register_stand_imlp.MainScheduler;
-import kz.sdu.stand.register_stand_imlp.MyConfig;
+import kz.sdu.stand.register_stand_imlp.scheduler.MainScheduler;
+import kz.sdu.stand.register_stand_imlp.scheduler.MyConfig;
 import kz.sdu.stand.util.Modules;
 
 public class LaunchStandServer {

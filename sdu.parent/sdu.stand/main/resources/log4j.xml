@@ -26,6 +26,18 @@
     </appender>
 
 
+    <appender name="INFO_EMAIL" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="${user.home}/education.d/logging/email.log"/>
+        <param name="MaxFileSize" value="10MB"/>
+        <param name="Threshold" value="INFO"/>
+        <param name="MaxBackupIndex" value="10"/>
+        <param name="Append" value="true"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p [%c] %m%n"/>
+        </layout>
+    </appender>
+
+
     <appender name="ERROR_APP" class="org.apache.log4j.RollingFileAppender">
         <param name="File" value="${user.home}/education.d/logging/error.log"/>
         <param name="MaxFileSize" value="10MB"/>
@@ -51,11 +63,15 @@
 
 
 
-    <category name="kz.sdu.stand.register_stand_imlp">
+    <category name="kz.sdu.stand.register_stand_imlp.scheduler">
         <appender-ref ref="SCHEDULING"/>
         <priority value="DEBUG"/>
     </category>
 
+    <category name="kz.sdu.stand.register_stand_imlp.scheduler">
+        <appender-ref ref="INFO_EMAIL"/>
+        <priority value="INFO"/>
+    </category>
 
     <category name="kz.sdu">
         <appender-ref ref="ERROR_APP"/>
