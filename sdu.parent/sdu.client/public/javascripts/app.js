@@ -1,5 +1,5 @@
 // angular.module('MyApp', ['ui.router','ngCookies','btford.socket-io', 'ngMessages','mgcrea.ngStrap'])
-angular.module('MyApp', ['ui.router'])
+angular.module('MyApp', ['ui.router','ngMaterial','ngMessages',"ngSanitize"])
   .config(['$locationProvider','$urlRouterProvider', '$stateProvider' ,function($locationProvider,$urlRouterProvider,$stateProvider) {
       $locationProvider.html5Mode(true);
       $urlRouterProvider.otherwise('/');

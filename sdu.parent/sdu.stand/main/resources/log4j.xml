@@ -13,7 +13,6 @@
         </layout>
     </appender>
 
-
     <appender name="SCHEDULING" class="org.apache.log4j.RollingFileAppender">
         <param name="File" value="${user.home}/education.d/logging/new_scheduling.log"/>
         <param name="MaxFileSize" value="10MB"/>

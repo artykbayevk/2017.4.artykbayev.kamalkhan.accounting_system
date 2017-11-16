@@ -13,8 +13,21 @@ gulp.task('css', function() {
         }));
 });
 
+gulp.task('material', function () {
+    return gulp.src("./node_modules/angular-material/**/*")
+        .pipe(gulp.dest('./dist/css/angular-material/'));
+})
+
 gulp.task('angular', function() {
-    gulp.src(["./public/javascripts/vendors/angular.js","./public/javascripts/vendors/angular-ui-router.min.js"])
+    gulp.src([
+        "./public/javascripts/vendors/angular.js",
+        "./public/javascripts/vendors/angular-ui-router.js",
+        "./public/javascripts/vendors/angular-animate.js",
+        "./public/javascripts/vendors/angular-aria.js",
+        "./public/javascripts/vendors/angular-material.js",
+        "./node_modules/angular-messages/angular-messages.js",
+        "./node_modules/angular-sanitize/angular-sanitize.js",
+    ])
         .pipe(concat('angular.js'))
         .pipe(gulp.dest('./dist/js'))
         .pipe(browserSync.reload({
@@ -59,7 +72,7 @@ gulp.task('css-lib',function(){
 })
 
 gulp.task('build', function() {
-    gulp.start(['angular','controllers','app','css','css-lib','html','fonts'])
+    gulp.start(['angular','controllers','app','css','material','css-lib','html','fonts'])
 });
 
 gulp.task('browser-sync', function() {
