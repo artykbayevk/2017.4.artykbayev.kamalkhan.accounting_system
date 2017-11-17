@@ -20,11 +20,11 @@ gulp.task('material', function () {
 
 gulp.task('angular', function() {
     gulp.src([
-        "./public/javascripts/vendors/angular.js",
-        "./public/javascripts/vendors/angular-ui-router.js",
-        "./public/javascripts/vendors/angular-animate.js",
-        "./public/javascripts/vendors/angular-aria.js",
-        "./public/javascripts/vendors/angular-material.js",
+        "./node_modules/angular/angular.js",
+        "./node_modules/angular-ui-router/release/angular-ui-router.js",
+        "./node_modules/angular-animate/angular-animate.js",
+        "./node_modules/angular-aria/angular-aria.js",
+        "./node_modules/angular-material/angular-material.js",
         "./node_modules/angular-messages/angular-messages.js",
         "./node_modules/angular-sanitize/angular-sanitize.js",
     ])
