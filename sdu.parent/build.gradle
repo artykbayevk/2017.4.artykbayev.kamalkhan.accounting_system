@@ -45,6 +45,13 @@ subprojects {
 	jar.manifest.attributes 'Implementation-Title': project.name, 'Implementation-Version': version,
 			'Implementation-Vendor': vendorName, 'Built-By': System.getProperty("user.name"), 'Built-At': nowFormattedDate
 
+	jar {
+		manifest {
+			attributes 'Implementation-Title': project.name, 'Implementation-Version': version,
+					'Implementation-Vendor': vendorName, 'Built-By': System.getProperty("user.name"), 'Built-At': nowFormattedDate
+		}
+	}
+
 	sourceSets {
 		main {
 			java.srcDirs = ["main/java"]
