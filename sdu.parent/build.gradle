@@ -12,11 +12,11 @@ allprojects {
 	sourceCompatibility = 1.8
 	targetCompatibility = 1.8
 
-	group = "kz.greetgo.sdu"
+	group = "kz.sdu"
 
-	//compileJava.options.debugOptions.debugLevel = "source, lines, vars"
+	compileJava.options.debugOptions.debugLevel = "source, lines, vars"
 	compileJava.options.encoding = "UTF-8"
-	//compileTestJava.options.debugOptions.debugLevel = "source, lines, vars"
+	compileTestJava.options.debugOptions.debugLevel = "source, lines, vars"
 	compileTestJava.options.encoding = "UTF-8"
 }
 
@@ -37,13 +37,13 @@ subprojects {
 		ext.greetgoConfVersion = '0.1.5'
         ext.greetgoScheduling = '2.0.0'
 		ext.postgreSqlVersion = '9.1-901-1.jdbc4'
+		ext.greetgoDbVersion = '2.0.0'
+
 
 		testCompile 'org.testng:testng:6.5.1'
 		testCompile 'org.easytesting:fest-assert-core:2.0M10'
 	}
 
-	jar.manifest.attributes 'Implementation-Title': project.name, 'Implementation-Version': version,
-			'Implementation-Vendor': vendorName, 'Built-By': System.getProperty("user.name"), 'Built-At': nowFormattedDate
 
 	jar {
 		manifest {

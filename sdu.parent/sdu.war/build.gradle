@@ -1,0 +1,49 @@
+apply plugin: 'war'
+webAppDirName = 'webapps'
+
+configurations { providedCompile }
+
+dependencies {
+  compile project(':sdu.server')
+
+  compile 'jstl:jstl:1.2'
+
+  testCompile "kz.greetgo.depinject:greetgo.depinject.gen:$greetgoDepInjectVersion"
+}
+
+task generateBeanContainerJavas(type: JavaExec) {
+  ext.genDir = "${project.buildDir}/generated/bean_container_impl"
+
+  main = 'kz.sdu.war.GenerateAndCompileBeanContainers'
+  args = ["${genDir}"]
+
+  classpath { [sourceSets.test.runtimeClasspath,] }
+}
+
+task beanContainerJar(type: Jar) {
+  dependsOn generateBeanContainerJavas
+  baseName "sdu-bean-container"
+  from generateBeanContainerJavas.genDir
+}
+
+war {
+  dependsOn project(':sdu.client').build
+  dependsOn beanContainerJar
+
+  doFirst {
+//    println(project(':sandbox.client').buildDir.toPath().resolve('product').toFile())
+  }
+
+  baseName 'sdu'
+
+  addExcludes rootSpec
+
+  classpath beanContainerJar
+
+  from project(':sdu.client').buildDir.toPath().resolve('dist').toFile()
+}
+
+static def addExcludes(rootSpec) {
+  rootSpec.exclude 'ant-*.jar'
+  rootSpec.exclude 'ant-launcher-*.jar'
+}
