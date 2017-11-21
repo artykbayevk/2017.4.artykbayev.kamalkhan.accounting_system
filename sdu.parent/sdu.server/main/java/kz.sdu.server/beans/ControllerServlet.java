@@ -2,11 +2,13 @@ package kz.sdu.server.beans;
 
 import kz.greetgo.depinject.core.Bean;
 import kz.greetgo.depinject.core.BeanGetter;
-import kz.greetgo.education.controller.utils.Controller;
+
+
 import kz.greetgo.mvc.interfaces.TunnelExecutorGetter;
 import kz.greetgo.mvc.interfaces.Views;
 import kz.greetgo.mvc.model.UploadInfo;
 import kz.greetgo.mvc.war.AppServlet;
+import kz.sdu.controller.utils.Controller;
 
 import java.util.ArrayList;
 import java.util.List;

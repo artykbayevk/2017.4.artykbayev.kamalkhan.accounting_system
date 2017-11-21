@@ -5,7 +5,6 @@ import kz.greetgo.depinject.core.BeanScanner;
 import kz.greetgo.depinject.core.Include;
 import kz.sdu.register.beans.all.any_db.BeanConfigAll;
 
-
 @BeanConfig
 @BeanScanner
 @Include({BeanConfigAll.class})

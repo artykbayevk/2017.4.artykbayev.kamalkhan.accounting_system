@@ -7,7 +7,8 @@ import kz.sdu.controller.register.UserRegister;
 @Bean
 public class UserRegisterImpl implements UserRegister {
 
-  public UserInfo getUserInfo(String personId) {
+  @Override
+  public UserInfo getUserInfo(String personId){
     return null;
   }
 
@@ -25,6 +26,4 @@ public class UserRegisterImpl implements UserRegister {
   public String acceptUser(String genNumber){
     return null;
   }
-
-
 }

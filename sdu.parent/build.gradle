@@ -14,9 +14,9 @@ allprojects {
 
 	group = "kz.sdu"
 
-	compileJava.options.debugOptions.debugLevel = "source, lines, vars"
+	compileJava.options.debugOptions.debugLevel = "source,lines,vars"
 	compileJava.options.encoding = "UTF-8"
-	compileTestJava.options.debugOptions.debugLevel = "source, lines, vars"
+	compileTestJava.options.debugOptions.debugLevel = "source,lines,vars"
 	compileTestJava.options.encoding = "UTF-8"
 }
 

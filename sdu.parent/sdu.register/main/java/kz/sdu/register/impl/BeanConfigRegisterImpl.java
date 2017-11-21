@@ -5,5 +5,5 @@ import kz.greetgo.depinject.core.BeanScanner;
 
 @BeanConfig
 @BeanScanner
-public class BeanConfigRegisterServerImpl {
+public class BeanConfigRegisterImpl {
 }

@@ -3,27 +3,22 @@ package kz.sdu.register.impl;
 import kz.greetgo.depinject.core.BeanGetter;
 import kz.greetgo.depinject.testng.AbstractDepinjectTestNg;
 import kz.greetgo.depinject.testng.ContainerConfig;
-import kz.greetgo.depinject.testng.DepinjectTestNg;
 import kz.sdu.controller.register.SendEmailRegister;
-import kz.sdu.register.test.util.BeanConfigMainServerPostgresTest;
+import kz.sdu.register.test.util.BeanConfigMainPostgresTests;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
-
-
-@ContainerConfig(BeanConfigMainServerPostgresTest.class)
+@ContainerConfig(BeanConfigMainPostgresTests.class)
 public class SendEmailRegisterImplTest extends AbstractDepinjectTestNg{
+  public BeanGetter<SendEmailRegister> sendEmailRegister;
 
-    public BeanGetter<SendEmailRegister> sendEmailRegister;
+  @Test
+  public void testToSend() throws Exception {
+    sendEmailRegister.get().toSend();
+  }
 
-    @Test
-    public void testToSend() throws Exception {
-        sendEmailRegister.get().toSend();
-    }
-
-    @Test
-    public void testPrepareSendEmail() throws Exception {
-        sendEmailRegister.get().prepareSendEmail();
-    }
+  @Test
+  public void testPrepareEmail() throws Exception {
+    sendEmailRegister.get().prepareSendEmail();
+  }
 
 }

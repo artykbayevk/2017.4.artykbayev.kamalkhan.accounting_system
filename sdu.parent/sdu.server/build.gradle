@@ -10,7 +10,7 @@ dependencies{
     compile "kz.greetgo.depinject:greetgo.depinject:$greetgoDepInjectVersion"
     compile "kz.greetgo:greetgo.email:$greetGoEmailVersion"
 
-    compile "kz.greetgo:greetgo.email:0.0.10"
+    compile "kz.greetgo:greetgo.email:$greetGoEmailVersion"
     //
     // libs
     //
