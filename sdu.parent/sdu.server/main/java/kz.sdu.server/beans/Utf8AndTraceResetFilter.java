@@ -1,7 +1,7 @@
 package kz.sdu.server.beans;
 
 import kz.greetgo.depinject.core.Bean;
-import kz.greetgo.education.controller.logging.LogIdentity;
+import kz.sdu.controller.logging.LogIdentity;
 
 import javax.servlet.*;
 import java.io.IOException;

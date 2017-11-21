@@ -1,36 +1,29 @@
-dependencies {
-    compile project(':sdu.controller')
+dependencies{
+  compile project(':sdu.controller')
 
-    compile "kz.greetgo.mvc:greetgo.mvc:$greetgoMvcVersion"
-    compile "kz.greetgo:greetgo.email:$greetGoEmailVersion"
-    compile "kz.greetgo.depinject:greetgo.depinject:$greetgoDepInjectVersion"
-    compile "kz.greetgo:greetgo.email:$greetGoEmailVersion"
+  //
+  // from greetgo!
+  //
+  compile "kz.greetgo.mvc:greetgo.mvc:$greetgoMvcVersion"
+  compile "kz.greetgo.depinject:greetgo.depinject:$greetgoDepInjectVersion"
+  compile "kz.greetgo:greetgo.email:$greetGoEmailVersion"
 
-    compile "kz.greetgo.db:greetgo.db:$greetgoDbVersion"
-    compile "kz.greetgo:greetgo.conf:$greetgoConfVersion"
-    compile "kz.greetgo.mvc:greetgo.mvc.security:$greetgoMvcVersion"
+  compile "kz.greetgo.db:greetgo.db:$greetgoDbVersion"
+  compile "kz.greetgo:greetgo.conf:$greetgoConfVersion"
+  compile "kz.greetgo.mvc:greetgo.mvc.security:$greetgoMvcVersion"
 
+  compile group: 'org.postgresql', name: 'postgresql', version: '9.4-1202-jdbc42'
+  compile group: 'org.mybatis', name: 'mybatis', version: '3.4.2'
+  compile group: 'org.liquibase', name: 'liquibase-core', version: '3.5.1'
+  compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.1.1'
 
-    compile "kz.greetgo.mvc:greetgo.mvc.jetty:$greetgoMvcVersion"
-    compile group: 'org.json', name: 'json', version: '20160810'
-    compile "com.google.guava:guava:$guavaVersion"
+  //
+  // libs
+  //
+  compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.21'
 
-
-    compile group: 'org.postgresql', name: 'postgresql', version: '9.4-1202-jdbc42'
-    compile group: 'org.mybatis', name: 'mybatis', version: '3.4.2'
-    compile group: 'org.liquibase', name: 'liquibase-core', version: '3.5.1'
-    compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.1.1'
-
-    compile "postgresql:postgresql:$postgreSqlVersion"
-
-    //
-    // libs
-    //
-    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.21'
-
-    //
-    // test dependencies
-    //
-
-    testCompile "kz.greetgo.depinject:greetgo.depinject.testng:$greetgoDepInjectVersion"
+  //
+  // test dependencies
+  //
+  testCompile "kz.greetgo.depinject:greetgo.depinject.testng:$greetgoDepInjectVersion"
 }

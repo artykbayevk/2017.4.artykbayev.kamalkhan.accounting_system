@@ -1,6 +1,0 @@
-package kz.sdu.register.test.util;
-
-import kz.greetgo.depinject.core.BeanContainer;
-
-public interface MainServerPostgresBeanContainer extends BeanContainer{
-}

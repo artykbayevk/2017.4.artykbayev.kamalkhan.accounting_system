@@ -6,28 +6,28 @@ import kz.greetgo.email.Email;
 import kz.greetgo.email.EmailSender;
 import kz.greetgo.email.EmailSenderController;
 import kz.sdu.controller.register.SendEmailRegister;
-
-import java.util.logging.Logger;
+import kz.sdu.register.util.GCommonConstant;
 
 @Bean
 public class SendEmailRegisterImpl implements SendEmailRegister {
 
-    public BeanGetter<EmailSender> emailSender;
+  public BeanGetter<EmailSender> emailSender;
+  public BeanGetter<EmailSenderController> emailSenderController;
 
-    public BeanGetter<EmailSenderController> emailSenderController;
 
-    @Override
-    public void toSend(){
-        emailSenderController.get().sendAllExistingEmails();
-    }
+  @Override
+  public void toSend() {
+    emailSenderController.get().sendAllExistingEmails();
+  }
 
-    @Override
-    public void prepareSendEmail(){
-        Email email = new Email();
-        email.setFrom("kamalkhan.sdu@gmail.com");
-        email.setTo("kamalkhan.artykbaev@is.sdu.edu.kz");
-        email.setSubject("This is subj");
-        email.setBody("Hi bro");
-        emailSender.get().send(email);
-    }
+  @Override
+  public void prepareSendEmail() {
+    Email email=new Email();
+    email.setFrom(GCommonConstant.username);
+    email.setTo("ilyas.tukibayev@sdu.edu.kz");
+    email.setSubject("Test Email");
+    email.setBody("If you get this message skip it");
+    emailSender.get().send(email);
+
+  }
 }
