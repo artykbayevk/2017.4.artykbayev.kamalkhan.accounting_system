@@ -79,7 +79,7 @@ gulp.task('browser-sync', function() {
     browserSync.init(null, {
         open: false,
         server: {
-            baseDir: 'dist',
+            baseDir: 'build/front/sdu',
         }
     });
 });
