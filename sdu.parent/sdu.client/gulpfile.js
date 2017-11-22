@@ -7,7 +7,7 @@ var devMode = false;
 gulp.task('css', function() {
     gulp.src("./public/stylesheets/main.css")
         .pipe(concat('main.css'))
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('build/front/sdu/css'))
         .pipe(browserSync.reload({
             stream: true
         }));
@@ -15,7 +15,7 @@ gulp.task('css', function() {
 
 gulp.task('material', function () {
     return gulp.src("./node_modules/angular-material/**/*")
-        .pipe(gulp.dest('./dist/css/angular-material/'));
+        .pipe(gulp.dest('build/front/sdu/css/angular-material/'));
 })
 
 gulp.task('angular', function() {
@@ -29,7 +29,7 @@ gulp.task('angular', function() {
         "./node_modules/angular-sanitize/angular-sanitize.js",
     ])
         .pipe(concat('angular.js'))
-        .pipe(gulp.dest('./dist/js'))
+        .pipe(gulp.dest('build/front/sdu/js'))
         .pipe(browserSync.reload({
             stream: true
         }));
@@ -38,7 +38,7 @@ gulp.task('angular', function() {
 gulp.task('app', function() {
     gulp.src("./public/javascripts/app.js")
         .pipe(concat('app.js'))
-        .pipe(gulp.dest('./dist/js'))
+        .pipe(gulp.dest('build/front/sdu/js'))
         .pipe(browserSync.reload({
             stream: true
         }));
@@ -47,7 +47,7 @@ gulp.task('app', function() {
 gulp.task('controllers', function() {
     gulp.src("./public/javascripts/controllers/*.js")
         .pipe(concat('controllers.js'))
-        .pipe(gulp.dest('./dist/js'))
+        .pipe(gulp.dest('build/front/sdu/js'))
         .pipe(browserSync.reload({
             stream: true
         }));
@@ -55,7 +55,7 @@ gulp.task('controllers', function() {
 
 gulp.task('html', function() {
     return gulp.src('./public/templates/**/*.html')
-        .pipe(gulp.dest('./dist/'))
+        .pipe(gulp.dest('build/front/sdu/'))
         .pipe(browserSync.reload({
             stream: true
         }));
@@ -63,12 +63,12 @@ gulp.task('html', function() {
 
 gulp.task('fonts',function(){
     return gulp.src(['./public/fonts/**/*'])
-        .pipe(gulp.dest('./dist/fonts/'));
+        .pipe(gulp.dest('build/front/sdu/fonts/'));
 })
 
 gulp.task('css-lib',function(){
     return gulp.src(['./public/stylesheets/lib/**/*'])
-        .pipe(gulp.dest('./dist/css/lib/'));
+        .pipe(gulp.dest('build/front/sdu/css/lib/'));
 })
 
 gulp.task('build', function() {

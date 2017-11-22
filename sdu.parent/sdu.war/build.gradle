@@ -31,7 +31,7 @@ war {
   dependsOn beanContainerJar
 
   doFirst {
-//    println(project(':sandbox.client').buildDir.toPath().resolve('product').toFile())
+//    println(project(':sdu.client').buildDir.toPath().resolve('public').toFile())
   }
 
   baseName 'sdu'
@@ -40,7 +40,7 @@ war {
 
   classpath beanContainerJar
 
-  from project(':sdu.client').buildDir.toPath().resolve('dist').toFile()
+  from project(':sdu.client').buildDir.toPath().resolve('front').toFile()
 }
 
 static def addExcludes(rootSpec) {
