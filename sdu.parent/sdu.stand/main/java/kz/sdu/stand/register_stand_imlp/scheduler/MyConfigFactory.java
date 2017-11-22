@@ -13,6 +13,6 @@ public class MyConfigFactory extends HotConfigFactory {
 
     @Override
     protected String getBaseDir(){
-        return System.getProperty("user.home")+"/education.d";
+        return System.getProperty("user.home")+"/sdu.d";
     }
 }

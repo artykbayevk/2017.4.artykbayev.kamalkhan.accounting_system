@@ -14,7 +14,7 @@
     </appender>
 
     <appender name="SCHEDULING" class="org.apache.log4j.RollingFileAppender">
-        <param name="File" value="${user.home}/education.d/logging/new_scheduling.log"/>
+        <param name="File" value="${user.home}/sdu.d/logging/new_scheduling.log"/>
         <param name="MaxFileSize" value="10MB"/>
         <param name="MaxBackupIndex" value="10"/>
         <param name="Append" value="true"/>
@@ -26,7 +26,7 @@
 
 
     <appender name="INFO_EMAIL" class="org.apache.log4j.RollingFileAppender">
-        <param name="File" value="${user.home}/education.d/logging/email.log"/>
+        <param name="File" value="${user.home}/sdu.d/logging/email.log"/>
         <param name="MaxFileSize" value="10MB"/>
         <param name="Threshold" value="INFO"/>
         <param name="MaxBackupIndex" value="10"/>
@@ -38,7 +38,7 @@
 
 
     <appender name="ERROR_APP" class="org.apache.log4j.RollingFileAppender">
-        <param name="File" value="${user.home}/education.d/logging/error.log"/>
+        <param name="File" value="${user.home}/sdu.d/logging/error.log"/>
         <param name="MaxFileSize" value="10MB"/>
         <param name="Threshold" value="ERROR"/>
         <param name="MaxBackupIndex" value="10"/>
@@ -50,7 +50,7 @@
 
 
     <appender name="SERVER" class="org.apache.log4j.RollingFileAppender">
-        <param name="File" value="${user.home}/education.d/logs/server.log"/>
+        <param name="File" value="${user.home}/sdu.d/logs/server.log"/>
         <param name="Threshold" value="INFO"/>
         <param name="Append" value="true"/>
         <param name="MaxFileSize" value="100MB"/>

@@ -13,7 +13,7 @@ public class MainScheduler {
     public void startSchedulers(MyTask myTask){
         if(scheduler != null) return;
 
-        String configDir = System.getProperty("user.home")+"/education.d";
+        String configDir = System.getProperty("user.home")+"/sdu.d";
         TaskCollector taskCollector = new TaskCollector(configDir);
 
         taskCollector.collect(myTask);

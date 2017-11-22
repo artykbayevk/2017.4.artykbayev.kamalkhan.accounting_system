@@ -23,7 +23,7 @@ public class MyTask implements HasScheduled{
     @Scheduled("repeat every 90 sec")
     public void doAJob() throws IOException {
 //        File parentFile;
-//        File file = new File(""+System.getProperty("user.home") + "/education.d/" + System.currentTimeMillis());
+//        File file = new File(""+System.getProperty("user.home") + "/sdu.d/" + System.currentTimeMillis());
 //        parentFile = file.getParentFile();
 //        if(!parentFile.exists()){
 //            parentFile.mkdirs();
@@ -55,7 +55,7 @@ public class MyTask implements HasScheduled{
 
     private String gun() throws IOException {
         File parentFile;
-        File file = new File(""+System.getProperty("user.home") + "/education.d/" + System.currentTimeMillis());
+        File file = new File(""+System.getProperty("user.home") + "/sdu.d/" + System.currentTimeMillis());
         parentFile = file.getParentFile();
         if(!parentFile.exists()){
             parentFile.mkdirs();
