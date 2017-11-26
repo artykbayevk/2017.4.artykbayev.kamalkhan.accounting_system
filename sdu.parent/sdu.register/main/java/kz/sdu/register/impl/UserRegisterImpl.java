@@ -4,6 +4,7 @@ import kz.greetgo.depinject.core.Bean;
 import kz.sdu.controller.model.UserInfo;
 import kz.sdu.controller.register.UserRegister;
 
+
 @Bean
 public class UserRegisterImpl implements UserRegister {
 

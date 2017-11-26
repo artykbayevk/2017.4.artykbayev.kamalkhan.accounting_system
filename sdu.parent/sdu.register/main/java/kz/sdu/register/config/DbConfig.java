@@ -8,11 +8,11 @@ import kz.greetgo.conf.hot.Description;
 public interface DbConfig {
 
   @Description("URL доступа к БД")
-  @DefaultStrValue("jdbc:postgres://localhost:5432/testdb")
+  @DefaultStrValue("jdbc:postgresql://localhost:5432/postgres")
   String url();
 
   @Description("Пользователь для доступа к БД")
-  @DefaultStrValue("patrick12")
+  @DefaultStrValue("patrick")
   String username();
 
   @Description("Пароль для доступа к БД")

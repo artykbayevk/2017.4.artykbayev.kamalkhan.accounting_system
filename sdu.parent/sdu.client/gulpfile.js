@@ -27,6 +27,8 @@ gulp.task('angular', function() {
         "./node_modules/angular-material/angular-material.js",
         "./node_modules/angular-messages/angular-messages.js",
         "./node_modules/angular-sanitize/angular-sanitize.js",
+        "./public/javascripts/vendors/mask.js"
+
     ])
         .pipe(concat('angular.js'))
         .pipe(gulp.dest('build/front/sdu/js'))
@@ -77,6 +79,7 @@ gulp.task('build', function() {
 
 gulp.task('browser-sync', function() {
     browserSync.init(null, {
+        port: 8090,
         open: false,
         server: {
             baseDir: 'build/front/sdu',

@@ -1,79 +1,25 @@
 <!DOCTYPE html>
-<html ng-app="MyApp">
+<html >
 <head>
-    <base href="/">
     <meta charset="utf-8">
-	<title>Manage Site</title>
+	<title>CRM System</title>
     <link href="css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="css/angular-material/angular-material.css">
 </head>
-<body>
+<body ng-app="MyApp">
 
+<header class="header header-bordered header-modified">
+    <p class="header-title logo-modified">
+        <a href="/" class="href-modified href-second main-href" style="color:rgba(255,255,255,1)">MANAGER.KZ</a>
+    </p>
+</header>
 
-
-
-    <!--<div ng-controller="NavCtrl">-->
-    <!--<header class="header header-bordered header-modified" >-->
-        <!--<p style="font-family: 'GothamPro';color:white">Hello</p>-->
-        <!--<a href="#" class="header-title header-title-modified" style="color:rgba(255,255,255,1);font-family: 'GothamPro';">Accounting Site</a>-->
-        <!--<a ng-click="logout()" class="header-title header-title-modified" style="color:rgba(255,255,255,1);float:right;cursor:pointer" ng-if="isUser">Logout</a>-->
-    <!--</header>-->
-
-    <!--<div class="navigation-bar" ng-if="isAdmin" >-->
-        <!--<span class="navigation-bar-span">-->
-                    <!--<a type="button" class="button button-add" ui-sref="users-list"><i class="icon-arrow-left"></i>-->
-                      <!--<p style="margin-left:3px;">Users-list</p></a>-->
-        <!--</span>-->
-               <!--<span class="navigation-bar-span navigation-bar-span-modified">-->
-                    <!--<a ui-sref="leads-history" type="button" class="button button-add"><i class="icon-arrow-up" style="background: rgba(231,76,60,1);"></i>-->
-                    <!--<p style="margin-left:3px;">Leads-history</p>-->
-                      <!--</a>-->
-        <!--</span>-->
-        <!--<span class="navigation-bar-span"> -->
-                    <!--<a type="button" ui-sref="admin-leads" class="button button-add" ><i class="icon-arrow-right "></i><p style="margin-left:3px;">Leads-list</p></a>-->
-                    <!---->
-        <!--</span>-->
-    <!--</div>-->
-
-    <!--<div class="navigation-bar"  ng-if="isJust">-->
-        <!--<span class="navigation-bar-span">-->
-                    <!--<a type="button" class="button button-add" ui-sref="manager-add"><i class="icon-arrow-left"></i>-->
-                      <!--<p style="margin-left:3px;">Add-Lead</p></a>-->
-        <!--</span>-->
-        <!--<span class="navigation-bar-span"> -->
-                    <!--<a type="button" ui-sref="users-leads   " class="button button-add" ><i class="icon-arrow-right "></i><p style="margin-left:3px;">Leads-list</p></a>-->
-                    <!---->
-        <!--</span>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <header class="header header-modified header-bordered">
-
-    </header>
 	<main ui-view class="main">
-        
     </main>
 
-    <footer>
-
+    <footer class="footer">
     </footer>
 
-	<!--<script type="text/javascript" src="javascripts/angular.js"></script>-->
-    <!--<script type="text/javascript" src="javascripts/angular-messages.js"></script>-->
-    <!--<script src="javascripts/angular-strap.js"></script>-->
-    <!--<script src="javascripts/angular-strap.tpl.js"></script>-->
-	<!--<script type="text/javascript" src="javascripts/angular-ui-router.min.js"></script>-->
-    <!--<script src="javascripts/socket-io/socket.io.js" charset="utf-8"></script>-->
-    <!--<script src="javascripts/socket-io/directive.socket.js" charset="utf-8"></script>-->
-    <!--<script type="text/javascript" src="javascripts/angular-cookies.js" charset="utf-8"></script>-->
-    <!--<script type="text/javascript" src="javascripts/angular-loader.js"></script>-->
-    <!--<script type="text/javascript" src="javascripts/angular-sanitize.js"></script>-->
-
-    <!--<script type="text/javascript" src="app.js"></script>-->
-    <!--<script src="javascripts/socket-io/service.socket.js" charset="utf-8"></script>-->
-    <!--<script type="text/javascript" src="services/factory-auth.js"></script>-->
-    <!--<script type="text/javascript" src="controllers/controllers.js" charset="utf-8"></script>-->
-    <!--<script src="js/angular-lib.js"></script>-->
 
 <script src="js/angular.js"></script>
 <script src="js/app.js"></script>

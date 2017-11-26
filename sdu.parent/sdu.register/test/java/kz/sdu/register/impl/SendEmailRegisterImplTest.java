@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 @ContainerConfig(BeanConfigMainPostgresTests.class)
 public class SendEmailRegisterImplTest extends AbstractDepinjectTestNg{
+
   public BeanGetter<SendEmailRegister> sendEmailRegister;
 
   @Test

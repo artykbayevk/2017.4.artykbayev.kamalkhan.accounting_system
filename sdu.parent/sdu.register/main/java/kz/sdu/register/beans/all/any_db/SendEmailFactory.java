@@ -2,11 +2,11 @@ package kz.sdu.register.beans.all.any_db;
 
 import com.sun.mail.smtp.SMTPTransport;
 import kz.greetgo.depinject.core.Bean;
+import kz.sdu.register.util.GCommonConstant;
 import kz.greetgo.email.Email;
 import kz.greetgo.email.EmailSaver;
 import kz.greetgo.email.EmailSender;
 import kz.greetgo.email.EmailSenderController;
-import kz.sdu.register.util.GCommonConstant;
 
 import javax.mail.Message;
 import javax.mail.PasswordAuthentication;

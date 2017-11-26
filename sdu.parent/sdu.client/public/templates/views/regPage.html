@@ -9,13 +9,13 @@
 <br>
 <h2>RegPage</h2>
 <br>
-        <input type="text" placeholder="Name" ng-model="name"><br>
+        <input type="text" placeholder="Name" ng-model= "name"><br>
         <input type="text" placeholder="Surname" ng-model="surname"><br>
         <input type="password" placeholder="Password" ng-model="password"><br>
         <input type="text" placeholder="Email" ng-model="email"><br>
         <input type="text" placeholder="Age" ng-model="age"><br>
         <input type="text" placeholder="CompanyID"  ng-model="compID"><br>
-        <input type="text" placeholder="Telephone Number"  ng-model="number"><br>
+        <input type="text" placeholder="Telephone Number"  ng-model="number" ui-mask="{{'(999) 999-9999'}}" ng-keyup="show()"><br>
         <select ng-model = "clientType">
             <option ng-repeat="x in clientTypeList" ng-value="x.abbrev" >
                 {{x.abbrev}}

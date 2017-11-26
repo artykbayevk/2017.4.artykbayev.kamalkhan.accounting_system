@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <span class="login-title">Вход в систему</p>
+        <form class="login-form" method="post" ng-submit="login()">
+            <input class ="input" type="email" ng-model="email" name="email" placeholder="Ваша электронная почта"><br>
+            <input class ="input" type="password" ng-model="password" name="password" placeholder="Ваш пароль" ><br>
+            <p class="error-message">
+                Адрес почты неправильный!
+            </p>
+            <button class ="button button-login button-modified-two">
+                Войти<i class="icon-arrow-right"></i>
+            </button>
+            <a ui-sref="regView" class="href-modified href-second">
+                <button class ="button button-login button-login--right ">
+                    <i class="icon-check"></i>Регистрация
+                </button></a>
+        </form>
+    </span>
+</div>

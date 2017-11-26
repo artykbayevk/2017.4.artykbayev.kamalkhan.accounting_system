@@ -8,6 +8,8 @@ import kz.sdu.controller.register.AuthRegister;
 import kz.sdu.stand.register_stand_imlp.db.Db;
 import kz.sdu.stand.register_stand_imlp.model.PersonDot;
 
+import java.util.Date;
+
 @Bean
 public class AuthRegisterStandImpl implements AuthRegister {
     public BeanGetter<Db> db;
@@ -37,5 +39,10 @@ public class AuthRegisterStandImpl implements AuthRegister {
 
         throw new RestError(470, err.toString());
     }
+    }
+
+    @Override
+    public Date getSysdate(){
+        return null;
     }
 }
