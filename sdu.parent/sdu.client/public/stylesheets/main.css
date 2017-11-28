@@ -10,7 +10,7 @@ body{
 .header-modified{
     width: 100%;
     font-weight: bold;
-    background-color: rgb(99,190,212	);
+    background-color: rgb(99,190,212);
 }
 
 .logo-modified{
@@ -93,6 +93,7 @@ body{
 /*Log form*/
 .wrapper{
     margin-top: 50px;
+    margin-bottom:50px;
 }
 .header__logo{
     position: absolute;
@@ -324,6 +325,7 @@ body{
     position: initial;
     float: right;
     margin-top: 55px;
+    margin-bottom:105px;
 }
 
 
@@ -348,4 +350,10 @@ body{
 .nav-list a:hover{
     border-left: 2px solid #5EBED5;
     color: #5EBED5;
+}
+
+.footer-modified{
+    width: 100%;
+    font-weight: bold;
+    background-color: rgb(99,190,212);
 }

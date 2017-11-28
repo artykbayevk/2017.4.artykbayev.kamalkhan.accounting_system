@@ -13,6 +13,14 @@ angular.module('MyApp', ['ui.router','ngMaterial','ngMessages',"ngSanitize", 'ui
               url: '/',
               templateUrl: 'views/initView.html',
               controller: 'InitCtrl'
-          });
-
+          })
+          .state('regCompany',{
+              url:'/regComp',
+              templateUrl:'views/regCompanyView.html',
+              controller:'RegCompanyCtrl'
+          }).state('adminUsersList',{
+              url:'/adminUsersList',
+              templateUrl:'views/adminUsersListView.html',
+              controller:'AdminUserListCtrl'
+      })
   }]);

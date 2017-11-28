@@ -6,6 +6,7 @@
             <input class ="input" ng-model="age" type="text"  placeholder="Ваш возраст"><br>
             <input class ="input" ng-model="surname" type="text"  placeholder="Ваша фамилия"><br>
             <input class ="input" ng-model="compID" type="text" placeholder="Идентификационный номер компании"><br>
+            <input class ="input" ng-model="compKEY" type="password" placeholder="Ключевое слово компании"><br>
             <input class ="input" ng-model="number" type="text" ui-mask="+7(709)999-99-99"><br>
             <input class ="input" ng-model="email" type="email"  placeholder="Ваша электронная почта"><br>
             <input class ="input" ng-model="password" type="password" name="password" placeholder="Ваш пароль" ><br>
@@ -14,6 +15,8 @@
             </p>
             <button class ="button button-login button-modified-two" type="submit">Регистрация<i class="icon-arrow-right"></i></button>
             <a ui-sref="any"  class="href-modified href-second"><button class ="button button-login button-login--right "><i class="icon-check"></i>Войти</button></a>
+<br>
+            <a ui-sref="regCompany"  class="href-modified href-second"><button class ="button button-login button-login--right"><i class="icon-star"></i>Регистрация Компании</button></a>
         </form>
     </span>
 </div>

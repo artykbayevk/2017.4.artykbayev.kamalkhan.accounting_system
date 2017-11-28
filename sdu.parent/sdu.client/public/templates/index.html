@@ -7,18 +7,56 @@
     <link rel="stylesheet" href="css/angular-material/angular-material.css">
 </head>
 <body ng-app="MyApp">
+<div>
+    <header class="header header-bordered header-modified">
+        <p class="header-title logo-modified">
+            <a href="/" class="href-modified href-second main-href" style="color:rgba(255,255,255,1)">MANAGER.KZ</a>
+        </p>
+    </header>
+    <!--<div class="navigation-bar" ng-if="isAdmin" >-->
+        <!--<span class="navigation-bar-span">-->
+            <!--<a type="button" ui-sref="statistics" class="button button-add button-modified" >-->
+                <!--<i class="icon-bar-graph"></i>-->
+                <!--<p style="margin-left:3px; margin-right:3px;">Статистика</p>-->
+            <!--</a>-->
+            <!--<a type="button" class="button button-add button-modified" ui-sref="users-list">-->
+                <!--<i class="icon-head"></i>-->
+                <!--<p style="margin-left:3px;margin-right:3px;">Менеджеры</p>-->
+            <!--</a>-->
+        <!--</span>-->
+        <!--<span class="navigation-bar-span">-->
+            <!--<a type="button" ui-sref="admin-leads" class="button button-add button-modified" >-->
+                <!--<i class="icon-briefcase"></i>-->
+                <!--<p style="margin-left:3px;margin-right:3px;">Заявки</p>-->
+            <!--</a>-->
+            <!--<a type="button" class="button button-add button-modified" ui-sref="leads-history">-->
+                <!--<i class="icon-paper" style="margin-left:3px;" ></i>-->
+                <!--<p style="margin-left:5px;margin-right:3px;">История</p>-->
+            <!--</a>-->
+        <!--</span>-->
+    <!--</div>-->
+    <!--<div class="navigation-bar"  ng-if="isJust">-->
+        <!--<span class="navigation-bar-span" style="margin-left:15px">-->
+            <!--<a type="button" class="button button-add" ui-sref="manager-add">-->
+                <!--<i class="icon-plus"></i>-->
+                <!--<p style="margin-left:3px;">Создать заявку</p>-->
+            <!--</a>-->
+        <!--</span>-->
+        <!--<span class="navigation-bar-span">-->
+            <!--<a type="button" ui-sref="users-leads" class="button button-add" >-->
+                <!--<i class="icon-paper"></i>-->
+                <!--<p style="margin-left:3px;">Заявки</p>-->
+            <!--</a>-->
+        <!--</span>-->
+    <!--</div>-->
+</div>
 
-<header class="header header-bordered header-modified">
-    <p class="header-title logo-modified">
-        <a href="/" class="href-modified href-second main-href" style="color:rgba(255,255,255,1)">MANAGER.KZ</a>
-    </p>
-</header>
+<main ui-view class="main">
 
-	<main ui-view class="main">
-    </main>
+</main>
 
-    <footer class="footer">
-    </footer>
+<footer class="footer footer-modified">
+</footer>
 
 
 <script src="js/angular.js"></script>
