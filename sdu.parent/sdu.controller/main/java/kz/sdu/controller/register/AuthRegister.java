@@ -6,7 +6,5 @@ import java.util.Date;
 
 public interface AuthRegister {
     AuthInfo getAuthInfo(String accountName, String password);
-
-
     Date getSysdate();
 }

@@ -7,6 +7,7 @@ import kz.greetgo.depinject.core.BeanGetter;
 import kz.greetgo.email.Email;
 import kz.greetgo.email.EmailSender;
 import kz.greetgo.email.EmailSenderController;
+import kz.sdu.controller.model.AuthInfo;
 import kz.sdu.controller.model.UserCtrlModel;
 import kz.sdu.controller.model.UserInfo;
 import kz.sdu.controller.register.UserRegister;
@@ -28,6 +29,9 @@ public class UserRegisterStandImpl implements UserRegister {
 
 
     @Override
+    public List<UserCtrlModel> getNotAcceptedUsersList(){return null;}
+
+    @Override
     public UserCtrlModel getWholeUserInfo(String id){
         return null;
     }
@@ -45,6 +49,9 @@ public class UserRegisterStandImpl implements UserRegister {
 
         return userInfo;
     }
+
+    @Override
+    public AuthInfo authUser(String input){return null;}
 
     @Override
     public String registerUser(String input){
@@ -127,17 +134,25 @@ public class UserRegisterStandImpl implements UserRegister {
         return strLong;
     }
 
-
+    @Override
+    public List<UserCtrlModel> getUsersList(){
+        return null;
+    }
 
     @Override
-    public String acceptUser(String genNumber){
-        String username = db.get().linkStorage.get(Long.valueOf(genNumber));
-        for (String id : db.get().clientsList.keySet()) {
-            UserStandModel cl = db.get().clientsList.get(id);
-            if(cl.email.equals(username)){
-                cl.setAccepted(true);
-            }
-        }
-        return username;
+    public String acceptUser(String userid){
+//        String username = db.get().linkStorage.get(Long.valueOf(genNumber));
+//        for (String id : db.get().clientsList.keySet()) {
+//            UserStandModel cl = db.get().clientsList.get(id);
+//            if(cl.email.equals(username)){
+//                cl.setAccepted(true);
+//            }
+//        }
+//        return username;
+        return userid;
     }
+
+    @Override
+    public String updateIsAccept(String genNumber){return null;}
+
 }

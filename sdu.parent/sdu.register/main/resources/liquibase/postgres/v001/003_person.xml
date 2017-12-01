@@ -23,8 +23,38 @@
   </changeSet>
 
   <changeSet author="kamalkhan" id="alter_table_for_user_table">
-    <sql endDelimiter=";;"><![CDATA[
+  <sql endDelimiter=";;"><![CDATA[
       alter table usertable add column ismanager varchar(5) not null
+    ]]></sql>
+</changeSet>
+
+  <changeSet author="kamalkhan" id="create_token_for_user">
+    <sql endDelimiter=";;"><![CDATA[
+      create table TokenTable (
+        userid varchar(50) not null,
+        token varchar(255) not null
+      )
+    ]]></sql>
+  </changeSet>
+
+  <changeSet author="kamalkhan" id="create_company_id">
+    <sql endDelimiter=";;"><![CDATA[
+      create table companyTable (
+        companyid varchar(50) not null,
+        name varchar(255) not null,
+        telephone varchar(255) not null,
+        email varchar(255) not null,
+        primary key(companyid, name)
+      )
+    ]]></sql>
+  </changeSet>
+
+  <changeSet author="kamalkhan" id="create_accept_table">
+    <sql endDelimiter=";;"><![CDATA[
+      create table accepttable (
+        userid varchar(50) not null,
+        generatedNumber varchar(255) not null
+      )
     ]]></sql>
   </changeSet>
 
