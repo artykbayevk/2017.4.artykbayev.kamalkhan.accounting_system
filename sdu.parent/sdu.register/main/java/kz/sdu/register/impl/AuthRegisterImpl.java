@@ -9,6 +9,7 @@ import kz.greetgo.util.RND;
 
 import java.util.Date;
 
+
 @Bean
 public class AuthRegisterImpl implements AuthRegister {
 

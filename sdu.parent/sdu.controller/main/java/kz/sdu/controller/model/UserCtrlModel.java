@@ -12,8 +12,10 @@ public class UserCtrlModel {
     public String age;
     public String companyId;
     public boolean isManager;
+    public boolean isAdmin;
 
-    public UserCtrlModel(String id, String surname, String name, String password, String age, String email, String tel_number, String companyId, boolean isManager){
+    public UserCtrlModel(String id, String surname, String name, String password, String age, String email, String tel_number, String companyId, boolean isManager, boolean
+                          isAdmin){
         this.id = id;
         this.surname = surname;
         this.name = name;
@@ -23,6 +25,7 @@ public class UserCtrlModel {
         this.companyId = companyId;
         this.isManager = isManager;
         this.password = password;
+        this.isAdmin = isAdmin;
     }
 
     public UserCtrlModel(){

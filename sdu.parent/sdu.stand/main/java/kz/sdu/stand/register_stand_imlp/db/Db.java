@@ -31,8 +31,8 @@ public class Db implements HasAfterInject{
 
     @Override
     public void afterInject() throws Exception {
-        UserStandModel c1 = new UserStandModel("1","Artykbayev", "Kamalkhan","qwe","20","kama@gmail.com","870222","55523",true,true);
-        UserStandModel c2 = new UserStandModel("2","Zigangirov", "Anatoliy","qwe","21","tolik@gmail.com","124124","1244",false,true);
+        UserStandModel c1 = new UserStandModel("1","Artykbayev", "Kamalkhan","qwe","20","kama@gmail.com","870222","55523",true,true,false);
+        UserStandModel c2 = new UserStandModel("2","Zigangirov", "Anatoliy","qwe","21","tolik@gmail.com","124124","1244",false,true, false);
 
         clientsList.put("1",c1);
         clientsList.put("2",c2);

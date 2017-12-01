@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+  <changeSet author="kamalkhan" id="create-table-UserTable">
+    <sql endDelimiter=";;"><![CDATA[
+      create table UserTable (
+        userid varchar(50) not null,
+        name varchar(255) not null,
+        surname varchar(255) not null,
+        email varchar(255) not null,
+        password varchar(255) not null,
+        telephone varchar(255) not null,
+        age varchar(255) not null,
+        companyId varchar(255) not null,
+        regDate varchar(8) default to_char(CURRENT_DATE, 'yyyymmdd'),
+        isAccepted varchar(5) not null,
+        isAdmin varchar(5) not null,
+        primary key(userid, name)
+      )
+    ]]></sql>
+  </changeSet>
+
+  <changeSet author="kamalkhan" id="alter_table_for_user_table">
+    <sql endDelimiter=";;"><![CDATA[
+      alter table usertable add column ismanager varchar(5) not null
+    ]]></sql>
+  </changeSet>
+
+</databaseChangeLog>

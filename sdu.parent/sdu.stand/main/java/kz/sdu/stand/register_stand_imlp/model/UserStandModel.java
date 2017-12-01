@@ -4,8 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class UserStandModel {
-    public String surname;
     public String id;
+    public String surname;
     public String name;
     public String email;
     public String password;
@@ -15,8 +15,9 @@ public class UserStandModel {
     public boolean isManager;
     public String regDate;
     public boolean isAccepted;
+    public boolean isAdmin;
 
-    public UserStandModel(String id, String surname, String name, String password, String age, String email, String tel_number, String companyId, boolean isManager, boolean isAccepted){
+    public UserStandModel(String id, String surname, String name, String password, String age, String email, String tel_number, String companyId, boolean isManager, boolean isAccepted, boolean isAdmin){
         this.id = id;
         this.surname = surname;
         this.name = name;
@@ -28,6 +29,7 @@ public class UserStandModel {
         this.isManager = isManager;
         this.regDate = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
         this.isAccepted = isAccepted;
+        this.isAdmin = isAdmin;
     }
 
     public UserStandModel(){

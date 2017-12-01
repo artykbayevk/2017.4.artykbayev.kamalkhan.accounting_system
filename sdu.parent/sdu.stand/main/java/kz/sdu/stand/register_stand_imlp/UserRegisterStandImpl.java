@@ -27,6 +27,10 @@ public class UserRegisterStandImpl implements UserRegister {
     public BeanGetter<EmailSender> emailSenderBeanGetter;
 
 
+    @Override
+    public UserCtrlModel getWholeUserInfo(String id){
+        return null;
+    }
 
     @Override
     public UserInfo getUserInfo(String personId) {
@@ -66,7 +70,7 @@ public class UserRegisterStandImpl implements UserRegister {
         }
         if (uuid.length() == 0) {
             uuid = UUID.randomUUID().toString();
-            UserStandModel x = new UserStandModel(uuid, surname, name, password, age, email, tel_number, companyId, isManager,false);
+            UserStandModel x = new UserStandModel(uuid, surname, name, password, age, email, tel_number, companyId, isManager,false, false);
             db.get().clientsList.put(uuid, x);
 
 
@@ -84,7 +88,7 @@ public class UserRegisterStandImpl implements UserRegister {
             emailSenderBeanGetter.get().send(emailSend);
             return "Ok, saved and prepare for sending your email";
         } else {
-            UserStandModel x = new UserStandModel(uuid, surname, name, password, age, email, tel_number, companyId, isManager,false);
+            UserStandModel x = new UserStandModel(uuid, surname, name, password, age, email, tel_number, companyId, isManager,false,false);
             db.get().clientsList.put(uuid, x);
             db.get().clientsList.put(uuid, x);
             return "Ok, updated";

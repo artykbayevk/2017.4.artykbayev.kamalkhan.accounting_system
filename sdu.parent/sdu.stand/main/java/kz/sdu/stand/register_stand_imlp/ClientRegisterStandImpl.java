@@ -20,7 +20,7 @@ public class ClientRegisterStandImpl implements ClientRegister {
     @Override
     public UserCtrlModel getClientById(String id) {
         UserStandModel cl = db.get().clientsList.get(id);
-        UserCtrlModel x = new UserCtrlModel(cl.id, cl.surname, cl.name, cl.password, cl.age, cl.email, cl.tel_number, cl.companyId, cl.isManager);
+        UserCtrlModel x = new UserCtrlModel(cl.id, cl.surname, cl.name, cl.password, cl.age, cl.email, cl.tel_number, cl.companyId, cl.isManager, cl.isAdmin);
         return x;
     }
 
@@ -29,7 +29,7 @@ public class ClientRegisterStandImpl implements ClientRegister {
         List<UserCtrlModel> list = new ArrayList<UserCtrlModel>();
         for (String id : db.get().clientsList.keySet()) {
             UserStandModel cl = db.get().clientsList.get(id);
-            UserCtrlModel x = new UserCtrlModel(cl.id, cl.surname, cl.name, cl.password, cl.age, cl.email, cl.tel_number, cl.companyId, cl.isManager);
+            UserCtrlModel x = new UserCtrlModel(cl.id, cl.surname, cl.name, cl.password, cl.age, cl.email, cl.tel_number, cl.companyId, cl.isManager, cl.isAdmin);
             list.add(x);
         }
         return list;
