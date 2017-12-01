@@ -78,4 +78,7 @@ public interface UserDao {
     @Insert("insert into accepttable (userid, generatednumber) values(#{userid}, #{generatednumber})")
     void insertIntoAcceptTable(@Param("userid") String userid,
                                @Param("generatednumber") String generatednumber);
+
+    @Select("select email from usertable where userid=#{userid}")
+    String getUserEmail(@Param("userid") String userid);
 }

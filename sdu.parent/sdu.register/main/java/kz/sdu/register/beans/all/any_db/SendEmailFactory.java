@@ -1,17 +1,14 @@
 package kz.sdu.register.beans.all.any_db;
 
 import com.sun.mail.smtp.SMTPTransport;
-//import kz.greetgo.depinject.Depinject;
-import kz.greetgo.depinject.Depinject;
 import kz.greetgo.depinject.core.Bean;
-//import kz.sdu.register.config.MyConfig;
-import kz.sdu.register.config.MyConfig;
+import kz.greetgo.depinject.core.BeanGetter;
+import kz.sdu.register.config.DbConfig;
 import kz.sdu.register.util.GCommonConstant;
 import kz.greetgo.email.Email;
 import kz.greetgo.email.EmailSaver;
 import kz.greetgo.email.EmailSender;
 import kz.greetgo.email.EmailSenderController;
-//import kz.sdu.server.app.ApplicationBeanContainer;
 
 import javax.mail.Message;
 import javax.mail.PasswordAuthentication;
@@ -25,6 +22,7 @@ import java.util.Properties;
 
 @Bean
 public class SendEmailFactory {
+  public BeanGetter<DbConfig> dbConfig;
 
   @Bean
   public EmailSender createEmailSender(){
@@ -82,8 +80,7 @@ public class SendEmailFactory {
 
         SMTPTransport t = (SMTPTransport) session.getTransport("smtp");
 
-//        t.connect("smtp.gmail.com", myConfig.loginAccount(),myConfig.accountPassword());
-        t.connect("smtp.gmail.com", GCommonConstant.username, GCommonConstant.password);
+        t.connect("smtp.gmail.com", dbConfig.get().loginAccount(), dbConfig.get().accountPassword());
         t.sendMessage(msg, msg.getAllRecipients());
 
         t.close();

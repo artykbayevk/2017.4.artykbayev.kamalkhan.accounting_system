@@ -18,4 +18,13 @@ public interface DbConfig {
   @Description("Пароль для доступа к БД")
   @DefaultStrValue("qwerty12")
   String password();
+
+  @DefaultStrValue("crm.kamalkhan@gmail.com")
+  @Description("Логин Аккаунта")
+  String loginAccount();
+
+
+  @DefaultStrValue("Systemofadown12")
+  @Description("Пароль Аккаунта")
+  String accountPassword();
 }

@@ -2,6 +2,9 @@ package kz.sdu.register.impl;
 
 import kz.greetgo.depinject.core.Bean;
 import kz.greetgo.depinject.core.BeanGetter;
+import kz.greetgo.email.Email;
+import kz.greetgo.email.EmailSender;
+import kz.greetgo.email.EmailSenderController;
 import kz.greetgo.util.RND;
 import kz.sdu.controller.model.AuthInfo;
 import kz.sdu.controller.model.UserCtrlModel;
@@ -9,6 +12,7 @@ import kz.sdu.controller.model.UserInfo;
 import kz.sdu.controller.register.UserRegister;
 import kz.sdu.register.dao.UserDao;
 import kz.sdu.register.models.UserDot;
+import kz.sdu.register.util.GCommonConstant;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -18,7 +22,8 @@ import java.util.List;
 public class UserRegisterImpl implements UserRegister {
 
 
-
+  public BeanGetter<EmailSender> emailSender;
+  public BeanGetter<EmailSenderController> emailSenderController;
   public BeanGetter<UserDao> userDaoBeanGetter;
 
   @Override
@@ -123,6 +128,16 @@ public class UserRegisterImpl implements UserRegister {
   public String acceptUser(String userid){
       String generatedNumber = RND.str(30);
       userDaoBeanGetter.get().insertIntoAcceptTable(userid, generatedNumber);
+      String emailTo = userDaoBeanGetter.get().getUserEmail(userid);
+      if(emailTo != null){
+        Email email=new Email();
+        email.setFrom(GCommonConstant.username);
+        email.setTo(emailTo);
+        email.setSubject("Hello Bro");
+        email.setBody("If you get this message skip it");
+        emailSender.get().send(email);
+      }
+
       return generatedNumber;
   }
 

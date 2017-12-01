@@ -135,7 +135,6 @@ public class UserRegisterImplTest extends AbstractDepinjectTestNg{
     public void testAcceptUser() throws Exception {
         String uuid = RND.intStr(30);
         String out = userRegisterBeanGetter.get().acceptUser(uuid);
-
         String check = userTestDaoBeanGetter.get().getUserIdFromAccept(out);
         Assertions.assertThat(out).isNotNull();
         Assertions.assertThat(check).isNotNull();
