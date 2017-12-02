@@ -10,15 +10,15 @@ import java.io.IOException;
 @Bean
 public class ExampleScheduler implements HasScheduled {
 
-    @Scheduled("repeat every 60 sec")
-    public void example() throws IOException {
-        File parentFile;
-        File file = new File(""+System.getProperty("user.home") + "/sdu.d/" + System.currentTimeMillis());
-        parentFile = file.getParentFile();
-        if(!parentFile.exists()){
-            parentFile.mkdirs();
-        }
-        file.createNewFile();
-        System.out.println("schedule running");
-    }
+//    @Scheduled("repeat every 60 sec")
+//    public void example() throws IOException {
+//        File parentFile;
+//        File file = new File(""+System.getProperty("user.home") + "/sdu.d/" + System.currentTimeMillis());
+//        parentFile = file.getParentFile();
+//        if(!parentFile.exists()){
+//            parentFile.mkdirs();
+//        }
+//        file.createNewFile();
+//        System.out.println("schedule running");
+//    }
 }

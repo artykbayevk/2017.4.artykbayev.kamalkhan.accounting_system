@@ -13,7 +13,7 @@ public class Application implements ServletContainerInitializer {
   public void onStartup(Set<Class<?>> c, ServletContext ctx) throws ServletException {
     try {
 
-      Depinject.newInstance(ApplicationBeanContainer.class).appInitializer().initialize(ctx);
+//      Depinject.newInstance(ApplicationBeanContainer.class).appInitializer().initialize(ctx);
 
       ApplicationBeanContainer applicationBeanContainer = Depinject.newInstance(ApplicationBeanContainer.class);
       applicationBeanContainer.appInitializer().initialize(ctx);

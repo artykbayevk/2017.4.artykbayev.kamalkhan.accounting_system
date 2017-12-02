@@ -7,6 +7,7 @@ import kz.greetgo.util.RND;
 import kz.sdu.controller.model.AuthInfo;
 import kz.sdu.controller.model.UserCtrlModel;
 import kz.sdu.controller.register.UserRegister;
+import kz.sdu.register.test.dao.CompanyTestDao;
 import kz.sdu.register.test.dao.UserTestDao;
 import kz.sdu.register.test.util.BeanConfigMainPostgresTests;
 import org.fest.assertions.api.Assertions;
@@ -19,6 +20,7 @@ public class UserRegisterImplTest extends AbstractDepinjectTestNg{
 
     public BeanGetter<UserTestDao> userTestDaoBeanGetter;
     public BeanGetter<UserRegister> userRegisterBeanGetter;
+    public BeanGetter<CompanyTestDao> companyTestDaoBeanGetter;
 
     @Test
     public void testGetUsersList(){
@@ -97,6 +99,8 @@ public class UserRegisterImplTest extends AbstractDepinjectTestNg{
 
     @Test
     public void testRegisterUser() throws Exception {
+
+
         String userid= RND.intStr(15);
         String name = RND.str(30);
         String surname = RND.str(30);
@@ -105,8 +109,9 @@ public class UserRegisterImplTest extends AbstractDepinjectTestNg{
         String telephone = RND.str(30);
         String age = RND.str(30);
         String companyid = RND.str(30);
-        String ismanager = "false";
 
+
+//        companyTestDaoBeanGetter.get().insertIntoCompany(companyid, name, telephone, email);
 
         JSONObject jo = new JSONObject();
         jo.put("id", userid);
@@ -117,7 +122,7 @@ public class UserRegisterImplTest extends AbstractDepinjectTestNg{
         jo.put("telephone", telephone);
         jo.put("age",age);
         jo.put("companyId",companyid);
-        jo.put("isManager", "0");
+        jo.put("isManager", "1");
 
         String res = userRegisterBeanGetter.get().registerUser(jo.toString());
         System.out.println(res);

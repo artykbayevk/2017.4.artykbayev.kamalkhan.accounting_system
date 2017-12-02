@@ -10,6 +10,7 @@ import kz.sdu.controller.model.AuthInfo;
 import kz.sdu.controller.model.UserCtrlModel;
 import kz.sdu.controller.model.UserInfo;
 import kz.sdu.controller.register.UserRegister;
+import kz.sdu.register.dao.CompanyDao;
 import kz.sdu.register.dao.UserDao;
 import kz.sdu.register.models.UserDot;
 import kz.sdu.register.util.GCommonConstant;
@@ -25,6 +26,7 @@ public class UserRegisterImpl implements UserRegister {
   public BeanGetter<EmailSender> emailSender;
   public BeanGetter<EmailSenderController> emailSenderController;
   public BeanGetter<UserDao> userDaoBeanGetter;
+  public BeanGetter<CompanyDao> companyDaoBeanGetter;
 
   @Override
   public UserCtrlModel getWholeUserInfo(String userid){
@@ -105,15 +107,20 @@ public class UserRegisterImpl implements UserRegister {
 
     String check = userDaoBeanGetter.get().checkEmail(email);
     if(check!=null){
-      res = check;
+      res = "email";
     }else{
-      if(uuid.length() == 0){
-        uuid = RND.intStr(15);
-        userDaoBeanGetter.get().insertPerson(uuid, name, surname, email, password, tel_number, age, companyId, isAccepted, isAdmin, isManager);
-        res = "added";
+      String companyName = companyDaoBeanGetter.get().getNameOfCompany(companyId);
+      if(companyName == null){
+        res = "company";
       }else{
-        userDaoBeanGetter.get().updatePerson(uuid, name, surname, email, password, tel_number, age, companyId);
-        res = "updated";
+        if(uuid.length() == 0){
+          uuid = RND.intStr(15);
+          userDaoBeanGetter.get().insertPerson(uuid, name, surname, email, password, tel_number, age, companyId, isAccepted, isAdmin, isManager);
+          res = "added";
+        }else{
+          userDaoBeanGetter.get().updatePerson(uuid, name, surname, email, password, tel_number, age, companyId);
+          res = "updated";
+        }
       }
     }
     return res;
