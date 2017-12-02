@@ -6,9 +6,10 @@ import kz.greetgo.depinject.core.Include;
 import kz.sdu.controller.controller.BeanConfigControllers;
 import kz.sdu.register.config.MyConfig;
 import kz.sdu.register.impl.BeanConfigRegisterImpl;
+import kz.sdu.register.schedulers.BeanConfigSchedulers;
 
 @BeanConfig
 @BeanScanner
-@Include({BeanConfigRegisterImpl.class, BeanConfigControllers.class})
+@Include({BeanConfigRegisterImpl.class, BeanConfigControllers.class, BeanConfigSchedulers.class})
 public class BeanConfigAll {
 }

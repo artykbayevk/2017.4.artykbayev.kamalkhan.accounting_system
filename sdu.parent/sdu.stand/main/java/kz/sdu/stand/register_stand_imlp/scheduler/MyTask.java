@@ -54,13 +54,15 @@ public class MyTask implements HasScheduled{
 
 
     private String gun() throws IOException {
-        File parentFile;
-        File file = new File(""+System.getProperty("user.home") + "/sdu.d/" + System.currentTimeMillis());
-        parentFile = file.getParentFile();
-        if(!parentFile.exists()){
-            parentFile.mkdirs();
-        }
-        file.createNewFile();
+//        File parentFile;
+//        File file = new File(""+System.getProperty("user.home") + "/sdu.d/" + System.currentTimeMillis());
+//        parentFile = file.getParentFile();
+//        if(!parentFile.exists()){
+//            parentFile.mkdirs();
+//        }
+//        file.createNewFile();
+//
+//        return null;
 
         return null;
     }

@@ -15,6 +15,9 @@ public class Application implements ServletContainerInitializer {
 
       Depinject.newInstance(ApplicationBeanContainer.class).appInitializer().initialize(ctx);
 
+      ApplicationBeanContainer applicationBeanContainer = Depinject.newInstance(ApplicationBeanContainer.class);
+      applicationBeanContainer.appInitializer().initialize(ctx);
+      applicationBeanContainer.getMainScheduler().startSchedulers();
     } catch (Exception e) {
       if (e instanceof RuntimeException) throw (RuntimeException) e;
       if (e instanceof ServletException) throw (ServletException) e;

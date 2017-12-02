@@ -11,6 +11,7 @@ dependencies{
   compile "kz.greetgo.db:greetgo.db:$greetgoDbVersion"
   compile "kz.greetgo:greetgo.conf:$greetgoConfVersion"
   compile "kz.greetgo.mvc:greetgo.mvc.security:$greetgoMvcVersion"
+  compile "kz.greetgo:greetgo.scheduling:$greetgoScheduling"
 
   compile group: 'org.json', name: 'json', version: '20160810'
   compile group: 'org.postgresql', name: 'postgresql', version: '9.4-1202-jdbc42'
