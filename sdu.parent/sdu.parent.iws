@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb59e246-c2e6-44bc-b12d-6649babdd029" name="Default" comment="Client update">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/controller/UserController.java" afterPath="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/register/CompanyRegister.java" afterPath="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/register/CompanyRegister.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.parent.iws" afterPath="$PROJECT_DIR$/sdu.parent.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/CompanyDao.java" afterPath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/CompanyDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/CompanyRegisterImpl.java" afterPath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/CompanyRegisterImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/CompanyRegisterImplTest.java" afterPath="$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/CompanyRegisterImplTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/CompanyStandImpl.java" afterPath="$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/CompanyStandImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/UserRegisterImpl.java" afterPath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/UserRegisterImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.register/main/resources/liquibase/postgres/v001/003_person.xml" afterPath="$PROJECT_DIR$/sdu.register/main/resources/liquibase/postgres/v001/003_person.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/sdu.client/node_modules/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -70,6 +66,14 @@
         <item name="public" type="e3449647:DbNodeDescriptor" />
         <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
       </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="postgres@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="postgres" type="e3449647:DbNodeDescriptor" />
+        <item name="public" type="e3449647:DbNodeDescriptor" />
+        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
+        <item name="leadtable" type="e3449647:DbNodeDescriptor" />
+      </path>
     </expand>
     <select />
   </component>
@@ -130,11 +134,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CompanyDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/CompanyDao.java">
+      <file leaf-file-name="LeadRegisterImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/LeadRegisterImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="40" column="6" lean-forward="false" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+            <state relative-caret-position="324">
+              <caret line="111" column="44" lean-forward="false" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#getLeadById#0;class#LeadRegisterImpl#0" expanded="false" />
+                <element signature="method#saveLead#0;class#LeadRegisterImpl#0" expanded="false" />
+                <element signature="method#getAllLeadList#0;class#LeadRegisterImpl#0" expanded="false" />
+                <element signature="e#1862#1872#0" expanded="true" />
+                <element signature="method#getAllMyLeads#0;class#LeadRegisterImpl#0" expanded="false" />
+                <element signature="e#2277#2287#0" expanded="true" />
+                <element signature="method#getAllMyNotAcceptedLeads#0;class#LeadRegisterImpl#0" expanded="false" />
+                <element signature="e#2714#2724#0" expanded="true" />
+                <element signature="method#getAllMyAcceptedLeads#0;class#LeadRegisterImpl#0" expanded="false" />
+                <element signature="e#3145#3155#0" expanded="true" />
+                <element signature="method#stopLead#0;class#LeadRegisterImpl#0" expanded="false" />
+                <element signature="method#startLead#0;class#LeadRegisterImpl#0" expanded="false" />
+                <element signature="method#acceptLead#0;class#LeadRegisterImpl#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LeadDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/LeadDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="51" column="57" lean-forward="false" selection-start-line="51" selection-start-column="57" selection-end-line="51" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -142,54 +171,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompanyRegisterImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/CompanyRegisterImpl.java">
+      <file leaf-file-name="LeadRegisterImplTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/LeadRegisterImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+            <state relative-caret-position="448">
+              <caret line="202" column="15" lean-forward="false" selection-start-line="202" selection-start-column="15" selection-end-line="202" selection-end-column="15" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#getCompanyById#0;class#CompanyRegisterImpl#0" expanded="false" />
-                <element signature="method#getAllCompany#0;class#CompanyRegisterImpl#0" expanded="false" />
-                <element signature="e#912#925#0" expanded="true" />
-                <element signature="method#getNotAcceptedCompany#0;class#CompanyRegisterImpl#0" expanded="false" />
-                <element signature="e#1316#1329#0" expanded="true" />
-                <element signature="method#acceptCompany#0;class#CompanyRegisterImpl#0" expanded="false" />
+                <element signature="method#testGetLeadById#0;class#LeadRegisterImplTest#0" expanded="false" />
+                <element signature="method#testSaveLead#0;class#LeadRegisterImplTest#0" expanded="false" />
+                <element signature="method#testGetAllLeadList#0;class#LeadRegisterImplTest#0" expanded="false" />
+                <element signature="method#testGetAllMyLeads#0;class#LeadRegisterImplTest#0" expanded="false" />
+                <element signature="method#testGetAllMyNotAcceptedLeads#0;class#LeadRegisterImplTest#0" expanded="false" />
+                <element signature="method#testGetAllMyAcceptedLeads#0;class#LeadRegisterImplTest#0" expanded="false" />
+                <element signature="method#testStopLead#0;class#LeadRegisterImplTest#0" expanded="false" />
+                <element signature="method#testStartLead#0;class#LeadRegisterImplTest#0" expanded="false" />
+                <element signature="method#testAcceptLead#0;class#LeadRegisterImplTest#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompanyRegisterImplTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/CompanyRegisterImplTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="102" column="0" lean-forward="true" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#testGetNotAcceptedCompany#0;class#CompanyRegisterImplTest#0" expanded="false" />
-                <element signature="method#testAcceptCompany#0;class#CompanyRegisterImplTest#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/47401c6d-64ad-43da-9748-8d07425d4c84/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserTestDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/dao/UserTestDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -204,9 +201,9 @@
         <option value="Tag Library Descriptor" />
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="Class" />
-        <option value="Interface" />
         <option value="TestNG Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -1568,17 +1565,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sdu.client/public/templates/index.html" />
-        <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/ClientDao.java" />
-        <option value="$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/model/UserStandModel.java" />
-        <option value="$PROJECT_DIR$/sdu.register/main/resources/liquibase/postgres/changelog-master.xml" />
-        <option value="$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/dao/postgres/UserTestDaoPostgres.java" />
-        <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/postgres/UserDaoPostgres.java" />
-        <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/postgres/ClientDaoPostgres.java" />
-        <option value="$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/db/Db.java" />
-        <option value="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/model/UserCtrlModel.java" />
-        <option value="$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/ClientRegisterStandImpl.java" />
-        <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/models/UserDot.java" />
         <option value="$PROJECT_DIR$/sdu.server/main/java/kz.sdu.server/beans/Utf8AndTraceResetFilter.java" />
         <option value="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/register/AuthRegister.java" />
         <option value="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/model/AuthInfo.java" />
@@ -1605,20 +1591,31 @@
         <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/models/CompanyDot.java" />
         <option value="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/model/CompanyInfo.java" />
         <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/sdu.register/main/resources/liquibase/postgres/v001/003_person.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/schedulers/ExampleScheduler.java" />
         <option value="$PROJECT_DIR$/sdu.server/main/java/kz.sdu.server/app/Application.java" />
         <option value="$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/dao/CompanyTestDao.java" />
-        <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/UserRegisterImpl.java" />
         <option value="$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/UserRegisterImplTest.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/47401c6d-64ad-43da-9748-8d07425d4c84/console.sql" />
         <option value="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/controller/UserController.java" />
         <option value="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/register/CompanyRegister.java" />
         <option value="$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/CompanyStandImpl.java" />
         <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/CompanyDao.java" />
         <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/CompanyRegisterImpl.java" />
         <option value="$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/CompanyRegisterImplTest.java" />
+        <option value="$PROJECT_DIR$/sdu.register/main/resources/liquibase/postgres/v001/003_person.xml" />
+        <option value="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/model/LeadInfo.java" />
+        <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/LeadRegister.java" />
+        <option value="$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/dao/postgres/LeadTestDaoPostgres.java" />
+        <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/postgres/LeadDaoPostgres.java" />
+        <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/models/LeadDot.java" />
+        <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/UserRegisterImpl.java" />
+        <option value="$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/dao/LeadTestDao.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/47401c6d-64ad-43da-9748-8d07425d4c84/console.sql" />
+        <option value="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/register/LeadRegister.java" />
+        <option value="$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/LeadRegisterStandImpl.java" />
+        <option value="$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/LeadRegisterImplTest.java" />
+        <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/LeadDao.java" />
+        <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/LeadRegisterImpl.java" />
       </list>
     </option>
   </component>
@@ -1637,10 +1634,10 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/sdu.client/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="-1366" />
-    <option name="width" value="1366" />
-    <option name="height" value="768" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="22" />
+    <option name="width" value="1280" />
+    <option name="height" value="742" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1676,7 +1673,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1687,94 +1686,43 @@
             <path>
               <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sdu.stand" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sdu.stand" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sdu.stand" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sdu.stand" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="register" type="462c0819:PsiDirectoryNode" />
+              <item name="stand" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sdu.stand" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="register" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="register" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="register" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="register" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="register" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="stand" type="462c0819:PsiDirectoryNode" />
+              <item name="register_stand_imlp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1786,7 +1734,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
-    <property name="SearchEverywhereHistoryKey" value="updateCompany&#9;PSI&#9;JAVA://kz.sdu.controller.register.CompanyRegister#updateCompany&#10;log&#9;PSI&#9;JAVA://kz.sdu.register.util.DbLoggingProxyFactory&#10;example&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/schedulers/ExampleScheduler.java&#10;Exam&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/schedulers/ExampleScheduler.java&#10;myconf&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/scheduler/MyConfig.java&#10;userDa&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/dao/UserDao.java&#10;userRe&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/impl/UserRegisterImpl.java&#10;dbconfi&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/config/DbConfig.java&#10;dbconf&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/config/DbConfig.java&#10;dbcon&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/config/DbConfig.java&#10;DbCOn&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/config/DbConfig.java&#10;.gi&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/.gitignore" />
+    <property name="SearchEverywhereHistoryKey" value="leadRegister&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.controller/main/java/kz/sdu/controller/register/LeadRegister.java&#10;leadin&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.controller/main/java/kz/sdu/controller/model/LeadInfo.java&#10;leadRegisterImpl&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/impl/LeadRegisterImpl.java&#10;updateCompany&#9;PSI&#9;JAVA://kz.sdu.controller.register.CompanyRegister#updateCompany&#10;log&#9;PSI&#9;JAVA://kz.sdu.register.util.DbLoggingProxyFactory&#10;example&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/schedulers/ExampleScheduler.java&#10;Exam&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/schedulers/ExampleScheduler.java&#10;myconf&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/scheduler/MyConfig.java&#10;userDa&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/dao/UserDao.java&#10;userRe&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/impl/UserRegisterImpl.java&#10;dbconfi&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/config/DbConfig.java&#10;dbconf&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/config/DbConfig.java&#10;dbcon&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/config/DbConfig.java&#10;DbCOn&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/config/DbConfig.java&#10;.gi&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/.gitignore" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
@@ -1798,16 +1746,6 @@
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="kz.sdu.register.impl" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/sdu.client/public/templates/views" />
-      <recent name="$PROJECT_DIR$/sdu.server/main/java/kz.sdu.server" />
-      <recent name="$PROJECT_DIR$/sdu.server/main/java" />
-      <recent name="$PROJECT_DIR$/sdu.client/public/javascripts/vendors" />
-      <recent name="$PROJECT_DIR$/sdu.client/public/javascripts/vendors/tmp" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="kz.sdu.register.config" />
@@ -1823,6 +1761,16 @@
       <recent name="$PROJECT_DIR$/sdu.server/main" />
       <recent name="$PROJECT_DIR$/sdu.server/main/java/kz.sdu.server/beans" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sdu.client/public/templates/views" />
+      <recent name="$PROJECT_DIR$/sdu.server/main/java/kz.sdu.server" />
+      <recent name="$PROJECT_DIR$/sdu.server/main/java" />
+      <recent name="$PROJECT_DIR$/sdu.client/public/javascripts/vendors" />
+      <recent name="$PROJECT_DIR$/sdu.client/public/javascripts/vendors/tmp" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -1836,8 +1784,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.CompanyRegisterImplTest.testUpdateCompany">
-    <configuration name="CompanyRegisterImplTest.testAcceptCompany" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.LeadRegisterImplTest.testAcceptLead">
+    <configuration name="LeadRegisterImplTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="kz.sdu.register.impl.*" />
@@ -1849,8 +1797,40 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="kz.sdu.register.impl" />
-      <option name="MAIN_CLASS_NAME" value="kz.sdu.register.impl.CompanyRegisterImplTest" />
-      <option name="METHOD_NAME" value="testAcceptCompany" />
+      <option name="MAIN_CLASS_NAME" value="kz.sdu.register.impl.LeadRegisterImplTest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/sdu.register" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="LeadRegisterImplTest.testAcceptLead" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="kz.sdu.register.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="sdu.register_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="kz.sdu.register.impl" />
+      <option name="MAIN_CLASS_NAME" value="kz.sdu.register.impl.LeadRegisterImplTest" />
+      <option name="METHOD_NAME" value="testAcceptLead" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -1869,7 +1849,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="CompanyRegisterImplTest.testGetNotAcceptedCompany" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LeadRegisterImplTest.testStartLead" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="kz.sdu.register.impl.*" />
@@ -1881,8 +1861,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="kz.sdu.register.impl" />
-      <option name="MAIN_CLASS_NAME" value="kz.sdu.register.impl.CompanyRegisterImplTest" />
-      <option name="METHOD_NAME" value="testGetNotAcceptedCompany" />
+      <option name="MAIN_CLASS_NAME" value="kz.sdu.register.impl.LeadRegisterImplTest" />
+      <option name="METHOD_NAME" value="testStartLead" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -1901,7 +1881,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="CompanyRegisterImplTest.testUpdateCompany" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LeadRegisterImplTest.testStopLead" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="kz.sdu.register.impl.*" />
@@ -1913,40 +1893,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="kz.sdu.register.impl" />
-      <option name="MAIN_CLASS_NAME" value="kz.sdu.register.impl.CompanyRegisterImplTest" />
-      <option name="METHOD_NAME" value="testUpdateCompany" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/sdu.register" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration name="UserRegisterImplTest.testRegisterUser" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="kz.sdu.register.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="sdu.register_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="kz.sdu.register.impl" />
-      <option name="MAIN_CLASS_NAME" value="kz.sdu.register.impl.UserRegisterImplTest" />
-      <option name="METHOD_NAME" value="testRegisterUser" />
+      <option name="MAIN_CLASS_NAME" value="kz.sdu.register.impl.LeadRegisterImplTest" />
+      <option name="METHOD_NAME" value="testStopLead" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -2076,19 +2024,19 @@
       </ExternalSystemSettings>
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="TestNG.CompanyRegisterImplTest.testGetNotAcceptedCompany" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.CompanyRegisterImplTest.testUpdateCompany" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.CompanyRegisterImplTest.testAcceptCompany" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.UserRegisterImplTest.testRegisterUser" />
-      <item index="4" class="java.lang.String" itemvalue="Gradle.sdu.parent:sdu.war [war]" />
+      <item index="0" class="java.lang.String" itemvalue="Gradle.sdu.parent:sdu.war [war]" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest.testStopLead" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest.testStartLead" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest.testAcceptLead" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.CompanyRegisterImplTest.testUpdateCompany" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest.testAcceptLead" />
         <item index="1" class="java.lang.String" itemvalue="Gradle.sdu.parent:sdu.war [war]" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.UserRegisterImplTest.testRegisterUser" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.CompanyRegisterImplTest.testAcceptCompany" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.CompanyRegisterImplTest.testGetNotAcceptedCompany" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest.testStartLead" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest.testStopLead" />
       </list>
     </recent_temporary>
   </component>
@@ -2188,44 +2136,45 @@
       <workItem from="1512128157804" duration="951000" />
       <workItem from="1512129243946" duration="21395000" />
       <workItem from="1512200796973" duration="11805000" />
-      <workItem from="1512214961709" duration="7828000" />
+      <workItem from="1512214961709" duration="8095000" />
+      <workItem from="1512240032689" duration="9302000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CompanyRegisterImplTest_testUpdateCompany - 2017.12.02 at 20h 11m 48s.xml">
-      <configuration name="CompanyRegisterImplTest.testUpdateCompany" configurationId="TestNG" />
+    <history-entry file="LeadRegisterImplTest - 2017.12.03 at 03h 06m 00s.xml">
+      <configuration name="LeadRegisterImplTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="CompanyRegisterImplTest_testUpdateCompany - 2017.12.02 at 20h 13m 52s.xml">
-      <configuration name="CompanyRegisterImplTest.testUpdateCompany" configurationId="TestNG" />
+    <history-entry file="LeadRegisterImplTest_testAcceptLead - 2017.12.03 at 03h 16m 24s.xml">
+      <configuration name="LeadRegisterImplTest.testAcceptLead" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="CompanyRegisterImplTest_testUpdateCompany - 2017.12.02 at 20h 14m 51s.xml">
-      <configuration name="CompanyRegisterImplTest.testUpdateCompany" configurationId="TestNG" />
+    <history-entry file="LeadRegisterImplTest_testStartLead - 2017.12.03 at 03h 02m 06s.xml">
+      <configuration name="LeadRegisterImplTest.testStartLead" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="CompanyRegisterImplTest_testUpdateCompany - 2017.12.02 at 20h 16m 32s.xml">
-      <configuration name="CompanyRegisterImplTest.testUpdateCompany" configurationId="TestNG" />
+    <history-entry file="LeadRegisterImplTest_testStartLead - 2017.12.03 at 03h 03m 24s.xml">
+      <configuration name="LeadRegisterImplTest.testStartLead" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="UserRegisterImplTest_testRegisterUser - 2017.12.02 at 19h 21m 38s.xml">
-      <configuration name="UserRegisterImplTest.testRegisterUser" configurationId="TestNG" />
+    <history-entry file="LeadRegisterImplTest_testStartLead - 2017.12.03 at 03h 03m 55s.xml">
+      <configuration name="LeadRegisterImplTest.testStartLead" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="UserRegisterImplTest_testRegisterUser - 2017.12.02 at 19h 21m 53s.xml">
-      <configuration name="UserRegisterImplTest.testRegisterUser" configurationId="TestNG" />
+    <history-entry file="LeadRegisterImplTest_testStartLead - 2017.12.03 at 03h 04m 47s.xml">
+      <configuration name="LeadRegisterImplTest.testStartLead" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="UserRegisterImplTest_testRegisterUser - 2017.12.02 at 19h 22m 03s.xml">
-      <configuration name="UserRegisterImplTest.testRegisterUser" configurationId="TestNG" />
+    <history-entry file="LeadRegisterImplTest_testStartLead - 2017.12.03 at 03h 05m 36s.xml">
+      <configuration name="LeadRegisterImplTest.testStartLead" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="UserRegisterImplTest_testRegisterUser - 2017.12.02 at 19h 22m 33s.xml">
-      <configuration name="UserRegisterImplTest.testRegisterUser" configurationId="TestNG" />
+    <history-entry file="LeadRegisterImplTest_testStartLead - 2017.12.03 at 03h 06m 38s.xml">
+      <configuration name="LeadRegisterImplTest.testStartLead" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="UserRegisterImplTest_testRegisterUser - 2017.12.02 at 19h 23m 07s.xml">
-      <configuration name="UserRegisterImplTest.testRegisterUser" configurationId="TestNG" />
+    <history-entry file="LeadRegisterImplTest_testStartLead - 2017.12.03 at 03h 06m 54s.xml">
+      <configuration name="LeadRegisterImplTest.testStartLead" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="UserRegisterImplTest_testRegisterUser - 2017.12.02 at 19h 46m 17s.xml">
-      <configuration name="UserRegisterImplTest.testRegisterUser" configurationId="TestNG" />
+    <history-entry file="LeadRegisterImplTest_testStopLead - 2017.12.03 at 03h 03m 09s.xml">
+      <configuration name="LeadRegisterImplTest.testStopLead" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180018000" />
+    <option name="totallyTimeSpent" value="189587000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2237,7 +2186,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1366" y="0" width="1366" height="768" extended-state="0" />
+    <frame x="0" y="22" width="1280" height="742" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2245,22 +2194,22 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875606" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39939025" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903846" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32164633" sideWeight="0.49676898" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3181818" sideWeight="0.49353796" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22619048" sideWeight="0.48707592" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22596154" sideWeight="0.48707592" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32164633" sideWeight="0.49676898" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29829547" sideWeight="0.48303714" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34375" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31495467" sideWeight="0.4889336" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32051283" sideWeight="0.48303714" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34134614" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34248787" sideWeight="0.4889336" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21486267" sideWeight="0.5110664" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2356,7 +2305,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="17" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2365,151 +2314,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sdu.register/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/schedulers/MainScheduler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="64" lean-forward="false" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/beans/all/any_db/BeanConfigAll.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/scheduler/MyTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="30" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/register/ClientRegister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/ClientRegisterImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/ClientDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/postgres/CompanyDaoPostgres.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/postgres/UserDaoPostgres.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/dao/postgres/UserTestDaoPostgres.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/dao/AuthTestDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/dao/postgres/AuthTestDaoPostgres.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/dao/postgres/CompanyTestDaoPostgres.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/AuthRegisterImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="16" column="65" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/SendEmailRegisterImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/models/CompanyDot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/model/CompanyInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/model/AuthInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/model/UserCtrlModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/model/UserInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
@@ -2525,19 +2329,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/resources/liquibase/postgres/v001/003_person.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="53" column="32" lean-forward="false" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/schedulers/BeanConfigSchedulers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2545,7 +2340,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2553,7 +2347,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2561,7 +2354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="17" column="68" lean-forward="false" selection-start-line="17" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2569,7 +2361,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
           <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2577,7 +2368,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2593,7 +2383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3101">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2601,7 +2390,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-259">
           <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2609,7 +2397,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2617,7 +2404,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
           <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2625,7 +2411,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2641,7 +2426,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="614">
           <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2649,15 +2433,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2665,7 +2440,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="770">
           <caret line="55" column="30" lean-forward="true" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2685,27 +2459,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/UserRegisterImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="102" column="3" lean-forward="true" selection-start-line="102" selection-start-column="3" selection-end-line="113" selection-end-column="29" />
-          <folding>
-            <element signature="method#getWholeUserInfo#0;class#UserRegisterImpl#0" expanded="false" />
-            <element signature="method#getUsersList#0;class#UserRegisterImpl#0" expanded="false" />
-            <element signature="method#getNotAcceptedUsersList#0;class#UserRegisterImpl#0" expanded="false" />
-            <element signature="method#authUser#0;class#UserRegisterImpl#0" expanded="false" />
-            <element signature="method#acceptUser#0;class#UserRegisterImpl#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/register/CompanyRegister.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2713,43 +2470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
           <caret line="26" column="56" lean-forward="false" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/UserRegisterImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="123" column="8" lean-forward="false" selection-start-line="123" selection-start-column="8" selection-end-line="134" selection-end-column="33" />
-          <folding>
-            <element signature="method#testGetUsersList#0;class#UserRegisterImplTest#0" expanded="false" />
-            <element signature="method#testGetNotAcceptedUsersList#0;class#UserRegisterImplTest#0" expanded="false" />
-            <element signature="method#testAuthUser#0;class#UserRegisterImplTest#0" expanded="false" />
-            <element signature="method#testGetWholeUserInfo#0;class#UserRegisterImplTest#0" expanded="false" />
-            <element signature="method#testAcceptUser#0;class#UserRegisterImplTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/dao/CompanyTestDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="15" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/CompanyDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="40" column="6" lean-forward="false" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2761,38 +2481,301 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/47401c6d-64ad-43da-9748-8d07425d4c84/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/CompanyRegisterImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="102" column="0" lean-forward="true" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+        <state relative-caret-position="349">
+          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#testGetNotAcceptedCompany#0;class#CompanyRegisterImplTest#0" expanded="false" />
             <element signature="method#testAcceptCompany#0;class#CompanyRegisterImplTest#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/main/resources/liquibase/postgres/v001/003_person.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="55" column="16" lean-forward="false" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/register/UserRegister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/register/SendEmailRegister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/IntroductionRegisterStandImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/LeadRegister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/dao/CompanyTestDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="15" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/dao/postgres/LeadTestDaoPostgres.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/dao/postgres/UserTestDaoPostgres.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/SendEmailRegisterImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/postgres/LeadDaoPostgres.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/models/LeadDot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/postgres/UserDaoPostgres.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/AuthDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/UserRegisterImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="123" column="8" lean-forward="false" selection-start-line="123" selection-start-column="8" selection-end-line="124" selection-end-column="29" />
+          <folding>
+            <element signature="method#testGetUsersList#0;class#UserRegisterImplTest#0" expanded="false" />
+            <element signature="method#testGetNotAcceptedUsersList#0;class#UserRegisterImplTest#0" expanded="false" />
+            <element signature="method#testAuthUser#0;class#UserRegisterImplTest#0" expanded="false" />
+            <element signature="method#testGetWholeUserInfo#0;class#UserRegisterImplTest#0" expanded="false" />
+            <element signature="method#testAcceptUser#0;class#UserRegisterImplTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/CompanyDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/CompanyRegisterImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        <state relative-caret-position="377">
+          <caret line="62" column="49" lean-forward="true" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#getCompanyById#0;class#CompanyRegisterImpl#0" expanded="false" />
             <element signature="method#getAllCompany#0;class#CompanyRegisterImpl#0" expanded="false" />
-            <element signature="e#912#925#0" expanded="true" />
             <element signature="method#getNotAcceptedCompany#0;class#CompanyRegisterImpl#0" expanded="false" />
-            <element signature="e#1316#1329#0" expanded="true" />
-            <element signature="method#acceptCompany#0;class#CompanyRegisterImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/UserRegisterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="113" column="29" lean-forward="true" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="29" />
+          <folding>
+            <element signature="method#getWholeUserInfo#0;class#UserRegisterImpl#0" expanded="false" />
+            <element signature="method#getUsersList#0;class#UserRegisterImpl#0" expanded="false" />
+            <element signature="method#getNotAcceptedUsersList#0;class#UserRegisterImpl#0" expanded="false" />
+            <element signature="method#authUser#0;class#UserRegisterImpl#0" expanded="false" />
+            <element signature="method#acceptUser#0;class#UserRegisterImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/model/LeadInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/sdu.parent3479a9ba/47401c6d-64ad-43da-9748-8d07425d4c84/postgres.public.leadtable">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/47401c6d-64ad-43da-9748-8d07425d4c84/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/dao/LeadTestDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/register/LeadRegister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/LeadRegisterStandImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
+            <element signature="e#591#592#0" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#921#922#0" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#1025#1026#0" expanded="true" />
+            <element signature="e#1089#1090#0" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/LeadDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="51" column="57" lean-forward="false" selection-start-line="51" selection-start-column="57" selection-end-line="51" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/LeadRegisterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="111" column="44" lean-forward="false" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getLeadById#0;class#LeadRegisterImpl#0" expanded="false" />
+            <element signature="method#saveLead#0;class#LeadRegisterImpl#0" expanded="false" />
+            <element signature="method#getAllLeadList#0;class#LeadRegisterImpl#0" expanded="false" />
+            <element signature="e#1862#1872#0" expanded="true" />
+            <element signature="method#getAllMyLeads#0;class#LeadRegisterImpl#0" expanded="false" />
+            <element signature="e#2277#2287#0" expanded="true" />
+            <element signature="method#getAllMyNotAcceptedLeads#0;class#LeadRegisterImpl#0" expanded="false" />
+            <element signature="e#2714#2724#0" expanded="true" />
+            <element signature="method#getAllMyAcceptedLeads#0;class#LeadRegisterImpl#0" expanded="false" />
+            <element signature="e#3145#3155#0" expanded="true" />
+            <element signature="method#stopLead#0;class#LeadRegisterImpl#0" expanded="false" />
+            <element signature="method#startLead#0;class#LeadRegisterImpl#0" expanded="false" />
+            <element signature="method#acceptLead#0;class#LeadRegisterImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/LeadRegisterImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="202" column="15" lean-forward="false" selection-start-line="202" selection-start-column="15" selection-end-line="202" selection-end-column="15" />
+          <folding>
+            <element signature="method#testGetLeadById#0;class#LeadRegisterImplTest#0" expanded="false" />
+            <element signature="method#testSaveLead#0;class#LeadRegisterImplTest#0" expanded="false" />
+            <element signature="method#testGetAllLeadList#0;class#LeadRegisterImplTest#0" expanded="false" />
+            <element signature="method#testGetAllMyLeads#0;class#LeadRegisterImplTest#0" expanded="false" />
+            <element signature="method#testGetAllMyNotAcceptedLeads#0;class#LeadRegisterImplTest#0" expanded="false" />
+            <element signature="method#testGetAllMyAcceptedLeads#0;class#LeadRegisterImplTest#0" expanded="false" />
+            <element signature="method#testStopLead#0;class#LeadRegisterImplTest#0" expanded="false" />
+            <element signature="method#testStartLead#0;class#LeadRegisterImplTest#0" expanded="false" />
+            <element signature="method#testAcceptLead#0;class#LeadRegisterImplTest#0" expanded="false" />
           </folding>
         </state>
       </provider>

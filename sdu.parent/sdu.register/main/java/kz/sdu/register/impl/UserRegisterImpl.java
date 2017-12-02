@@ -110,7 +110,7 @@ public class UserRegisterImpl implements UserRegister {
     String companyId = obj.getString("companyId");
     String isManager = obj.getString("isManager").equals("1") ? "true" : "false";
     String password = obj.getString("password");
-    String isAccepted = "false";
+    String isAccepted = obj.getString("isAccepted").equals("1") ? "true":"false";
     String isAdmin = "false";
 
     String check = userDaoBeanGetter.get().checkEmail(email);

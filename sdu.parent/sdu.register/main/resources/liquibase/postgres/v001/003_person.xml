@@ -62,4 +62,18 @@
       alter table companytable add column isaccepted varchar(5) not null
     ]]></sql>
   </changeSet>
+
+  <changeSet author="kamalkhan" id="create_lead_table">
+    <sql endDelimiter=";;"><![CDATA[
+      create table leadtable (
+        leadid varchar(50) not null,
+        name varchar(255) not null,
+        type varchar(255) not null,
+        managerid varchar(255) not null,
+        clientid varchar(255) not null,
+        status varchar(255) not null,
+        isaccepted varchar(255) not null
+      )
+    ]]></sql>
+  </changeSet>
 </databaseChangeLog>
