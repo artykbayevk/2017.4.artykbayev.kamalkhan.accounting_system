@@ -8,6 +8,7 @@ import kz.sdu.register.models.CompanyDot;
 import kz.sdu.register.test.dao.CompanyTestDao;
 import kz.sdu.register.test.util.BeanConfigMainPostgresTests;
 import org.fest.assertions.api.Assertions;
+import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -70,8 +71,10 @@ public class CompanyRegisterImplTest extends AbstractDepinjectTestNg {
         String telephone = RND.str(30);
 
         testDaoBeanGetter.get().insertIntoCompany(compID, name, telephone, email, "false");
-        CompanyDot x = testDaoBeanGetter.get().getCompanyById(compID);
 
+
+        CompanyDot x = testDaoBeanGetter.get().getCompanyById(compID);
+//
         Assertions.assertThat(x).isNotNull();
         Assertions.assertThat(x.companyid).isEqualTo(compID);
         Assertions.assertThat(x.name).isEqualTo(name);
@@ -83,10 +86,20 @@ public class CompanyRegisterImplTest extends AbstractDepinjectTestNg {
         name = RND.str(30);
         email = RND.str(30);
         telephone = RND.str(30);
-        String res = companyRegisterBeanGetter.get().updateCompany(compID,name, telephone, email);
+
+
+        JSONObject jo = new JSONObject();
+        jo.put("companyid", compID);
+//        jo.put("companyid", "");
+        jo.put("name", name);
+        jo.put("email",email);
+        jo.put("telephone", telephone);
+
+        String res = companyRegisterBeanGetter.get().saveCompany(jo.toString());
         System.out.println(res);
         x = testDaoBeanGetter.get().getCompanyById(compID);
         Assertions.assertThat(x.companyid).isEqualTo(compID);
+        System.out.println(x.companyid);
         Assertions.assertThat(x.name).isEqualTo(name);
         Assertions.assertThat(x.telephone).isEqualTo(telephone);
         Assertions.assertThat(x.email).isEqualTo(email);

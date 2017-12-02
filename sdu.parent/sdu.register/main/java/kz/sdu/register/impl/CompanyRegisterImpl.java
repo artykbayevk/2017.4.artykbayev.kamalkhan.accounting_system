@@ -2,10 +2,12 @@ package kz.sdu.register.impl;
 
 import kz.greetgo.depinject.core.Bean;
 import kz.greetgo.depinject.core.BeanGetter;
+import kz.greetgo.util.RND;
 import kz.sdu.controller.model.CompanyInfo;
 import kz.sdu.controller.register.CompanyRegister;
 import kz.sdu.register.dao.CompanyDao;
 import kz.sdu.register.models.CompanyDot;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,9 +47,24 @@ public class CompanyRegisterImpl implements CompanyRegister {
     }
 
     @Override
-    public String updateCompany(String companyID,String name, String telephone, String email){
-        companyDaoBeanGetter.get().updateCompanyById(companyID, name, telephone, email);
-        return "updated";
+    public String saveCompany(String input){
+
+        JSONObject obj = new JSONObject(input);
+        String companyid = obj.getString("companyid");
+        String name = obj.getString("name");
+        String telephone = obj.getString("telephone");
+        String email = obj.getString("email");
+
+        if(companyid.length() == 0){
+            companyid = RND.intStr(30);
+            companyDaoBeanGetter.get().insertIntoCompany(companyid, name, telephone, email, "false");
+            return "added";
+        }else{
+            companyDaoBeanGetter.get().updateCompanyById(companyid, name, telephone, email);
+            return "updated";
+        }
+
+
     }
 
     @Override

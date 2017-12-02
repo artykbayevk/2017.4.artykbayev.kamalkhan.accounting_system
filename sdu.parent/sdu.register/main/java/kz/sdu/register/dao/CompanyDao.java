@@ -2,6 +2,7 @@ package kz.sdu.register.dao;
 
 import kz.sdu.controller.model.CompanyInfo;
 import kz.sdu.register.models.CompanyDot;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
@@ -30,4 +31,12 @@ public interface CompanyDao {
 
     @Update("update companytable set isaccepted = 'true' where companyid = #{companyid}")
     void acceptCompanyQuery(@Param("companyid") String companyid);
+
+    @Insert("insert into companytable values(#{companyid}, #{name}, #{telephone}, #{email}, #{isaccepted})")
+    void insertIntoCompany(@Param("companyid") String companyid,
+                           @Param("name") String name,
+                           @Param("telephone") String telephone,
+                           @Param("email") String email,
+                           @Param("isaccepted") String isaccepted
+    );
 }

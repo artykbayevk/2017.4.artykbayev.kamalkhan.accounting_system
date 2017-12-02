@@ -43,6 +43,7 @@ public class UserController implements Controller {
     public UserCtrlModel getWholeUserInfo(@Par("id") String id){
 //        return "We are here";
 //        return userRegister.get().getUserId(email);
-        return null;
+        return userRegister.get().getWholeUserInfo(id);
+
     }
 }
