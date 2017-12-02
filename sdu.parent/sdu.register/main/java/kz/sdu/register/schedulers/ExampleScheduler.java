@@ -10,8 +10,8 @@ import java.io.IOException;
 @Bean
 public class ExampleScheduler implements HasScheduled {
 
-//    @Scheduled("repeat every 60 sec")
-//    public void example() throws IOException {
+    @Scheduled("repeat every 100 sec")
+    public void example() throws IOException {
 //        File parentFile;
 //        File file = new File(""+System.getProperty("user.home") + "/sdu.d/" + System.currentTimeMillis());
 //        parentFile = file.getParentFile();
@@ -19,6 +19,6 @@ public class ExampleScheduler implements HasScheduled {
 //            parentFile.mkdirs();
 //        }
 //        file.createNewFile();
-//        System.out.println("schedule running");
-//    }
+        System.out.println("schedule running");
+    }
 }

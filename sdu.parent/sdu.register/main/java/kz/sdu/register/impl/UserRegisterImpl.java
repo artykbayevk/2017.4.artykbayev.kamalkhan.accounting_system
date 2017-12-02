@@ -12,6 +12,7 @@ import kz.sdu.controller.model.UserInfo;
 import kz.sdu.controller.register.UserRegister;
 import kz.sdu.register.dao.CompanyDao;
 import kz.sdu.register.dao.UserDao;
+import kz.sdu.register.models.CompanyDot;
 import kz.sdu.register.models.UserDot;
 import kz.sdu.register.util.GCommonConstant;
 import org.json.JSONObject;
@@ -70,18 +71,25 @@ public class UserRegisterImpl implements UserRegister {
     String userid = userDaoBeanGetter.get().getUserIdSelect(email, password);
     AuthInfo x = new AuthInfo();
     if(userid == null){
-      x.token = "0";
-      x.personId = "0";
+      x.token = "not found";
+      x.personId = userid;
     }else {
-      String out_token = userDaoBeanGetter.get().getUserToken(userid);
-      if(out_token == null){
-        x.token = RND.str(15);
+      String isAccepted = userDaoBeanGetter.get().checkIsAccepted(userid);
+      if(isAccepted.equals("false")) {
+        x.token = "not accepted";
         x.personId = userid;
-        userDaoBeanGetter.get().insertToken(userid, x.token);
-      }else{
-        x.token = RND.str(15);
-        x.personId = userid;
-        userDaoBeanGetter.get().updateToken(userid, x.token);
+      }
+      else{
+        String out_token = userDaoBeanGetter.get().getUserToken(userid);
+        if (out_token == null) {
+          x.token = RND.str(15);
+          x.personId = userid;
+          userDaoBeanGetter.get().insertToken(userid, x.token);
+        } else {
+          x.token = RND.str(15);
+          x.personId = userid;
+          userDaoBeanGetter.get().updateToken(userid, x.token);
+        }
       }
     }
     return x;
@@ -113,13 +121,18 @@ public class UserRegisterImpl implements UserRegister {
       if(companyName == null){
         res = "company";
       }else{
-        if(uuid.length() == 0){
-          uuid = RND.intStr(15);
-          userDaoBeanGetter.get().insertPerson(uuid, name, surname, email, password, tel_number, age, companyId, isAccepted, isAdmin, isManager);
-          res = "added";
+        CompanyDot x = companyDaoBeanGetter.get().getCompanyById(companyId);
+        if(x.isAccepted.equals("false")){
+          res = "accept";
         }else{
-          userDaoBeanGetter.get().updatePerson(uuid, name, surname, email, password, tel_number, age, companyId);
-          res = "updated";
+          if(uuid.length() == 0){
+            uuid = RND.intStr(15);
+            userDaoBeanGetter.get().insertPerson(uuid, name, surname, email, password, tel_number, age, companyId, isAccepted, isAdmin, isManager);
+            res = "added";
+          }else{
+            userDaoBeanGetter.get().updatePerson(uuid, name, surname, email, password, tel_number, age, companyId);
+            res = "updated";
+          }
         }
       }
     }

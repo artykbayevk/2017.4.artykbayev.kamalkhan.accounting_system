@@ -52,7 +52,7 @@ public class UserRegisterImplTest extends AbstractDepinjectTestNg{
         String telephone = RND.str(30);
         String age = RND.str(30);
         String companyid = RND.str(30);
-        String isaccepted = "false";
+        String isaccepted = "true";
         String isadmin = "false";
         String ismanager = "false";
         userTestDaoBeanGetter.get().insertPerson(userid, name, surname, email, password, telephone, age, companyid, isaccepted, isadmin, ismanager);
@@ -82,6 +82,10 @@ public class UserRegisterImplTest extends AbstractDepinjectTestNg{
 
         UserCtrlModel x = userRegisterBeanGetter.get().getWholeUserInfo(userid);
 
+
+        System.out.println(x.isAdmin);
+        System.out.println(x.isManager);
+
         Assertions.assertThat(x).isNotNull();
         Assertions.assertThat(x.id).isEqualTo(userid);
         Assertions.assertThat(x.name).isEqualTo(name);
@@ -93,6 +97,10 @@ public class UserRegisterImplTest extends AbstractDepinjectTestNg{
         Assertions.assertThat(x.companyId).isEqualTo(companyid);
         Assertions.assertThat(x.isAdmin).isEqualTo(false);
         Assertions.assertThat(x.isManager).isEqualTo(false);
+
+
+
+
 
         userTestDaoBeanGetter.get().deleteUser(userid);
     }
@@ -122,6 +130,8 @@ public class UserRegisterImplTest extends AbstractDepinjectTestNg{
         jo.put("telephone", telephone);
         jo.put("age",age);
         jo.put("companyId",companyid);
+//        jo.put("companyId","824280833506907100897200929422");
+//        jo.put("companyId","554014646149592020495124675967");
         jo.put("isManager", "1");
 
         String res = userRegisterBeanGetter.get().registerUser(jo.toString());

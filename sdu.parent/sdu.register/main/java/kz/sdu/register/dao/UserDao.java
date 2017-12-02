@@ -17,6 +17,9 @@ public interface UserDao {
     @Select("select email from usertable where email = #{email}")
     String checkEmail(@Param("email") String email);
 
+    @Select("select isaccepted from usertable where userid = #{userid}")
+    String checkIsAccepted(@Param("userid") String userid);
+
     @Insert("insert into usertable (userid, name, surname, email, password, telephone,age, companyid, isaccepted,isadmin, ismanager)" +
             "values (#{userid},#{name},#{surname},#{email},#{password},#{telephone},#{age}, #{companyid}, #{isaccepted}, #{isadmin}, #{ismanager})")
     void insertPerson(@Param("userid") String userid,

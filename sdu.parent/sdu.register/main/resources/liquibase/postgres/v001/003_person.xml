@@ -57,5 +57,9 @@
       )
     ]]></sql>
   </changeSet>
-
+  <changeSet author="kamalkhan" id="alter_table_for_company_table">
+    <sql endDelimiter=";;"><![CDATA[
+      alter table companytable add column isaccepted varchar(5) not null
+    ]]></sql>
+  </changeSet>
 </databaseChangeLog>

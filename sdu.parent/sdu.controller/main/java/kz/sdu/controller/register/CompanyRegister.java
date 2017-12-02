@@ -9,7 +9,7 @@ public interface CompanyRegister {
     CompanyInfo getCompanyById(String companyID);
     List<CompanyInfo> getAllCompany();
     List<CompanyInfo> getNotAcceptedCompany();
-    String updateCompany(String name, String telephone, String email);
+    String updateCompany(String companyID,String name, String telephone, String email);
     String acceptCompany(String companyID);
 
 }

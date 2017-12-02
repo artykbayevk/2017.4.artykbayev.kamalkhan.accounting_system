@@ -24,7 +24,7 @@ public class CompanyStandImpl implements CompanyRegister{
     }
 
     @Override
-    public String updateCompany(String name, String telephone, String email){
+    public String updateCompany(String companyID, String name, String telephone, String email){
         return null;
     }
 
