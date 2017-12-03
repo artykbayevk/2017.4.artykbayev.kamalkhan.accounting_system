@@ -29,8 +29,8 @@ angular.module('MyApp', ['ui.router','ngMaterial','ngMessages',"ngSanitize", 'ui
 
           .state('managerLeadAdd', {
               url:"/managerLeadAddUrl",
-              templateUrl:"views/managerLeadAddView.html",
-              controller:"ManagerLeadAddCtrl"
+              templateUrl:"views/leadAddView.html",
+              controller:"LeadAddCtrl"
           })
           .state('managerNotActiveLeads', {
               url:"/managerNotActiveLeads",
@@ -42,6 +42,8 @@ angular.module('MyApp', ['ui.router','ngMaterial','ngMessages',"ngSanitize", 'ui
               templateUrl:"views/managerActiveLeadsView.html",
               controller:"ManagerActiveLeadCtrl"
           })
+
+
 
           .state('clientAllLeads', {
               url:"/clientAllLeads",
@@ -58,6 +60,8 @@ angular.module('MyApp', ['ui.router','ngMaterial','ngMessages',"ngSanitize", 'ui
               templateUrl:"views/clientFinishedLeadsView.html",
               controller:"ClientFinishedLeadsCtrl"
           })
+
+
 
           .state('adminUsersList',{
               url:'/adminUsersList',

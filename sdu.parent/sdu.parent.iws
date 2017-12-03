@@ -2,28 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb59e246-c2e6-44bc-b12d-6649babdd029" name="Default" comment="Client update">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sdu.client/public/templates/views/old_views/admin-leads.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sdu.client/public/templates/views/old_views/leads-history.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sdu.client/public/templates/views/old_views/log.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sdu.client/public/templates/views/old_views/manager-add.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sdu.client/public/templates/views/old_views/reg.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sdu.client/public/templates/views/old_views/users-leads.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sdu.client/public/templates/views/old_views/users-list.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.client/public/javascripts/app.js" afterPath="$PROJECT_DIR$/sdu.client/public/javascripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.client/public/javascripts/controllers/AdminController.js" afterPath="$PROJECT_DIR$/sdu.client/public/javascripts/controllers/AdminController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.client/public/javascripts/controllers/LeadController.js" afterPath="$PROJECT_DIR$/sdu.client/public/javascripts/controllers/LeadController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.client/public/templates/index.html" afterPath="$PROJECT_DIR$/sdu.client/public/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.client/public/templates/views/adminCompanyListView.html" afterPath="$PROJECT_DIR$/sdu.client/public/templates/views/adminCompanyListView.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.client/public/templates/views/adminLeadListView.html" afterPath="$PROJECT_DIR$/sdu.client/public/templates/views/adminLeadListView.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.client/public/templates/views/adminLeadsHistoryView.html" afterPath="$PROJECT_DIR$/sdu.client/public/templates/views/adminLeadsHistoryView.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.client/public/templates/views/adminUsersListView.html" afterPath="$PROJECT_DIR$/sdu.client/public/templates/views/adminUsersListView.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/controller/CompanyController.java" afterPath="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/controller/CompanyController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/controller/EmailSendController.java" afterPath="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/controller/EmailSendController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/controller/LeadController.java" afterPath="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/controller/LeadController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/controller/UserController.java" afterPath="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/register/LeadRegister.java" afterPath="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/register/LeadRegister.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/register/UserRegister.java" afterPath="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/register/UserRegister.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.client/public/javascripts/controllers/UserController.js" afterPath="$PROJECT_DIR$/sdu.client/public/javascripts/controllers/UserController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.parent.iws" afterPath="$PROJECT_DIR$/sdu.parent.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/beans/all/any_db/SendEmailFactory.java" afterPath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/beans/all/any_db/SendEmailFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/LeadDao.java" afterPath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/LeadDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/UserDao.java" afterPath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/LeadRegisterImpl.java" afterPath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/LeadRegisterImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/UserRegisterImpl.java" afterPath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/UserRegisterImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/LeadRegisterStandImpl.java" afterPath="$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/LeadRegisterStandImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/UserRegisterStandImpl.java" afterPath="$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/UserRegisterStandImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/sdu.client/node_modules/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -153,29 +141,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AdminController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sdu.client/public/javascripts/controllers/AdminController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="88" column="8" lean-forward="true" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="8" />
-              <folding>
-                <element signature="e#142#1458#0" expanded="false" />
-                <element signature="e#218#336#0" expanded="false" />
-                <element signature="e#1579#2175#0" expanded="false" />
-                <element signature="e#1655#1766#0" expanded="false" />
-                <element signature="e#2299#2899#0" expanded="false" />
-                <element signature="e#3023#3588#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sdu.client/public/javascripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="58" column="27" lean-forward="false" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="292">
+              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+              <folding>
+                <element signature="e#320#455#0" expanded="false" />
+                <element signature="e#481#605#0" expanded="false" />
+                <element signature="e#637#777#0" expanded="false" />
+                <element signature="e#806#940#0" expanded="false" />
+                <element signature="e#980#1124#0" expanded="false" />
+                <element signature="e#1168#1347#0" expanded="false" />
+                <element signature="e#1388#1554#0" expanded="false" />
+                <element signature="e#1594#1749#0" expanded="false" />
+                <element signature="e#1789#1953#0" expanded="false" />
+                <element signature="e#1995#2165#0" expanded="false" />
+                <element signature="e#2204#2358#0" expanded="false" />
+                <element signature="e#2394#2547#0" expanded="false" />
+                <element signature="e#2585#2746#0" expanded="false" />
+                <element signature="e#2788#2954#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -191,8 +177,8 @@
         <option value="TestNG Test Class" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -1562,15 +1548,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/sdu.server/main/java/kz.sdu.server/app/Application.java" />
-        <option value="$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/dao/CompanyTestDao.java" />
-        <option value="$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/UserRegisterImplTest.java" />
-        <option value="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/register/CompanyRegister.java" />
-        <option value="$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/CompanyStandImpl.java" />
-        <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/CompanyDao.java" />
-        <option value="$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/CompanyRegisterImplTest.java" />
-        <option value="$PROJECT_DIR$/sdu.register/main/resources/liquibase/postgres/v001/003_person.xml" />
         <option value="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/model/LeadInfo.java" />
         <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/LeadRegister.java" />
         <option value="$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/dao/postgres/LeadTestDaoPostgres.java" />
@@ -1586,7 +1563,6 @@
         <option value="$PROJECT_DIR$/sdu.client/public/javascripts/controllers/client_controllers.js" />
         <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/CompanyRegisterImpl.java" />
         <option value="$PROJECT_DIR$/sdu.client/public/javascripts/controllers/CompanyController.js" />
-        <option value="$PROJECT_DIR$/sdu.client/public/javascripts/controllers/UserController.js" />
         <option value="$PROJECT_DIR$/sdu.client/public/templates/views/leadAddView.html" />
         <option value="$PROJECT_DIR$/sdu.client/public/templates/views/initView.html" />
         <option value="$PROJECT_DIR$/sdu.client/public/templates/views/regCompanyView.html" />
@@ -1612,7 +1588,17 @@
         <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/UserRegisterImpl.java" />
         <option value="$PROJECT_DIR$/sdu.client/public/templates/views/adminLeadListView.html" />
         <option value="$PROJECT_DIR$/sdu.client/public/javascripts/controllers/AdminController.js" />
+        <option value="$PROJECT_DIR$/sdu.client/public/templates/views/ownPageView.html" />
+        <option value="$PROJECT_DIR$/sdu.client/public/templates/views/managerNotActiveLeadsListView.html" />
+        <option value="$PROJECT_DIR$/sdu.client/public/templates/views/managerActiveLeadsView.html" />
+        <option value="$PROJECT_DIR$/sdu.client/public/templates/views/clientActiveLeadsView.html" />
+        <option value="$PROJECT_DIR$/sdu.client/public/templates/views/clientAllLeadsView.html" />
+        <option value="$PROJECT_DIR$/sdu.client/public/templates/views/clientFinishedLeadsView.html" />
         <option value="$PROJECT_DIR$/sdu.client/public/javascripts/app.js" />
+        <option value="$PROJECT_DIR$/sdu.client/public/javascripts/controllers/UserController.js" />
+        <option value="$PROJECT_DIR$/sdu.client/public/javascripts/controllers/ManagerController.html" />
+        <option value="$PROJECT_DIR$/sdu.client/public/javascripts/controllers/ManagerController.js" />
+        <option value="$PROJECT_DIR$/sdu.client/public/javascripts/controllers/ClientController.js" />
       </list>
     </option>
   </component>
@@ -1704,15 +1690,8 @@
               <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="sdu.client" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="sdu.client" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -2134,7 +2113,7 @@
       <workItem from="1512214961709" duration="8095000" />
       <workItem from="1512240032689" duration="9441000" />
       <workItem from="1512291746808" duration="6230000" />
-      <workItem from="1512320978712" duration="18400000" />
+      <workItem from="1512320978712" duration="19155000" />
     </task>
     <servers />
   </component>
@@ -2171,7 +2150,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214356000" />
+    <option name="totallyTimeSpent" value="215111000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2305,7 +2284,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="24" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2314,86 +2293,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/bean_containers/BeanConfigForStandBeanContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/scheduler/MyTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="31" column="8" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="33" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/schedulers/ExampleScheduler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="31" column="68" lean-forward="false" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/resources/log4j.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/controller/AuthController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.client/build/front/sdu/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1264">
-          <caret line="30" column="49" lean-forward="false" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/CompanyStandImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/register/CompanyRegister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/CompanyRegisterImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="49" column="18" lean-forward="false" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
-          <folding>
-            <element signature="method#getCompanyById#0;class#CompanyRegisterImpl#0" expanded="false" />
-            <element signature="method#getAllCompany#0;class#CompanyRegisterImpl#0" expanded="false" />
-            <element signature="method#getNotAcceptedCompany#0;class#CompanyRegisterImpl#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.client/public/javascripts/controllers/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sdu.client/public/javascripts/controllers/CompanyController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -2406,14 +2305,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.client/public/templates/views/leadAddView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="2" column="66" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2463,14 +2354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="359" column="16" lean-forward="true" selection-start-line="359" selection-start-column="16" selection-end-line="359" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.client/public/javascripts/controllers/client_controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="14" column="15" lean-forward="true" selection-start-line="14" selection-start-column="15" selection-end-line="25" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -2617,16 +2500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.client/public/javascripts/controllers/UserController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="37" column="8" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="114" />
-          <folding>
-            <element signature="e#133#1429#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sdu.register/build/toSend/Education-2017-12-03-15.07.14.534.89525223.email.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
@@ -2764,7 +2637,7 @@
     <entry file="file://$PROJECT_DIR$/sdu.client/public/javascripts/controllers/AdminController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
-          <caret line="88" column="8" lean-forward="true" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="8" />
+          <caret line="88" column="8" lean-forward="false" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="8" />
           <folding>
             <element signature="e#142#1458#0" expanded="false" />
             <element signature="e#218#336#0" expanded="false" />
@@ -2776,11 +2649,134 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.client/public/templates/views/ownPageView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.client/public/templates/views/managerNotActiveLeadsListView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.client/public/templates/views/managerActiveLeadsView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.client/public/templates/views/leadAddView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="2" column="66" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.client/public/templates/views/clientActiveLeadsView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.client/public/templates/views/clientAllLeadsView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.client/public/templates/views/clientFinishedLeadsView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.client/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.client/public/javascripts/controllers/ManagerController.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.client/public/javascripts/controllers/UserController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="121" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding>
+            <element signature="e#133#1429#0" expanded="false" />
+            <element signature="e#1544#3122#0" expanded="false" />
+            <element signature="e#3237#4659#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.client/public/javascripts/controllers/client_controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.client/public/javascripts/controllers/ManagerController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.client/public/javascripts/controllers/ClientController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="7" column="40" lean-forward="false" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sdu.client/public/javascripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="58" column="27" lean-forward="false" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="292">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding>
+            <element signature="e#320#455#0" expanded="false" />
+            <element signature="e#481#605#0" expanded="false" />
+            <element signature="e#637#777#0" expanded="false" />
+            <element signature="e#806#940#0" expanded="false" />
+            <element signature="e#980#1124#0" expanded="false" />
+            <element signature="e#1168#1347#0" expanded="false" />
+            <element signature="e#1388#1554#0" expanded="false" />
+            <element signature="e#1594#1749#0" expanded="false" />
+            <element signature="e#1789#1953#0" expanded="false" />
+            <element signature="e#1995#2165#0" expanded="false" />
+            <element signature="e#2204#2358#0" expanded="false" />
+            <element signature="e#2394#2547#0" expanded="false" />
+            <element signature="e#2585#2746#0" expanded="false" />
+            <element signature="e#2788#2954#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
