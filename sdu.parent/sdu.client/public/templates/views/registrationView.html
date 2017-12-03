@@ -1,12 +1,11 @@
 <div class="wrapper">
     <span class="login-title">Регистрация в систему</p>
-        <form class="login-form" method="post" ng-submit="signup()">
+        <form class="login-form" method="post" ng-submit="save_user()">
             <input class ="input" ng-model="name" type="text"  placeholder="Ваше имя"><br>
             <input class ="input" ng-model="surname" type="text"  placeholder="Ваша фамилия"><br>
             <input class ="input" ng-model="age" type="text"  placeholder="Ваш возраст"><br>
-            <input class ="input" ng-model="surname" type="text"  placeholder="Ваша фамилия"><br>
             <input class ="input" ng-model="compID" type="text" placeholder="Идентификационный номер компании"><br>
-            <input class ="input" ng-model="number" type="text" ui-mask="+7(709)999-99-99"><br>
+            <input class ="input" ng-model="telephone" type="text" ui-mask="+7(709)999-99-99"><br>
             <select class = "select updated-select" ng-model = "clientType">
                 <option ng-repeat="x in clientTypeList" ng-value="x.abbrev" >
                     {{x.abbrev}}

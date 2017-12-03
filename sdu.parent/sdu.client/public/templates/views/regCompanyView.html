@@ -1,8 +1,7 @@
 <div class="wrapper">
     <span class="login-title">Регистрация компаний</p>
-        <form class="login-form" method="post" ng-submit="signup()">
+        <form class="login-form" method="post" ng-submit="reg_company()">
             <input class ="input" ng-model="name" type="text"  placeholder="Наименование компаний"><br>
-            <input class ="input" ng-model="number" type="text"  placeholder="Идентификационный номер"><br>
             <input class ="input" ng-model="telephone" type="text" ui-mask="+7(709)999-99-99"><br>
             <input class ="input" ng-model="email" type="email"  placeholder="Электронная почта компании"><br>
             <button class ="button button-login button-modified-two" type="submit">Регистрация<i class="icon-arrow-right"></i></button>

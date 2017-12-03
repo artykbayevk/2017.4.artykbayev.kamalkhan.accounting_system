@@ -58,9 +58,11 @@ public class CompanyRegisterImpl implements CompanyRegister {
         if(companyid.length() == 0){
             companyid = RND.intStr(30);
             companyDaoBeanGetter.get().insertIntoCompany(companyid, name, telephone, email, "false");
-            return "added";
+            System.out.println("Company added");
+            return companyid;
         }else{
             companyDaoBeanGetter.get().updateCompanyById(companyid, name, telephone, email);
+            System.out.println("Company updated");
             return "updated";
         }
 

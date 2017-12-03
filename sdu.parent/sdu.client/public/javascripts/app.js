@@ -18,9 +18,15 @@ angular.module('MyApp', ['ui.router','ngMaterial','ngMessages',"ngSanitize", 'ui
               url:'/regComp',
               templateUrl:'views/regCompanyView.html',
               controller:'RegCompanyCtrl'
-          }).state('adminUsersList',{
+          })
+          .state('adminUsersList',{
               url:'/adminUsersList',
               templateUrl:'views/adminUsersListView.html',
               controller:'AdminUserListCtrl'
-      })
+          })
+          .state('leadAdd', {
+              url:"/leadAddUrl",
+              templateUrl:"views/leadAddView.html",
+              controller:"LeadAddCtrl"
+          });
   }]);

@@ -35,8 +35,10 @@ public class LeadRegisterImpl implements LeadRegister {
 
         JSONObject obj = new JSONObject(input);
         String leadid = obj.getString("leadid");
+
         String name = obj.getString("name");
         String type = obj.getString("type");
+
         String managerid = obj.getString("managerid");
         String clientid = obj.getString("clientid");
         String status = obj.getString("status");

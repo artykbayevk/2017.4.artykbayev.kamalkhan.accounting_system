@@ -116,19 +116,14 @@ public class UserRegisterImpl implements UserRegister {
       if(companyName == null){
         res = "company";
       }else{
-        CompanyDot x = companyDaoBeanGetter.get().getCompanyById(companyId);
-        if(x.isAccepted.equals("false")){
-          res = "accept";
-        }else{
           if(uuid.length() == 0){
-            uuid = RND.intStr(15);
-            userDaoBeanGetter.get().insertPerson(uuid, name, surname, email, password, tel_number, age, companyId, isAccepted, isAdmin, isManager);
-            res = "added";
+              uuid = RND.intStr(15);
+              userDaoBeanGetter.get().insertPerson(uuid, name, surname, email, password, tel_number, age, companyId, isAccepted, isAdmin, isManager);
+              res = "added";
           }else{
-            userDaoBeanGetter.get().updatePerson(uuid, name, surname, email, password, tel_number, age, companyId);
-            res = "updated";
+              userDaoBeanGetter.get().updatePerson(uuid, name, surname, email, password, tel_number, age, companyId);
+              res = "updated";
           }
-        }
       }
     }
     return res;

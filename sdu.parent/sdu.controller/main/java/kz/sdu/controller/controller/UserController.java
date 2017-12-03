@@ -7,6 +7,7 @@ import kz.greetgo.mvc.annotations.Mapping;
 import kz.greetgo.mvc.annotations.Par;
 import kz.greetgo.mvc.annotations.RequestInput;
 import kz.greetgo.mvc.annotations.ToJson;
+import kz.sdu.controller.model.AuthInfo;
 import kz.sdu.controller.model.UserCtrlModel;
 import kz.sdu.controller.model.UserInfo;
 import kz.sdu.controller.register.UserRegister;
@@ -26,23 +27,20 @@ public class UserController implements Controller {
     }
 
     @ToJson
-    @Mapping("/register")
+    @Mapping("/save")
     public String registerUser(@RequestInput String input){
         return userRegister.get().registerUser(input);
     }
 
     @ToJson
     @Mapping("/check")
-    public String checkUser(@RequestInput String input){
-        return userRegister.get().checkUser(input);
+    public AuthInfo checkUser(@RequestInput String input){
+        return userRegister.get().authUser(input);
     }
-
 
     @ToJson
     @Mapping("/getInfo")
     public UserCtrlModel getWholeUserInfo(@Par("id") String id){
-//        return "We are here";
-//        return userRegister.get().getUserId(email);
         return userRegister.get().getWholeUserInfo(id);
 
     }
