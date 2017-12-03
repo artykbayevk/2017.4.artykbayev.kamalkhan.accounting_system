@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="true">
+
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <errorHandler class="org.apache.log4j.helpers.OnlyOnceErrorHandler"/>
+        <param name="Target" value="System.out"/>
+        <param name="Threshold" value="INFO"/>
+
+        <layout class="kz.sdu.controller.logging.MyLog4jLayout">
+            <param name="LoggerNameCut" value="2"/>
+        </layout>
+    </appender>
+
+    <appender name="SCHEDULING" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="${user.home}/sdu.d/logging/new_scheduling.log"/>
+        <param name="MaxFileSize" value="10MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+        <param name="Append" value="true"/>
+        <param name="Threshold" value="DEBUG"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p [%c] %m%n"/>
+        </layout>
+    </appender>
+
+
+    <appender name="INFO_EMAIL" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="${user.home}/sdu.d/logging/email.log"/>
+        <param name="MaxFileSize" value="10MB"/>
+        <param name="Threshold" value="INFO"/>
+        <param name="MaxBackupIndex" value="10"/>
+        <param name="Append" value="true"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p [%c] %m%n"/>
+        </layout>
+    </appender>
+
+
+    <appender name="ERROR_APP" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="${user.home}/sdu.d/logging/error.log"/>
+        <param name="MaxFileSize" value="10MB"/>
+        <param name="Threshold" value="ERROR"/>
+        <param name="MaxBackupIndex" value="10"/>
+        <param name="Append" value="true"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p [%c] %m%n"/>
+        </layout>
+    </appender>
+
+
+    <appender name="SERVER" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="${user.home}/sdu.d/logs/server.log"/>
+        <param name="Threshold" value="INFO"/>
+        <param name="Append" value="true"/>
+        <param name="MaxFileSize" value="100MB"/>
+        <param name="MaxBackupIndex" value="100"/>
+        <layout class="kz.sdu.controller.logging.MyLog4jLayout">
+            <param name="LoggerNameCut" value="0"/>
+        </layout>
+    </appender>
+
+
+
+    <category name="kz.sdu.register.schedulers.ExampleScheduler">
+        <appender-ref ref="SCHEDULING"/>
+        <priority value="DEBUG"/>
+    </category>
+
+    <category name="kz.sdu.register.schedulers.ExampleScheduler">
+        <appender-ref ref="INFO_EMAIL"/>
+        <priority value="INFO"/>
+    </category>
+
+    <category name="kz.sdu">
+        <appender-ref ref="ERROR_APP"/>
+        <priority value="ERROR"/>
+    </category>
+
+
+    <category name="org.apache">
+        <priority value="INFO"/>
+    </category>
+
+
+    <root>
+        <priority value="INFO"/>
+        <appender-ref ref="SERVER"/>
+    </root>
+
+</log4j:configuration>

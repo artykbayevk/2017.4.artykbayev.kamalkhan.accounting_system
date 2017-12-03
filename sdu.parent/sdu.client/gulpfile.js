@@ -79,7 +79,6 @@ gulp.task('build', function() {
 
 gulp.task('browser-sync', function() {
     browserSync.init(null, {
-        port: 8090,
         open: false,
         server: {
             baseDir: 'build/front/sdu',

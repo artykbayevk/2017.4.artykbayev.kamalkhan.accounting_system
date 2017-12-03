@@ -4,4 +4,6 @@ angular.module('MyApp')
     }])
     .controller('RegViewCtrl', ['$http','$scope','$state','$rootScope',function($http,$scope,$state,$rootScope) {
         console.log("RegViewController");
+
+
     }]);

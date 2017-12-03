@@ -6,8 +6,12 @@
             <input class ="input" ng-model="age" type="text"  placeholder="Ваш возраст"><br>
             <input class ="input" ng-model="surname" type="text"  placeholder="Ваша фамилия"><br>
             <input class ="input" ng-model="compID" type="text" placeholder="Идентификационный номер компании"><br>
-            <input class ="input" ng-model="compKEY" type="password" placeholder="Ключевое слово компании"><br>
             <input class ="input" ng-model="number" type="text" ui-mask="+7(709)999-99-99"><br>
+            <select class = "select updated-select" ng-model = "clientType">
+                <option ng-repeat="x in clientTypeList" ng-value="x.abbrev" >
+                    {{x.abbrev}}
+                </option>
+            </select>
             <input class ="input" ng-model="email" type="email"  placeholder="Ваша электронная почта"><br>
             <input class ="input" ng-model="password" type="password" name="password" placeholder="Ваш пароль" ><br>
             <p class="error-message">

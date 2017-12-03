@@ -357,3 +357,7 @@ body{
     font-weight: bold;
     background-color: rgb(99,190,212);
 }
+
+.updated-select{
+    width:90%;
+}

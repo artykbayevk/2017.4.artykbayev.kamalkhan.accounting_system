@@ -37,11 +37,6 @@ public class UserRegisterImpl implements UserRegister {
   }
 
   @Override
-  public UserInfo getUserInfo(String personId){
-    return null;
-  }
-
-  @Override
   public List<UserCtrlModel> getUsersList(){
     List<UserDot> cl = userDaoBeanGetter.get().getAllUsersList();
     List<UserCtrlModel> out = new ArrayList<UserCtrlModel>();
@@ -140,11 +135,6 @@ public class UserRegisterImpl implements UserRegister {
   }
 
   @Override
-  public String checkUser(String input){
-    return null;
-  }
-
-  @Override
   public String acceptUser(String userid){
       String generatedNumber = RND.str(30);
       userDaoBeanGetter.get().insertIntoAcceptTable(userid, generatedNumber);
@@ -159,6 +149,16 @@ public class UserRegisterImpl implements UserRegister {
       }
 
       return generatedNumber;
+  }
+
+  @Override
+  public String checkUser(String input){
+    return null;
+  }
+
+  @Override
+  public UserInfo getUserInfo(String personId){
+    return null;
   }
 
   @Override
