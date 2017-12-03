@@ -115,4 +115,15 @@ public class LeadRegisterImpl implements LeadRegister {
         leadDaoBeanGetter.get().acceptLeadQuery(leadid);
         return "accepted";
     }
+
+    @Override
+    public List<LeadInfo> getAllNotAcceptedLeads() {
+        List<LeadDot> cl = leadDaoBeanGetter.get().getAllNotAcceptedLeadsQuery();
+        List<LeadInfo> out = new ArrayList<LeadInfo>();
+        for(LeadDot x : cl){
+            LeadInfo tmp  = new LeadInfo(x.leadid, x.name, x.type, x.managerid, x.clientid, x.status, x.isaccepted);
+            out.add(tmp);
+        }
+        return out;
+    }
 }

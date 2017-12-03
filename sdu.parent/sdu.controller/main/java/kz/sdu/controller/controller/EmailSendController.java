@@ -18,7 +18,7 @@ public class EmailSendController implements Controller {
     @Mapping("/{generatedNumber}")
     public void sentEmail(@ParPath("generatedNumber") String num){
         System.out.println(num);
-        String username = userRegisterBeanGetter.get().acceptUser(num);
-        System.out.println(username);
+//        String username = userRegisterBeanGetter.get().acceptUser(num);
+//        System.out.println(username);
     }
 }

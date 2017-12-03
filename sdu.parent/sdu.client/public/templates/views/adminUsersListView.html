@@ -25,15 +25,14 @@
     <div class="list-container">
         <span class="login-title"><p>Пользователи</p></span>
         <md-list>
-            <!--<md-list-item class="md-2-line" ng-repeat="item in todos">-->
-            <md-list-item class="md-3-line" >
+            <md-list-item class="md-3-line" ng-repeat="item in users_list">
                 <div class="md-list-item-text">
-                    <h3><i>Name & Surname</i>: Kamalkhan Artykbayev</h3>
-                    <p><i>Email</i>: kamalkhan.sdu@gmail.com</p>
-                    <p><i>Status</i>: Manager</p>
-                    <a type="button" class="button myButton button-add"  ><i class="icon-check"></i></a>
-                    <a type="button" class="button myButton button-add" ><i class="icon-cross" style="background: rgba(231,76,60,1)"></i></a>
-
+                    <h3><i>ФИО</i>: {{item.name}} {{item.surname}}</h3>
+                    <p><i>Email</i>: {{item.email}}</p>
+                    <p ng-if = "item.isManager"><i>Status</i>: Менеджер</p>
+                    <p ng-if = "!item.isManager"><i>Status</i>: Клиент</p>
+                    <a type="button" class="button myButton button-add"  ng-click="accept_user_func(item.id)"><i class="icon-check"></i></a>
+                    <a type="button" class="button myButton button-add" ng-click="decline_user_func(item.id)"><i class="icon-cross" style="background: rgba(231,76,60,1)"></i></a>
                 </div>
             </md-list-item>
         </md-list>

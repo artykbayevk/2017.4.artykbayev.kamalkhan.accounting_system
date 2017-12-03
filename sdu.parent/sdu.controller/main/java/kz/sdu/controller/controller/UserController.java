@@ -13,6 +13,8 @@ import kz.sdu.controller.model.UserInfo;
 import kz.sdu.controller.register.UserRegister;
 import kz.sdu.controller.utils.Controller;
 
+import java.util.List;
+
 @Bean
 @Mapping("/user")
 public class UserController implements Controller {
@@ -40,8 +42,23 @@ public class UserController implements Controller {
 
     @ToJson
     @Mapping("/getInfo")
-    public UserCtrlModel getWholeUserInfo(@Par("id") String id){
-        return userRegister.get().getWholeUserInfo(id);
+    public UserCtrlModel getWholeUserInfo(@Par("id") String id){ return userRegister.get().getWholeUserInfo(id);}
 
+    @ToJson
+    @Mapping("/getNotAccepted")
+    public List<UserCtrlModel> getAllNotAcceptedUsers(){
+        return userRegister.get().getNotAcceptedUsersList();
+    }
+
+    @ToJson
+    @Mapping("/acceptUserFromAdmin")
+    public String acceptUserFromAdmin(@Par("userid") String userid){
+        return userRegister.get().acceptUser(userid);
+    }
+
+    @ToJson
+    @Mapping("/declineUserFromAdmin")
+    public String declineUserFromAdmin(@Par("userid") String userid){
+        return userRegister.get().declineUser(userid);
     }
 }

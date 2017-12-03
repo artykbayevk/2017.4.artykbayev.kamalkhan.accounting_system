@@ -155,4 +155,8 @@ public class UserRegisterStandImpl implements UserRegister {
     @Override
     public String updateIsAccept(String genNumber){return null;}
 
+    @Override
+    public String declineUser(String userid) {
+        return null;
+    }
 }

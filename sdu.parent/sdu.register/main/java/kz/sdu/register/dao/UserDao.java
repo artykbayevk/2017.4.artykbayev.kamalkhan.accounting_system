@@ -84,4 +84,10 @@ public interface UserDao {
 
     @Select("select email from usertable where userid=#{userid}")
     String getUserEmail(@Param("userid") String userid);
+
+    @Update("update usertable set isaccepted='true' where userid = #{userid}")
+    void updateIsAccept(@Param("userid") String userid);
+
+    @Update("update usertable set isaccepted='decli' where userid = #{userid}")
+    void declineUser(@Param("userid") String userid);
 }

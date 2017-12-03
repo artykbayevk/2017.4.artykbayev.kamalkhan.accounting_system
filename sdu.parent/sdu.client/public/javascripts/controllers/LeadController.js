@@ -1,7 +1,7 @@
 angular.module('MyApp')
     .controller('LeadAddCtrl', ['$http','$scope','$state','$rootScope',function($http,$scope,$state,$rootScope) {
         console.log("Lead addition Controller");
-        $scope.leadTypeList = ('Налоги Счет-фактура Коммуналлка').split(' ').map(function (state) { return { abbrev: state }; });
+        $scope.leadTypeList = ('Налоги Счет-фактура Коммуналка').split(' ').map(function (state) { return { abbrev: state }; });
 
         $scope.add_lead = function(){
             var data = {

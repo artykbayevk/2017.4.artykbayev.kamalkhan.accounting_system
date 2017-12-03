@@ -40,6 +40,8 @@ public interface LeadDao {
     @Select("select * from leadtable where isaccepted='true' and (managerid = #{userid} or clientid = #{userid})")
     List<LeadDot> getAllMyAcceptedLeadsQuery(@Param("userid") String userid);
 
+    @Select("select * from leadtable where isaccepted = 'false' ")
+    List<LeadDot> getAllNotAcceptedLeadsQuery();
 
     @Update("update leadtable set status = 'stopped' where leadid = #{leadid}")
     void stopStatus(@Param("leadid") String leadid);

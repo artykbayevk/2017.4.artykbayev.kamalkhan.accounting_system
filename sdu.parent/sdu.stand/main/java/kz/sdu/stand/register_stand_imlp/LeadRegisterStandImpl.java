@@ -23,6 +23,12 @@ public class LeadRegisterStandImpl implements LeadRegister{
         return null;
     }
 
+
+    @Override
+    public List<LeadInfo> getAllNotAcceptedLeads() {
+        return null;
+    }
+
     @Override
     public List<LeadInfo> getAllMyLeads(String userid) {
         return null;

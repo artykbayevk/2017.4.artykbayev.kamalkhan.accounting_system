@@ -19,12 +19,45 @@ angular.module('MyApp', ['ui.router','ngMaterial','ngMessages',"ngSanitize", 'ui
               templateUrl:'views/regCompanyView.html',
               controller:'RegCompanyCtrl'
           })
-          .state('leadAdd', {
-              url:"/leadAddUrl",
-              templateUrl:"views/leadAddView.html",
-              controller:"LeadAddCtrl"
+          .state('ownPage',{
+              url:'/ownPage',
+              templateUrl:'views/ownPageView.html',
+              controller:'OwnPageCtrl'
           })
 
+
+
+          .state('managerLeadAdd', {
+              url:"/managerLeadAddUrl",
+              templateUrl:"views/managerLeadAddView.html",
+              controller:"ManagerLeadAddCtrl"
+          })
+          .state('managerNotActiveLeads', {
+              url:"/managerNotActiveLeads",
+              templateUrl:"views/managerNotActiveLeadsListView.html",
+              controller:"ManagerNotActiveLeadCtrl"
+          })
+          .state('managerActiveLeads', {
+              url:"/managerActiveLeads",
+              templateUrl:"views/managerActiveLeadsView.html",
+              controller:"ManagerActiveLeadCtrl"
+          })
+
+          .state('clientAllLeads', {
+              url:"/clientAllLeads",
+              templateUrl:"views/clientAllLeadsView.html",
+              controller:"ClientAllLeadsCtrl"
+          })
+          .state('clientActiveLeads', {
+              url:"/clientActiveLeads",
+              templateUrl:"views/clientActiveLeadsView.html",
+              controller:"ClientActiveLeadsCtrl"
+          })
+          .state('clientFinishedLeads', {
+              url:"/clientFinishedLeads",
+              templateUrl:"views/clientFinishedLeadsView.html",
+              controller:"ClientFinishedLeadsCtrl"
+          })
 
           .state('adminUsersList',{
               url:'/adminUsersList',

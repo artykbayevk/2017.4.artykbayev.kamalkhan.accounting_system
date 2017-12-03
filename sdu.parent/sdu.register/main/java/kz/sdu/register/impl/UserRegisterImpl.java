@@ -132,19 +132,43 @@ public class UserRegisterImpl implements UserRegister {
   @Override
   public String acceptUser(String userid){
       String generatedNumber = RND.str(30);
+      System.out.println(userid);
       userDaoBeanGetter.get().insertIntoAcceptTable(userid, generatedNumber);
       String emailTo = userDaoBeanGetter.get().getUserEmail(userid);
-      if(emailTo != null){
-        Email email=new Email();
-        email.setFrom(GCommonConstant.username);
-        email.setTo(emailTo);
-        email.setSubject("Hello Bro");
-        email.setBody("If you get this message skip it");
-        emailSender.get().send(email);
-      }
+      userDaoBeanGetter.get().updateIsAccept(userid);
 
+      if(emailTo != null){
+          Email email=new Email();
+          email.setFrom(GCommonConstant.username);
+          email.setTo(emailTo);
+          email.setSubject("Accept");
+          email.setBody("Hey Bro, we are accept you.\n You can auth in our service");
+          emailSender.get().send(email);
+      }
       return generatedNumber;
   }
+
+  @Override
+  public String declineUser(String userid) {
+      System.out.println(userid);
+      String emailTo = userDaoBeanGetter.get().getUserEmail(userid);
+      userDaoBeanGetter.get().declineUser(userid);
+      if(emailTo != null){
+          Email email=new Email();
+          email.setFrom(GCommonConstant.username);
+          email.setTo(emailTo);
+          email.setSubject("Decline");
+          email.setBody("Hey Bro, sorry but we decline you.\n Goog luck");
+          emailSender.get().send(email);
+      }
+      return "Declined";
+  }
+
+
+
+
+
+
 
   @Override
   public String checkUser(String input){

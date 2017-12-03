@@ -25,15 +25,13 @@
     <div class="list-container">
         <span class="login-title"><p>Заявки</p></span>
         <md-list>
-            <!--<md-list-item class="md-2-line" ng-repeat="item in todos">-->
-            <md-list-item class="md-3-line" >
+            <md-list-item class="md-3-line" ng-repeat="item in not_accepted_leads_list">
                 <div class="md-list-item-text">
-                    <h3><i>Name & Type</i>: Моя заявка </h3>
-                    <p>Type: Для счет фактуры</p>
-                    <p><i>Manager</i>: Kamalkhan Artykbayev</p>
+                    <h3><i>Наименование</i>: {{item.name}} </h3>
+                    <p>Тип: {{item.type}}</p>
+                    <p><i>Менеджер</i>: {{item.managerid}}</p>
                     <a type="button" class="button myButton button-add"  ><i class="icon-check"></i></a>
                     <a type="button" class="button myButton button-add" ><i class="icon-cross" style="background: rgba(231,76,60,1)"></i></a>
-
                 </div>
             </md-list-item>
         </md-list>

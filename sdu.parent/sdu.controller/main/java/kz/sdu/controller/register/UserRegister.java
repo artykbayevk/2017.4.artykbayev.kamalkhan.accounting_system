@@ -13,6 +13,8 @@ public interface UserRegister {
     List<UserCtrlModel> getUsersList();
     List<UserCtrlModel> getNotAcceptedUsersList();
     String acceptUser(String userid);
+    String declineUser(String userid);
+
     String updateIsAccept(String genNumber);
 
     UserInfo getUserInfo(String personId);

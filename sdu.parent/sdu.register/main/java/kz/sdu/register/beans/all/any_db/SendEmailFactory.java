@@ -58,20 +58,22 @@ public class SendEmailFactory {
         props.setProperty("mail.smtp.port", "465");
         props.setProperty("mail.smtp.auth", "true");
         props.setProperty("mail.smtp.starttls.enable", "true");
+        props.setProperty("mail.smtp.ssl.trust", "smtp.gmail.com");
         props.setProperty("mail.smtp.socketFactory.class", SSL_FACTORY);
+
 
         Session session = Session.getInstance(props, new javax.mail.Authenticator() {
           protected PasswordAuthentication getPasswordAuthentication() {
-            return new PasswordAuthentication(GCommonConstant.username, GCommonConstant.password);
+            return new PasswordAuthentication(dbConfig.get().loginAccount(), dbConfig.get().accountPassword());
           }
         });
-        session.setDebug(true);
+        session.setDebug(false);
 
         final MimeMessage msg = new MimeMessage(session);
 
 
         msg.setFrom(new InternetAddress(email.getFrom()));
-        msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email.getTo(), false));
+        msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email.getTo(), true));
 
         msg.setSubject(email.getSubject());
 

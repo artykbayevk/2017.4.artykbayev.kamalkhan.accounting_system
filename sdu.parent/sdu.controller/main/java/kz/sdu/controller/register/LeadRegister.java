@@ -7,6 +7,8 @@ import java.util.List;
 public interface LeadRegister {
     String saveLead(String input);
     List<LeadInfo> getAllLeadList();
+    List<LeadInfo> getAllNotAcceptedLeads();
+
     List<LeadInfo> getAllMyLeads(String userid);
     List<LeadInfo> getAllMyNotAcceptedLeads(String userid);
     List<LeadInfo> getAllMyAcceptedLeads(String userid);

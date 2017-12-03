@@ -25,15 +25,12 @@
     <div class="list-container">
         <span class="login-title"><p>История Заявок</p></span>
         <md-list>
-            <!--<md-list-item class="md-2-line" ng-repeat="item in todos">-->
-            <md-list-item class="md-3-line" >
+            <md-list-item class="md-3-line" ng-repeat="item in leads_list">
                 <div class="md-list-item-text">
-                    <h3><i>Название заявки</i>: Моя заявка</h3>
-                    <p><i>ID заявки</i> 140103096</p>
-                    <p><i>Тип Заявки</i> Налоги</p>
-                    <a type="button" class="button myButton button-add"  ><i class="icon-check"></i></a>
-                    <a type="button" class="button myButton button-add" ><i class="icon-cross" style="background: rgba(231,76,60,1)"></i></a>
-
+                    <h3><i>Название заявки</i>: {{item.name}}</h3>
+                    <p><i>ID заявки:</i> {{item.leadid}}</p>
+                    <p><i>Тип Заявки:</i> {{item.type}}</p>
+                    <p>Статус Заявки: {{item.status}}</p>
                 </div>
             </md-list-item>
         </md-list>
