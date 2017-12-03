@@ -1,6 +1,8 @@
 package kz.sdu.register.schedulers;
 
 import kz.greetgo.depinject.core.Bean;
+import kz.greetgo.depinject.core.BeanGetter;
+import kz.greetgo.email.EmailSenderController;
 import kz.greetgo.scheduling.HasScheduled;
 import kz.greetgo.scheduling.Scheduled;
 
@@ -10,7 +12,9 @@ import java.io.IOException;
 @Bean
 public class ExampleScheduler implements HasScheduled {
 
-    @Scheduled("repeat every 100 sec")
+    public BeanGetter<EmailSenderController> emailSenderControllerBeanGetter;
+
+    @Scheduled("repeat every 200 sec")
     public void example() throws IOException {
 //        File parentFile;
 //        File file = new File(""+System.getProperty("user.home") + "/sdu.d/" + System.currentTimeMillis());
@@ -19,6 +23,8 @@ public class ExampleScheduler implements HasScheduled {
 //            parentFile.mkdirs();
 //        }
 //        file.createNewFile();
-        System.out.println("schedule running");
+
+        emailSenderControllerBeanGetter.get().sendAllExistingEmails();
+        System.out.println("schedule running and email sent");
     }
 }

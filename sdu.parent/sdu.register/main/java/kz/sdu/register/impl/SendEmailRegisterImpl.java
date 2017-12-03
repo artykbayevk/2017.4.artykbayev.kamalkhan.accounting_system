@@ -28,7 +28,7 @@ public class SendEmailRegisterImpl implements SendEmailRegister {
     email.setFrom(GCommonConstant.username);
     email.setTo("kamalkhan.sdu@gmail.com");
     email.setSubject("Test Email");
-    email.setBody("If you get this message skip it");
+    email.setBody("Hey Bro how are you?");
     emailSender.get().send(email);
 
   }

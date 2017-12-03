@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fb59e246-c2e6-44bc-b12d-6649babdd029" name="Default" comment="Client update">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.parent.iws" afterPath="$PROJECT_DIR$/sdu.parent.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/UserRegisterImpl.java" afterPath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/UserRegisterImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.register/main/resources/liquibase/postgres/v001/003_person.xml" afterPath="$PROJECT_DIR$/sdu.register/main/resources/liquibase/postgres/v001/003_person.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/SendEmailRegisterImpl.java" afterPath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/SendEmailRegisterImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/schedulers/ExampleScheduler.java" afterPath="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/schedulers/ExampleScheduler.java" />
     </list>
     <ignored path="$PROJECT_DIR$/sdu.client/node_modules/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -133,60 +133,43 @@
     <favorites_list name="sdu.parent" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LeadRegisterImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/LeadRegisterImpl.java">
+    <leaf>
+      <file leaf-file-name="ExampleScheduler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/schedulers/ExampleScheduler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="111" column="44" lean-forward="false" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#getLeadById#0;class#LeadRegisterImpl#0" expanded="false" />
-                <element signature="method#saveLead#0;class#LeadRegisterImpl#0" expanded="false" />
-                <element signature="method#getAllLeadList#0;class#LeadRegisterImpl#0" expanded="false" />
-                <element signature="e#1862#1872#0" expanded="true" />
-                <element signature="method#getAllMyLeads#0;class#LeadRegisterImpl#0" expanded="false" />
-                <element signature="e#2277#2287#0" expanded="true" />
-                <element signature="method#getAllMyNotAcceptedLeads#0;class#LeadRegisterImpl#0" expanded="false" />
-                <element signature="e#2714#2724#0" expanded="true" />
-                <element signature="method#getAllMyAcceptedLeads#0;class#LeadRegisterImpl#0" expanded="false" />
-                <element signature="e#3145#3155#0" expanded="true" />
-                <element signature="method#stopLead#0;class#LeadRegisterImpl#0" expanded="false" />
-                <element signature="method#startLead#0;class#LeadRegisterImpl#0" expanded="false" />
-                <element signature="method#acceptLead#0;class#LeadRegisterImpl#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="252">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LeadDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/LeadDao.java">
+      <file leaf-file-name="SendEmailRegisterImplTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/SendEmailRegisterImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="51" column="57" lean-forward="false" selection-start-line="51" selection-start-column="57" selection-end-line="51" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="98">
+              <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LeadRegisterImplTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/LeadRegisterImplTest.java">
+      <file leaf-file-name="SendEmailRegisterImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/SendEmailRegisterImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="202" column="15" lean-forward="false" selection-start-line="202" selection-start-column="15" selection-end-line="202" selection-end-column="15" />
-              <folding>
-                <element signature="method#testGetLeadById#0;class#LeadRegisterImplTest#0" expanded="false" />
-                <element signature="method#testSaveLead#0;class#LeadRegisterImplTest#0" expanded="false" />
-                <element signature="method#testGetAllLeadList#0;class#LeadRegisterImplTest#0" expanded="false" />
-                <element signature="method#testGetAllMyLeads#0;class#LeadRegisterImplTest#0" expanded="false" />
-                <element signature="method#testGetAllMyNotAcceptedLeads#0;class#LeadRegisterImplTest#0" expanded="false" />
-                <element signature="method#testGetAllMyAcceptedLeads#0;class#LeadRegisterImplTest#0" expanded="false" />
-                <element signature="method#testStopLead#0;class#LeadRegisterImplTest#0" expanded="false" />
-                <element signature="method#testStartLead#0;class#LeadRegisterImplTest#0" expanded="false" />
-                <element signature="method#testAcceptLead#0;class#LeadRegisterImplTest#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="294">
+              <caret line="30" column="39" lean-forward="false" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/scheduler/MyTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="70" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1574,7 +1557,6 @@
         <option value="$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/UserRegisterStandImpl.java" />
         <option value="$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/dao/UserTestDao.java" />
         <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/config/MyConfig.java" />
-        <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/SendEmailRegisterImpl.java" />
         <option value="$PROJECT_DIR$/sdu.server/build.gradle" />
         <option value="$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/bean_containers/SendEmailServerFactory.java" />
         <option value="$PROJECT_DIR$/sdu.war/test/java/kz.sdu.war/GenerateAndCompileBeanContainers.java" />
@@ -1592,7 +1574,6 @@
         <option value="$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/model/CompanyInfo.java" />
         <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/schedulers/ExampleScheduler.java" />
         <option value="$PROJECT_DIR$/sdu.server/main/java/kz.sdu.server/app/Application.java" />
         <option value="$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/dao/CompanyTestDao.java" />
         <option value="$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/UserRegisterImplTest.java" />
@@ -1616,6 +1597,8 @@
         <option value="$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/LeadRegisterImplTest.java" />
         <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/dao/LeadDao.java" />
         <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/LeadRegisterImpl.java" />
+        <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/schedulers/ExampleScheduler.java" />
+        <option value="$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/SendEmailRegisterImpl.java" />
       </list>
     </option>
   </component>
@@ -1673,8 +1656,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -1686,42 +1667,96 @@
             <path>
               <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="sdu.stand" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="sdu.stand" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="toSend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="sdu.stand" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="register" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="register" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="register" type="462c0819:PsiDirectoryNode" />
+              <item name="schedulers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="sdu.stand" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="stand" type="462c0819:PsiDirectoryNode" />
+              <item name="register" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sdu.parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="sdu.parent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="sdu.stand" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="sdu.register" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="stand" type="462c0819:PsiDirectoryNode" />
-              <item name="register_stand_imlp" type="462c0819:PsiDirectoryNode" />
+              <item name="register" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -1734,7 +1769,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
-    <property name="SearchEverywhereHistoryKey" value="leadRegister&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.controller/main/java/kz/sdu/controller/register/LeadRegister.java&#10;leadin&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.controller/main/java/kz/sdu/controller/model/LeadInfo.java&#10;leadRegisterImpl&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/impl/LeadRegisterImpl.java&#10;updateCompany&#9;PSI&#9;JAVA://kz.sdu.controller.register.CompanyRegister#updateCompany&#10;log&#9;PSI&#9;JAVA://kz.sdu.register.util.DbLoggingProxyFactory&#10;example&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/schedulers/ExampleScheduler.java&#10;Exam&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/schedulers/ExampleScheduler.java&#10;myconf&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/scheduler/MyConfig.java&#10;userDa&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/dao/UserDao.java&#10;userRe&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/impl/UserRegisterImpl.java&#10;dbconfi&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/config/DbConfig.java&#10;dbconf&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/config/DbConfig.java&#10;dbcon&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/config/DbConfig.java&#10;DbCOn&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/config/DbConfig.java&#10;.gi&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/.gitignore" />
+    <property name="SearchEverywhereHistoryKey" value="mytas&#9;PSI&#9;JAVA://kz.sdu.stand.register_stand_imlp.scheduler.MyTask&#10;leadRegister&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.controller/main/java/kz/sdu/controller/register/LeadRegister.java&#10;leadin&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.controller/main/java/kz/sdu/controller/model/LeadInfo.java&#10;leadRegisterImpl&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/impl/LeadRegisterImpl.java&#10;updateCompany&#9;PSI&#9;JAVA://kz.sdu.controller.register.CompanyRegister#updateCompany&#10;log&#9;PSI&#9;JAVA://kz.sdu.register.util.DbLoggingProxyFactory&#10;example&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/schedulers/ExampleScheduler.java&#10;Exam&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/schedulers/ExampleScheduler.java&#10;myconf&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/scheduler/MyConfig.java&#10;userDa&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/dao/UserDao.java&#10;userRe&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/impl/UserRegisterImpl.java&#10;dbconfi&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/config/DbConfig.java&#10;dbconf&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/config/DbConfig.java&#10;dbcon&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/config/DbConfig.java&#10;DbCOn&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/sdu.register/main/java/kz/sdu/register/config/DbConfig.java&#10;.gi&#9;FILE&#9;file:///Users/kamaonbagan/Documents/SDU/SENIOR COURSE/JAVA EE/Project/2017.4.artykbayev.kamalkhan.accounting_system/sdu.parent/.gitignore" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
@@ -1784,7 +1819,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.LeadRegisterImplTest.testAcceptLead">
+  <component name="RunManager" selected="Gradle.sdu.parent:sdu.war [war]">
     <configuration name="LeadRegisterImplTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1881,7 +1916,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="LeadRegisterImplTest.testStopLead" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SendEmailRegisterImplTest.testPrepareEmail" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="kz.sdu.register.impl.*" />
@@ -1893,8 +1928,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="kz.sdu.register.impl" />
-      <option name="MAIN_CLASS_NAME" value="kz.sdu.register.impl.LeadRegisterImplTest" />
-      <option name="METHOD_NAME" value="testStopLead" />
+      <option name="MAIN_CLASS_NAME" value="kz.sdu.register.impl.SendEmailRegisterImplTest" />
+      <option name="METHOD_NAME" value="testPrepareEmail" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -2025,18 +2060,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Gradle.sdu.parent:sdu.war [war]" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest.testStopLead" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest.testStartLead" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest.testAcceptLead" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest.testStartLead" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest.testAcceptLead" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.SendEmailRegisterImplTest.testPrepareEmail" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest.testAcceptLead" />
-        <item index="1" class="java.lang.String" itemvalue="Gradle.sdu.parent:sdu.war [war]" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest.testStartLead" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest.testStopLead" />
+        <item index="0" class="java.lang.String" itemvalue="Gradle.sdu.parent:sdu.war [war]" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.SendEmailRegisterImplTest.testPrepareEmail" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest.testAcceptLead" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest.testStartLead" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.LeadRegisterImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -2137,17 +2172,12 @@
       <workItem from="1512129243946" duration="21395000" />
       <workItem from="1512200796973" duration="11805000" />
       <workItem from="1512214961709" duration="8095000" />
-      <workItem from="1512240032689" duration="9302000" />
+      <workItem from="1512240032689" duration="9441000" />
+      <workItem from="1512291746808" duration="509000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LeadRegisterImplTest - 2017.12.03 at 03h 06m 00s.xml">
-      <configuration name="LeadRegisterImplTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="LeadRegisterImplTest_testAcceptLead - 2017.12.03 at 03h 16m 24s.xml">
-      <configuration name="LeadRegisterImplTest.testAcceptLead" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="LeadRegisterImplTest_testStartLead - 2017.12.03 at 03h 02m 06s.xml">
       <configuration name="LeadRegisterImplTest.testStartLead" configurationId="TestNG" />
     </history-entry>
@@ -2172,9 +2202,15 @@
     <history-entry file="LeadRegisterImplTest_testStopLead - 2017.12.03 at 03h 03m 09s.xml">
       <configuration name="LeadRegisterImplTest.testStopLead" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="SendEmailRegisterImplTest_testPrepareEmail - 2017.12.03 at 15h 07m 14s.xml">
+      <configuration name="SendEmailRegisterImplTest.testPrepareEmail" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="SendEmailRegisterImplTest_testPrepareEmail - 2017.12.03 at 15h 09m 11s.xml">
+      <configuration name="SendEmailRegisterImplTest.testPrepareEmail" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189587000" />
+    <option name="totallyTimeSpent" value="190235000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2190,29 +2226,28 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2621951" sideWeight="0.5129241" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875606" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903846" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32164633" sideWeight="0.49676898" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3181818" sideWeight="0.49353796" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22596154" sideWeight="0.48707592" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2621951" sideWeight="0.5129241" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22596154" sideWeight="0.48707592" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32164633" sideWeight="0.49676898" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32051283" sideWeight="0.48303714" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34134614" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34248787" sideWeight="0.4889336" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34814218" sideWeight="0.4889336" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21486267" sideWeight="0.5110664" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875606" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903846" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28029078" sideWeight="0.50790066" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2221,6 +2256,7 @@
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34134614" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3262195" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -2314,78 +2350,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/model/UserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/models/UserDot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/schedulers/BeanConfigSchedulers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.server/main/java/kz.sdu.server/app/ApplicationBeanContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.server/main/java/kz.sdu.server/app/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="17" column="68" lean-forward="false" selection-start-line="17" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/schedulers/ExampleScheduler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.stand/main/resources/log4j.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/resources/liquibase/postgres/changelog-master.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/util/DbLoggingProxyFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3101">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/logging/MyLog4jLayout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-259">
@@ -2418,7 +2382,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="19" column="52" lean-forward="false" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2443,19 +2406,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/SendEmailRegisterImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2477,19 +2431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
           <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/CompanyRegisterImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#testGetNotAcceptedCompany#0;class#CompanyRegisterImplTest#0" expanded="false" />
-            <element signature="method#testAcceptCompany#0;class#CompanyRegisterImplTest#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2497,7 +2438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="55">
           <caret line="55" column="16" lean-forward="false" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2505,15 +2445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
           <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/register/SendEmailRegister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2521,23 +2452,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/LeadRegister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/LeadRegister.java" />
     <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/dao/CompanyTestDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="15" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2545,9 +2467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2555,15 +2474,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/SendEmailRegisterImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2571,9 +2481,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
           <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2581,7 +2488,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2589,7 +2495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2597,7 +2502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
           <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2605,21 +2509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/UserRegisterImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="123" column="8" lean-forward="false" selection-start-line="123" selection-start-column="8" selection-end-line="124" selection-end-column="29" />
-          <folding>
-            <element signature="method#testGetUsersList#0;class#UserRegisterImplTest#0" expanded="false" />
-            <element signature="method#testGetNotAcceptedUsersList#0;class#UserRegisterImplTest#0" expanded="false" />
-            <element signature="method#testAuthUser#0;class#UserRegisterImplTest#0" expanded="false" />
-            <element signature="method#testGetWholeUserInfo#0;class#UserRegisterImplTest#0" expanded="false" />
-            <element signature="method#testAcceptUser#0;class#UserRegisterImplTest#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2627,7 +2516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2661,7 +2549,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2679,7 +2566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2687,7 +2573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2695,9 +2580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2705,27 +2587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
           <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#320#321#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#405#406#0" expanded="true" />
-            <element signature="e#432#433#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-            <element signature="e#591#592#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#701#702#0" expanded="true" />
-            <element signature="e#728#729#0" expanded="true" />
-            <element signature="e#808#809#0" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
-            <element signature="e#998#999#0" expanded="true" />
-            <element signature="e#1025#1026#0" expanded="true" />
-            <element signature="e#1089#1090#0" expanded="true" />
-            <element signature="e#1116#1117#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2733,9 +2594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="51" column="57" lean-forward="false" selection-start-line="51" selection-start-column="57" selection-end-line="51" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2762,9 +2620,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/test/util/BeanConfigMainPostgresTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/UserRegisterImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="141" column="0" lean-forward="true" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding>
+            <element signature="method#testGetUsersList#0;class#UserRegisterImplTest#0" expanded="false" />
+            <element signature="method#testGetNotAcceptedUsersList#0;class#UserRegisterImplTest#0" expanded="false" />
+            <element signature="method#testAuthUser#0;class#UserRegisterImplTest#0" expanded="false" />
+            <element signature="method#testGetWholeUserInfo#0;class#UserRegisterImplTest#0" expanded="false" />
+            <element signature="method#testAcceptUser#0;class#UserRegisterImplTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/LeadRegisterImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
+        <state relative-caret-position="224">
           <caret line="202" column="15" lean-forward="false" selection-start-line="202" selection-start-column="15" selection-end-line="202" selection-end-column="15" />
           <folding>
             <element signature="method#testGetLeadById#0;class#LeadRegisterImplTest#0" expanded="false" />
@@ -2777,6 +2656,113 @@
             <element signature="method#testStartLead#0;class#LeadRegisterImplTest#0" expanded="false" />
             <element signature="method#testAcceptLead#0;class#LeadRegisterImplTest#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/CompanyRegisterImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding>
+            <element signature="method#testGetNotAcceptedCompany#0;class#CompanyRegisterImplTest#0" expanded="false" />
+            <element signature="method#testAcceptCompany#0;class#CompanyRegisterImplTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/AuthRegisterImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-70">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/build/sended/2017-12-02/Education-2017-12-02-00.15.07.817.1081890727.email.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/build/sended/2017-12-02/Education-2017-12-02-00.15.19.798.1364301287.email.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/build/toSend/Education-2017-12-02-01.11.24.292.-1178625990.email.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/build/toSend/Education-2017-12-02-01.12.07.536.200004733.email.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/build/toSend/Education-2017-12-02-01.16.01.516.1368971228.email.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.controller/main/java/kz/sdu/controller/register/SendEmailRegister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/build/toSend/Education-2017-12-03-15.07.14.534.89525223.email.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="5" column="53" lean-forward="false" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.stand/main/java/kz/sdu/stand/register_stand_imlp/scheduler/MyTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/test/java/kz/sdu/register/impl/SendEmailRegisterImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/schedulers/ExampleScheduler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdu.register/main/java/kz/sdu/register/impl/SendEmailRegisterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="30" column="39" lean-forward="false" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
