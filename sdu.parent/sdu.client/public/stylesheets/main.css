@@ -131,6 +131,10 @@ body{
     border-bottom:solid rgba(99,190,212,0.54) 2px;
 }
 
+.myBotton{
+    position: initial;
+    float: right;
+}
 .login-form .button{
     position: initial;
     float: right;
@@ -360,4 +364,15 @@ body{
 
 .updated-select{
     width:90%;
+}
+
+.navigation-bar{
+    margin:0px auto;
+    width:450px;
+}
+
+.list-container{
+    width:768px;
+    margin:0px auto;
+    margin-top:10px;
 }

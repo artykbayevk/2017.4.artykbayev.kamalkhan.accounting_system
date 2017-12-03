@@ -19,14 +19,31 @@ angular.module('MyApp', ['ui.router','ngMaterial','ngMessages',"ngSanitize", 'ui
               templateUrl:'views/regCompanyView.html',
               controller:'RegCompanyCtrl'
           })
+          .state('leadAdd', {
+              url:"/leadAddUrl",
+              templateUrl:"views/leadAddView.html",
+              controller:"LeadAddCtrl"
+          })
+
+
           .state('adminUsersList',{
               url:'/adminUsersList',
               templateUrl:'views/adminUsersListView.html',
               controller:'AdminUserListCtrl'
           })
-          .state('leadAdd', {
-              url:"/leadAddUrl",
-              templateUrl:"views/leadAddView.html",
-              controller:"LeadAddCtrl"
-          });
+          .state('adminLeadsList',{
+              url:'/adminLeadsList',
+              templateUrl:'views/adminLeadListView.html',
+              controller:'AdminLeadListCtrl'
+          })
+          .state('adminCompanyList',{
+              url:'/adminCompanyList',
+              templateUrl:'views/adminCompanyListView.html',
+              controller:'AdminCompanyListCtrl'
+          })
+          .state('adminLeadHistoryList',{
+              url:'/adminLeadHistoryList',
+              templateUrl:'views/adminLeadsHistoryView.html',
+              controller:'AdminLeadHistoryCtrl'
+          });;
   }]);
