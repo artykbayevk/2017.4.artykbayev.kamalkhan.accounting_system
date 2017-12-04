@@ -72,4 +72,9 @@ public class LeadRegisterStandImpl implements LeadRegister{
     public List<LeadInfo> getAllMyFinishedLeads(String clientid) {
         return null;
     }
+
+    @Override
+    public String declineLead(String leadid) {
+        return null;
+    }
 }

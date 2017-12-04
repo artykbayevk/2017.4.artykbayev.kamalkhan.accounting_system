@@ -5,6 +5,29 @@ angular.module('MyApp')
         console.log($sessionStorage.userToken);
         console.log($sessionStorage.personId);
 
+
+        if($sessionStorage.personId === undefined){
+            $state.go("any");
+        }else{
+            var req = {
+                method: "GET",
+                url:'http://localhost:8080/sdu/api/user/getInfo?id='+$sessionStorage.personId
+            }
+
+            $http(req).then(function success(res){
+                var obj = res.data;
+                if(obj.isManager == false){
+                    $state.go("any");
+                }
+            }, function error(err){
+                console.log("Error call back");
+                console.log(err);
+            });
+        }
+
+
+
+
         $scope.leadTypeList = ('Налоги Счет-фактура Коммуналка').split(' ').map(function (state) { return { abbrev: state }; });
 
         $scope.add_lead = function(){
@@ -12,7 +35,7 @@ angular.module('MyApp')
                 'leadid' : "",
                 'name':$scope.name,
                 'type':$scope.leadType,
-                'managerid':'891652226169095',
+                'managerid':$sessionStorage.personId,
                 'clientid':'0',
                 'status':'none',
                 'isaccepted':'false'

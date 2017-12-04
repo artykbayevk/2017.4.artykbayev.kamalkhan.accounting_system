@@ -32,6 +32,9 @@ public interface CompanyDao {
     @Update("update companytable set isaccepted = 'true' where companyid = #{companyid}")
     void acceptCompanyQuery(@Param("companyid") String companyid);
 
+    @Update("update companytable set isaccepted = 'decli' where companyid = #{companyid}")
+    void declineCompanyQuery(@Param("companyid") String companyid);
+
     @Insert("insert into companytable values(#{companyid}, #{name}, #{telephone}, #{email}, #{isaccepted})")
     void insertIntoCompany(@Param("companyid") String companyid,
                            @Param("name") String name,

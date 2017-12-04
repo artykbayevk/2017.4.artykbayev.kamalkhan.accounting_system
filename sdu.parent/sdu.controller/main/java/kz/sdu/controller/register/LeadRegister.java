@@ -14,11 +14,17 @@ public interface LeadRegister {
     List<LeadInfo> getAllMyAcceptedLeads(String userid);
     List<LeadInfo> getAllNotMyAcceptedLeads(String clientid);
 
+
+
     List<LeadInfo> getAllMyActiveLeads(String clientid);
     List<LeadInfo> getAllMyFinishedLeads(String clientid);
+
+
 
     String stopLead(String leadid);
     String startLead(String leadid, String clientid);
     LeadInfo getLeadById(String leadid);
+
     String acceptLead(String leadid);
+    String declineLead(String leadid);
 }

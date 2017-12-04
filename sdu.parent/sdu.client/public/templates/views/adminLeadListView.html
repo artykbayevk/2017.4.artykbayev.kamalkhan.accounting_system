@@ -30,8 +30,8 @@
                     <h3><i>Наименование</i>: {{item.name}} </h3>
                     <p>Тип: {{item.type}}</p>
                     <p><i>Менеджер</i>: {{item.managerid}}</p>
-                    <a type="button" class="button myButton button-add"  ><i class="icon-check"></i></a>
-                    <a type="button" class="button myButton button-add" ><i class="icon-cross" style="background: rgba(231,76,60,1)"></i></a>
+                    <a type="button" class="button myButton button-add" ng-click="accept_lead(item.leadid)"><i class="icon-check"></i></a>
+                    <a type="button" class="button myButton button-add" ng-click="decline_lead(item.leadid)"><i class="icon-cross" style="background: rgba(231,76,60,1)"></i></a>
                 </div>
             </md-list-item>
         </md-list>

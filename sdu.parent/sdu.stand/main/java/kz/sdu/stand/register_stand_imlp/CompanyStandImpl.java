@@ -30,4 +30,9 @@ public class CompanyStandImpl implements CompanyRegister{
     public String acceptCompany(String companyID){
         return null;
     }
+
+    @Override
+    public String declineCompany(String companyID) {
+        return null;
+    }
 }

@@ -117,6 +117,12 @@ public class LeadRegisterImpl implements LeadRegister {
     }
 
     @Override
+    public String declineLead(String leadid) {
+        leadDaoBeanGetter.get().declineLeadQuery(leadid);
+        return "declined";
+    }
+
+    @Override
     public List<LeadInfo> getAllNotMyAcceptedLeads(String clientid) {
         List<LeadDot> cl = leadDaoBeanGetter.get().getAllNotMyAcceptedLeads(clientid);
         List<LeadInfo> out = new ArrayList<LeadInfo>();

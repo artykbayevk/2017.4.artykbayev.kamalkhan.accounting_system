@@ -2,10 +2,7 @@ package kz.sdu.controller.controller;
 
 import kz.greetgo.depinject.core.Bean;
 import kz.greetgo.depinject.core.BeanGetter;
-import kz.greetgo.mvc.annotations.Mapping;
-import kz.greetgo.mvc.annotations.Par;
-import kz.greetgo.mvc.annotations.RequestInput;
-import kz.greetgo.mvc.annotations.ToJson;
+import kz.greetgo.mvc.annotations.*;
 import kz.sdu.controller.model.LeadInfo;
 import kz.sdu.controller.register.CompanyRegister;
 import kz.sdu.controller.register.LeadRegister;
@@ -37,9 +34,17 @@ public class LeadController implements Controller {
         return leadRegisterBeanGetter.get().getAllLeadList();
     }
 
+
+
+
+
     @ToJson
     @Mapping("/getAllMyNotAcceptedLeads")
     public List<LeadInfo> getAllMyNotAcceptedLeads(@Par("managerid") String userid){ return leadRegisterBeanGetter.get().getAllMyNotAcceptedLeads(userid); }
+
+
+
+
 
     @ToJson
     @Mapping("/getAllMyAcceptedLeads")
@@ -61,5 +66,32 @@ public class LeadController implements Controller {
     @Mapping("/getAllMyFinishedLeads")
     public List<LeadInfo> getAllMyFinishedLeads(@Par("clientid") String clientid){
         return leadRegisterBeanGetter.get().getAllMyFinishedLeads(clientid);
+    }
+
+
+    @ToJson
+    @Mapping("/acceptLead")
+    public String acceptLead(@Par("leadid") String leadid){
+        return leadRegisterBeanGetter.get().acceptLead(leadid);
+    }
+
+    @ToJson
+    @Mapping("/declineLead")
+    public String declineLead(@Par("leadid") String leadid){
+        return leadRegisterBeanGetter.get().declineLead(leadid);
+    }
+
+
+
+    @ToJson
+    @Mapping("/startLead")
+    public String startLead(@Par("clid") String clientid, @Par("lid") String leadid){
+        return leadRegisterBeanGetter.get().startLead(leadid, clientid);
+    }
+
+    @ToJson
+    @Mapping("/stopLead")
+    public String stopLead(@Par("lid") String leadid){
+        return leadRegisterBeanGetter.get().stopLead(leadid);
     }
 }

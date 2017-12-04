@@ -28,10 +28,10 @@
             <md-list-item class="md-3-line" ng-repeat="item in not_accepted_companies">
                 <div class="md-list-item-text">
                     <h3><i>Наименование</i>: {{item.name}}</h3>
-                    <p>Телефон: {{item.telephone}}</p>
-                    <p><i>Email</i>: 870{{item.email}}</p>
-                    <a type="button" class="button myButton button-add"  ><i class="icon-check"></i></a>
-                    <a type="button" class="button myButton button-add" ><i class="icon-cross" style="background: rgba(231,76,60,1)"></i></a>
+                    <p>Телефон: 870{{item.telephone}}</p>
+                    <p><i>Email</i>: {{item.email}}</p>
+                    <a type="button" class="button myButton button-add" ng-click="accept_company(item.companyid)"><i class="icon-check"></i></a>
+                    <a type="button" class="button myButton button-add" ng-click="decline_company(item.companyid)"><i class="icon-cross" style="background: rgba(231,76,60,1)"></i></a>
                 </div>
             </md-list-item>
         </md-list>

@@ -3,6 +3,7 @@ package kz.sdu.controller.controller;
 import kz.greetgo.depinject.core.Bean;
 import kz.greetgo.depinject.core.BeanGetter;
 import kz.greetgo.mvc.annotations.Mapping;
+import kz.greetgo.mvc.annotations.Par;
 import kz.greetgo.mvc.annotations.RequestInput;
 import kz.greetgo.mvc.annotations.ToJson;
 import kz.sdu.controller.model.CompanyInfo;
@@ -28,5 +29,17 @@ public class CompanyController implements Controller {
     @Mapping("/notAcceptedCompanies")
     public List<CompanyInfo> getNotAcceptedCompanies(){
         return companyRegisterBeanGetter.get().getNotAcceptedCompany();
+    }
+
+    @ToJson
+    @Mapping("/acceptCompany")
+    public String acceptCompany(@Par("companyid") String id){
+        return companyRegisterBeanGetter.get().acceptCompany(id);
+    }
+
+    @ToJson
+    @Mapping("/declineCompany")
+    public String declineCompany(@Par("companyid") String id){
+        return companyRegisterBeanGetter.get().declineCompany(id);
     }
 }

@@ -106,11 +106,34 @@ angular.module('MyApp')
     }])
     .controller('OwnPageCtrl', ['$sessionStorage','$http','$scope','$state','$rootScope',function($sessionStorage,$http,$scope,$state,$rootScope) {
         console.log("OwnPageCtrl");
-        $scope.id = "891652226169095";
+
 
         console.log("Check token");
         console.log($sessionStorage.userToken);
         console.log($sessionStorage.personId);
+        $scope.id = $sessionStorage.personId;
+
+        if($sessionStorage.userToken === undefined){
+            $state.go("any")
+        }else{
+            var req = {
+                method: "GET",
+                url:'http://localhost:8080/sdu/api/user/getInfo?id='+$sessionStorage.personId
+            }
+
+            $http(req).then(function success(res){
+                var obj = res.data;
+                if(obj.isManager == true){
+                    $scope.Manager = true;
+                }else{
+                    $scope.Manager = false;
+                }
+                console.log("Manager: "+$scope.Manager);
+            }, function error(err){
+                console.log("Error call back");
+                console.log(err);
+            });
+        }
 
 
 
@@ -170,7 +193,11 @@ angular.module('MyApp')
                     $state.go("any")
                 }else{
                     alert("Your information successfully updated");
-                    $state.go("managerNotActiveLeads");
+                    if($scope.Manager == true){
+                        $state.go("managerNotActiveLeads");
+                    }else{
+                        $state.go("clientAllLeads");
+                    }
                     console.log("nothing");
                 }
             });

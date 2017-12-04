@@ -11,5 +11,6 @@ public interface CompanyRegister {
     List<CompanyInfo> getNotAcceptedCompany();
     String saveCompany(String input);
     String acceptCompany(String companyID);
+    String declineCompany(String companyID);
 
 }

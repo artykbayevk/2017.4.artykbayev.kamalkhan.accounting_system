@@ -74,4 +74,10 @@ public class CompanyRegisterImpl implements CompanyRegister {
         companyDaoBeanGetter.get().acceptCompanyQuery(companyID);
         return "accepted";
     }
+
+    @Override
+    public String declineCompany(String companyID) {
+        companyDaoBeanGetter.get().declineCompanyQuery(companyID);
+        return "declined";
+    }
 }

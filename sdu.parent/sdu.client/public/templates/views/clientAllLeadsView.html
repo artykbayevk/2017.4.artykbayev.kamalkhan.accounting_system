@@ -30,17 +30,9 @@
                     <h3><i>Наименование</i>: {{item.name}} </h3>
                     <p>Тип: {{item.type}}</p>
                     <p><i>Менеджер</i>: {{item.managerid}}</p>
-                    <a type="button" class="button myButton button-add"  ><i class="icon-check"></i></a>
+                    <a type="button" class="button myButton button-add"  ng-click="start_lead(item.leadid)" ><i class="icon-check"></i></a>
                 </div>
             </md-list-item>
-            <!--<md-list-item class="md-3-line">-->
-                <!--<div class="md-list-item-text">-->
-                    <!--<h3><i>Наименование</i>: Непонятная заявка </h3>-->
-                    <!--<p>Тип:Счет фактура</p>-->
-                    <!--<p><i>Менеджер</i>: 1401003096 </p>-->
-                    <!--<a type="button" class="button myButton button-add"  ><i class="icon-check"></i></a>-->
-                <!--</div>-->
-            <!--</md-list-item>-->
         </md-list>
     </div>
 </div>

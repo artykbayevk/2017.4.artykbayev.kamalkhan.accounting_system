@@ -5,8 +5,27 @@ angular.module('MyApp')
         console.log($sessionStorage.userToken);
         console.log($sessionStorage.personId);
 
+        if($sessionStorage.personId == undefined){
+            $state.go("any");
+        }else{
+            var req = {
+                method: "GET",
+                url:'http://localhost:8080/sdu/api/user/getInfo?id='+$sessionStorage.personId
+            }
 
-        $scope.id = "891652226169095";
+            $http(req).then(function success(res){
+                var obj = res.data;
+                if(obj.isManager === false){
+                    $state.go("any");
+                }
+            }, function error(err){
+                console.log("Error call back");
+                console.log(err);
+            });
+        }
+
+
+        $scope.id = $sessionStorage.personId;
 
         var request = {
             method: "GET",
@@ -20,8 +39,6 @@ angular.module('MyApp')
             console.log("Error call back");
             console.log(response);
         });
-        // my_not_accepted_leads_list
-
     }])
     .controller('ManagerActiveLeadCtrl', ['$sessionStorage','$http','$scope','$state','$rootScope',function($sessionStorage,$http,$scope,$state,$rootScope) {
         console.log("ManagerActiveLeadCtrl");
@@ -29,8 +46,28 @@ angular.module('MyApp')
         console.log($sessionStorage.userToken);
         console.log($sessionStorage.personId);
 
+        if($sessionStorage.personId == undefined){
+            $state.go("any");
+        }else{
+            var req = {
+                method: "GET",
+                url:'http://localhost:8080/sdu/api/user/getInfo?id='+$sessionStorage.personId
+            }
 
-        $scope.id = "891652226169095";
+            $http(req).then(function success(res){
+                var obj = res.data;
+                if(obj.isManager === false){
+                    $state.go("any");
+                }
+            }, function error(err){
+                console.log("Error call back");
+                console.log(err);
+            });
+        }
+
+
+
+        $scope.id = $sessionStorage.personId;
 
         var request = {
             method: "GET",
