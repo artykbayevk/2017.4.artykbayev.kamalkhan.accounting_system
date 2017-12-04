@@ -44,4 +44,22 @@ public class LeadController implements Controller {
     @ToJson
     @Mapping("/getAllMyAcceptedLeads")
     public List<LeadInfo> getAllMyAcceptedLeads(@Par("managerid") String userid){ return leadRegisterBeanGetter.get().getAllMyAcceptedLeads(userid); }
+
+    @ToJson
+    @Mapping("/getAllNotMyAcceptedLeads")
+    public List<LeadInfo> getAllNotMyAcceptedLeads(@Par("clientid") String clientid){
+        return leadRegisterBeanGetter.get().getAllNotMyAcceptedLeads(clientid);
+    }
+
+    @ToJson()
+    @Mapping("/getAllMyActiveLeads")
+    public List<LeadInfo> getAllMyActiveLeads(@Par("clientid") String clientid){
+        return leadRegisterBeanGetter.get().getAllMyActiveLeads(clientid);
+    }
+
+    @ToJson
+    @Mapping("/getAllMyFinishedLeads")
+    public List<LeadInfo> getAllMyFinishedLeads(@Par("clientid") String clientid){
+        return leadRegisterBeanGetter.get().getAllMyFinishedLeads(clientid);
+    }
 }

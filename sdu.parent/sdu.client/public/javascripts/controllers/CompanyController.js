@@ -1,6 +1,11 @@
 angular.module('MyApp')
-    .controller('RegCompanyCtrl', ['$http','$scope','$state','$rootScope',function($http,$scope,$state,$rootScope) {
+    .controller('RegCompanyCtrl', ['$sessionStorage','$http','$scope','$state','$rootScope',function($sessionStorage,$http,$scope,$state,$rootScope) {
         console.log("Registration Company Controller");
+        console.log("Check token");
+        console.log($sessionStorage.userToken);
+        console.log($sessionStorage.personId);
+
+
         $scope.reg_company = function(){
             var data = {
                 companyid:"",
@@ -14,6 +19,7 @@ angular.module('MyApp')
                     'Content-Type': "x-www-form-urlencoded"
                 }
             }).then(function(response){
+                console.log("======DATA FROM RESPONSE======");
                 console.log(response.data);
                 res = response.data.split("\"")[1];
                 alert("Your company id : " + res+". Please dont forget this id. For safety - we send to your email");

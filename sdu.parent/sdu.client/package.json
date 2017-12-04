@@ -12,10 +12,12 @@
     "angular-material": "latest",
     "angular-messages": "latest",
     "angular-sanitize": "latest",
+    "angular-session": "0.0.2",
     "angular-ui-mask": "^1.8.7",
     "angular-ui-router": "latest",
     "browser-sync": "^2.18.2",
     "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1"
+    "gulp-concat": "^2.6.1",
+    "ngstorage": "^0.3.11"
   }
 }

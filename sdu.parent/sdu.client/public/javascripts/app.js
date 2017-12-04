@@ -1,9 +1,10 @@
-angular.module('MyApp', ['ui.router','ngMaterial','ngMessages',"ngSanitize", 'ui.mask'])
+angular.module('MyApp', ['ngStorage','ui.router','ngMaterial','ngMessages',"ngSanitize",'ui.mask'])
   .config(['$urlRouterProvider', '$stateProvider' ,function($urlRouterProvider,$stateProvider) {
       // $locationProvider.html5Mode(true);
       $urlRouterProvider.otherwise('/');
-
-
+      // console.log("Check token");
+      // console.log($rootScope.token);
+      // console.log($rootScope.personId);
       // User Pages
       // +
       // +
@@ -48,7 +49,6 @@ angular.module('MyApp', ['ui.router','ngMaterial','ngMessages',"ngSanitize", 'ui
               templateUrl:'views/ownPageView.html',
               controller:'OwnPageCtrl'
           })
-
 
 
           .state('managerLeadAdd', {

@@ -43,6 +43,12 @@ public interface LeadDao {
     @Select("select * from leadtable where isaccepted = 'false' ")
     List<LeadDot> getAllNotAcceptedLeadsQuery();
 
+    @Select("select * from leadtable where isaccepted ='true' and clientid != #{clientid} and status = 'none'")
+    List<LeadDot> getAllNotMyAcceptedLeads(@Param("clientid") String clientid);
+
+    @Select("select * from leadtable where isaccepted = 'true' and clientid = #{clientid} and status ='started'")
+    List<LeadDot> getAllMyActiveLeads(@Param("clientid") String clientid);
+
     @Update("update leadtable set status = 'stopped' where leadid = #{leadid}")
     void stopStatus(@Param("leadid") String leadid);
 
@@ -52,4 +58,7 @@ public interface LeadDao {
 
     @Update("update leadtable set isaccepted = 'true' where leadid = #{leadid}")
     void acceptLeadQuery(@Param("leadid") String leadid);
+
+    @Select("select * from leadtable where isaccepted = 'true' and clientid=#{clientid} and status ='stopped'")
+    List<LeadDot> getAllMyFinishedLeads(@Param("clientid") String clientid);
 }

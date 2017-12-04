@@ -9,6 +9,11 @@ import java.util.List;
 @Bean
 public class LeadRegisterStandImpl implements LeadRegister{
     @Override
+    public List<LeadInfo> getAllNotMyAcceptedLeads(String clientid) {
+        return null;
+    }
+
+    @Override
     public String acceptLead(String leadid) {
         return null;
     }
@@ -23,6 +28,10 @@ public class LeadRegisterStandImpl implements LeadRegister{
         return null;
     }
 
+    @Override
+    public List<LeadInfo> getAllMyActiveLeads(String clientid) {
+        return null;
+    }
 
     @Override
     public List<LeadInfo> getAllNotAcceptedLeads() {
@@ -56,6 +65,11 @@ public class LeadRegisterStandImpl implements LeadRegister{
 
     @Override
     public LeadInfo getLeadById(String leadid) {
+        return null;
+    }
+
+    @Override
+    public List<LeadInfo> getAllMyFinishedLeads(String clientid) {
         return null;
     }
 }

@@ -117,6 +117,31 @@ public class LeadRegisterImpl implements LeadRegister {
     }
 
     @Override
+    public List<LeadInfo> getAllNotMyAcceptedLeads(String clientid) {
+        List<LeadDot> cl = leadDaoBeanGetter.get().getAllNotMyAcceptedLeads(clientid);
+        List<LeadInfo> out = new ArrayList<LeadInfo>();
+        for(LeadDot x : cl){
+            LeadInfo tmp  = new LeadInfo(x.leadid, x.name, x.type, x.managerid, x.clientid, x.status, x.isaccepted);
+            out.add(tmp);
+        }
+        System.out.println(clientid+" came here");
+        return out;
+    }
+
+    @Override
+    public List<LeadInfo> getAllMyActiveLeads(String clientid) {
+        List<LeadDot> cl = leadDaoBeanGetter.get().getAllMyActiveLeads(clientid);
+        List<LeadInfo> out = new ArrayList<LeadInfo>();
+        for(LeadDot x : cl){
+            LeadInfo tmp  = new LeadInfo(x.leadid, x.name, x.type, x.managerid, x.clientid, x.status, x.isaccepted);
+            out.add(tmp);
+        }
+        System.out.println(clientid+" came here");
+        return out;
+//
+    }
+
+    @Override
     public List<LeadInfo> getAllNotAcceptedLeads() {
         List<LeadDot> cl = leadDaoBeanGetter.get().getAllNotAcceptedLeadsQuery();
         List<LeadInfo> out = new ArrayList<LeadInfo>();
@@ -124,6 +149,18 @@ public class LeadRegisterImpl implements LeadRegister {
             LeadInfo tmp  = new LeadInfo(x.leadid, x.name, x.type, x.managerid, x.clientid, x.status, x.isaccepted);
             out.add(tmp);
         }
+        return out;
+    }
+
+    @Override
+    public List<LeadInfo> getAllMyFinishedLeads(String clientid) {
+        List<LeadDot> cl = leadDaoBeanGetter.get().getAllMyFinishedLeads(clientid);
+        List<LeadInfo> out = new ArrayList<LeadInfo>();
+        for(LeadDot x : cl){
+            LeadInfo tmp  = new LeadInfo(x.leadid, x.name, x.type, x.managerid, x.clientid, x.status, x.isaccepted);
+            out.add(tmp);
+        }
+        System.out.println(clientid+" came here");
         return out;
     }
 }

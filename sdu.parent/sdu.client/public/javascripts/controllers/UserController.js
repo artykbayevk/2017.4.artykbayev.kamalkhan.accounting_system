@@ -1,6 +1,10 @@
 angular.module('MyApp')
-    .controller('InitCtrl', ['$http','$scope','$state','$rootScope',function($http,$scope,$state,$rootScope) {
+    .controller('InitCtrl', ['$sessionStorage','$window','$http','$scope','$state','$rootScope',function($sessionStorage,$window,$http,$scope,$state,$rootScope) {
         console.log("InitialControler");
+        console.log("Check token");
+        console.log($sessionStorage.userToken);
+        console.log($sessionStorage.personId);
+
         $scope.login = function(){
             var data = {
                 "email":$scope.email,
@@ -13,19 +17,20 @@ angular.module('MyApp')
                     'Content-Type': "x-www-form-urlencoded"
                 }
             }).then(function(response){
+                console.log("======DATA FROM RESPONSE======");
                 if(response.data.token =="not accepted"){
                     alert("Your user are not accepted from admin");
                     console.log(response.data.token);
                     console.log(response.data.personId);
                 }else if(response.data.token == "not found"){
-                    alert("Your user are not registered");
+                    alert("Your user are not registered or your data incorrect");
                     console.log(response.data.token);
                     console.log(response.data.personId);
                 }else{
-                    $rootScope.token = response.data.token;
-                    $rootScope.personId = response.data.personId;
-                    console.log($rootScope.personId);
-                    console.log($rootScope.token);
+                    $sessionStorage.userToken = response.data.token;
+                    $sessionStorage.personId = response.data.personId;
+                    console.log($sessionStorage.userToken);
+                    console.log($sessionStorage.personId);
                 }
 
                 $scope.email = "";
@@ -33,8 +38,12 @@ angular.module('MyApp')
             });
         }
     }])
-    .controller('RegViewCtrl', ['$http','$scope','$state','$rootScope',function($http,$scope,$state,$rootScope) {
+    .controller('RegViewCtrl', ['$sessionStorage','$window','$http','$scope','$state','$rootScope',function($sessionStorage,$window,$http,$scope,$state,$rootScope) {
         console.log("RegViewController");
+        console.log("Check token");
+        console.log($sessionStorage.userToken);
+        console.log($sessionStorage.personId);
+
         $scope.clientTypeList = ('Manager Client').split(' ').map(function (state) { return { abbrev: state }; });
         $scope.save_user = function(){
             var isManager = ($scope.clientType =='Manager' ? "1" : "0");
@@ -61,6 +70,7 @@ angular.module('MyApp')
                     'Content-Type': "x-www-form-urlencoded"
                 }
             }).then(function(response){
+                console.log("======DATA FROM RESPONSE======");
                 console.log((response.data))
                 res = response.data.split('\"')[1];
                 if(res === "email"){
@@ -76,9 +86,13 @@ angular.module('MyApp')
             });
         }
     }])
-    .controller('OwnPageCtrl', ['$http','$scope','$state','$rootScope',function($http,$scope,$state,$rootScope) {
+    .controller('OwnPageCtrl', ['$sessionStorage','$http','$scope','$state','$rootScope',function($sessionStorage,$http,$scope,$state,$rootScope) {
         console.log("OwnPageCtrl");
         $scope.id = "891652226169095";
+
+        console.log("Check token");
+        console.log($sessionStorage.userToken);
+        console.log($sessionStorage.personId);
 
 
 

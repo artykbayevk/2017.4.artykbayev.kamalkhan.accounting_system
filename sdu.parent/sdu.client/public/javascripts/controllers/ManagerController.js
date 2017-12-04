@@ -1,6 +1,10 @@
 angular.module('MyApp')
-    .controller('ManagerNotActiveLeadCtrl', ['$http','$scope','$state','$rootScope',function($http,$scope,$state,$rootScope) {
+    .controller('ManagerNotActiveLeadCtrl', ['$sessionStorage','$http','$scope','$state','$rootScope',function($sessionStorage,$http,$scope,$state,$rootScope) {
         console.log("ManagerNotActiveLeadCtrl");
+        console.log("Check token");
+        console.log($sessionStorage.userToken);
+        console.log($sessionStorage.personId);
+
 
         $scope.id = "891652226169095";
 
@@ -9,9 +13,8 @@ angular.module('MyApp')
             url:'http://localhost:8080/sdu/api/lead/getAllMyNotAcceptedLeads?managerid='+$scope.id
         }
         $http(request).then(function successCallback(response) {
-            console.log("Http request run");
-            console.log(response.data);
             $scope.my_not_accepted_leads_list = response.data;
+            console.log("======DATA FROM RESPONSE======");
             console.log($scope.my_not_accepted_leads_list)
         }, function errorCallback(response) {
             console.log("Error call back");
@@ -20,8 +23,12 @@ angular.module('MyApp')
         // my_not_accepted_leads_list
 
     }])
-    .controller('ManagerActiveLeadCtrl', ['$http','$scope','$state','$rootScope',function($http,$scope,$state,$rootScope) {
+    .controller('ManagerActiveLeadCtrl', ['$sessionStorage','$http','$scope','$state','$rootScope',function($sessionStorage,$http,$scope,$state,$rootScope) {
         console.log("ManagerActiveLeadCtrl");
+        console.log("Check token");
+        console.log($sessionStorage.userToken);
+        console.log($sessionStorage.personId);
+
 
         $scope.id = "891652226169095";
 
@@ -30,9 +37,8 @@ angular.module('MyApp')
             url:'http://localhost:8080/sdu/api/lead/getAllMyAcceptedLeads?managerid='+$scope.id
         }
         $http(request).then(function successCallback(response) {
-            console.log("Http request run");
-            console.log(response.data);
             $scope.my_accepted_leads_list = response.data;
+            console.log("======DATA FROM RESPONSE======");
             console.log($scope.my_accepted_leads_list)
         }, function errorCallback(response) {
             console.log("Error call back");

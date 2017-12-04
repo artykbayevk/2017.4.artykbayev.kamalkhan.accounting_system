@@ -1,6 +1,10 @@
 angular.module('MyApp')
-    .controller('LeadAddCtrl', ['$http','$scope','$state','$rootScope',function($http,$scope,$state,$rootScope) {
+    .controller('LeadAddCtrl', ['$sessionStorage','$http','$scope','$state','$rootScope',function($sessionStorage,$http,$scope,$state,$rootScope) {
         console.log("Lead addition Controller");
+        console.log("Check token");
+        console.log($sessionStorage.userToken);
+        console.log($sessionStorage.personId);
+
         $scope.leadTypeList = ('Налоги Счет-фактура Коммуналка').split(' ').map(function (state) { return { abbrev: state }; });
 
         $scope.add_lead = function(){
@@ -20,6 +24,7 @@ angular.module('MyApp')
                     'Content-Type': "x-www-form-urlencoded"
                 }
             }).then(function(response){
+                console.log("======DATA FROM RESPONSE======");
                 console.log(response.data);
                 var res = response.data.split("\"")[1];
                 if(res == 'added'){

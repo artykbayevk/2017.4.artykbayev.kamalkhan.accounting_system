@@ -12,6 +12,7 @@ import kz.sdu.controller.utils.Controller;
 @Bean
 @Mapping("/auth")
 public class AuthController implements Controller{
+
     public BeanGetter<AuthRegister> authRegister;
 
     @ToJson
@@ -19,5 +20,4 @@ public class AuthController implements Controller{
     public AuthInfo getAuthInfo(@Par("login")String login, @Par("password") String password) {
         return authRegister.get().getAuthInfo(login, password);
     }
-
 }
