@@ -2,11 +2,16 @@ package kz.sdu.register.impl;
 
 import kz.greetgo.depinject.core.Bean;
 import kz.greetgo.depinject.core.BeanGetter;
+import kz.greetgo.email.Email;
+import kz.greetgo.email.EmailSender;
 import kz.greetgo.util.RND;
 import kz.sdu.controller.model.LeadInfo;
 import kz.sdu.controller.register.LeadRegister;
 import kz.sdu.register.dao.LeadDao;
+import kz.sdu.register.dao.UserDao;
 import kz.sdu.register.models.LeadDot;
+import kz.sdu.register.models.UserDot;
+import kz.sdu.register.util.GCommonConstant;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -16,6 +21,8 @@ import java.util.List;
 public class LeadRegisterImpl implements LeadRegister {
 
     public BeanGetter<LeadDao> leadDaoBeanGetter;
+    public BeanGetter<UserDao> userDaoBeanGetter;
+    public BeanGetter<EmailSender> emailSender;
 
     @Override
     public LeadInfo getLeadById(String leadid){
@@ -113,12 +120,33 @@ public class LeadRegisterImpl implements LeadRegister {
     @Override
     public String acceptLead(String leadid) {
         leadDaoBeanGetter.get().acceptLeadQuery(leadid);
+        LeadDot x = leadDaoBeanGetter.get().getLeadById(leadid);
+        UserDot y = userDaoBeanGetter.get().getWholeSelect(x.managerid);
+        if(x != null){
+            Email email=new Email();
+            email.setFrom(GCommonConstant.username);
+            email.setTo(y.email);
+            email.setSubject("Accept");
+            email.setBody("Hey Bro, we accept your lead by ID: "+leadid);
+            emailSender.get().send(email);
+        }
+
         return "accepted";
     }
 
     @Override
     public String declineLead(String leadid) {
         leadDaoBeanGetter.get().declineLeadQuery(leadid);
+        LeadDot x = leadDaoBeanGetter.get().getLeadById(leadid);
+        UserDot y = userDaoBeanGetter.get().getWholeSelect(x.managerid);
+        if(x != null){
+            Email email=new Email();
+            email.setFrom(GCommonConstant.username);
+            email.setTo(y.email);
+            email.setSubject("Decline");
+            email.setBody("Hey Bro, we decline your lead by ID: "+leadid);
+            emailSender.get().send(email);
+        }
         return "declined";
     }
 

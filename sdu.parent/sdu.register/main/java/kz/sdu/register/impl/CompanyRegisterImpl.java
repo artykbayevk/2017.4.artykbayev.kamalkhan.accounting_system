@@ -2,11 +2,14 @@ package kz.sdu.register.impl;
 
 import kz.greetgo.depinject.core.Bean;
 import kz.greetgo.depinject.core.BeanGetter;
+import kz.greetgo.email.Email;
+import kz.greetgo.email.EmailSender;
 import kz.greetgo.util.RND;
 import kz.sdu.controller.model.CompanyInfo;
 import kz.sdu.controller.register.CompanyRegister;
 import kz.sdu.register.dao.CompanyDao;
 import kz.sdu.register.models.CompanyDot;
+import kz.sdu.register.util.GCommonConstant;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -16,6 +19,7 @@ import java.util.List;
 public class CompanyRegisterImpl implements CompanyRegister {
 
     public BeanGetter<CompanyDao> companyDaoBeanGetter;
+    public BeanGetter<EmailSender> emailSender;
 
     @Override
     public CompanyInfo getCompanyById(String companyID){
@@ -72,12 +76,30 @@ public class CompanyRegisterImpl implements CompanyRegister {
     @Override
     public String acceptCompany(String companyID){
         companyDaoBeanGetter.get().acceptCompanyQuery(companyID);
+        CompanyDot x = companyDaoBeanGetter.get().getCompanyById(companyID);
+        if(x != null){
+            Email email=new Email();
+            email.setFrom(GCommonConstant.username);
+            email.setTo(x.email);
+            email.setSubject("Accept");
+            email.setBody("Hey Bro, we are accept your company.Your company ID: "+companyID);
+            emailSender.get().send(email);
+        }
         return "accepted";
     }
 
     @Override
     public String declineCompany(String companyID) {
         companyDaoBeanGetter.get().declineCompanyQuery(companyID);
+        CompanyDot x = companyDaoBeanGetter.get().getCompanyById(companyID);
+        if(x != null){
+            Email email=new Email();
+            email.setFrom(GCommonConstant.username);
+            email.setTo(x.email);
+            email.setSubject("Decline");
+            email.setBody("Hey Bro, we are decline your company.");
+            emailSender.get().send(email);
+        }
         return "declined";
     }
 }
