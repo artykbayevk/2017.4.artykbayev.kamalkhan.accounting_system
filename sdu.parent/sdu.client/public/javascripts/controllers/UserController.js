@@ -31,8 +31,26 @@ angular.module('MyApp')
                     $sessionStorage.personId = response.data.personId;
                     console.log($sessionStorage.userToken);
                     console.log($sessionStorage.personId);
-                }
 
+                    var req = {
+                        method: "GET",
+                        url:'http://localhost:8080/sdu/api/user/getInfo?id='+$sessionStorage.personId
+                    }
+
+                    $http(req).then(function success(res){
+                        var obj = res.data;
+                        if(obj.isAdmin == true){
+                            $state.go("adminUsersList");
+                        }else if(obj.isManager == true){
+                            $state.go("managerNotActiveLeads");
+                        }else{
+                            $state.go("clientAllLeads");
+                        }
+                    }, function error(err){
+                        console.log("Error call back");
+                        console.log(err);
+                        });
+                    }
                 $scope.email = "";
                 $scope.password = "";
             });

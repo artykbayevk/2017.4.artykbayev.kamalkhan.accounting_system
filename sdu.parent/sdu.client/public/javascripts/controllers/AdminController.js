@@ -5,6 +5,24 @@ angular.module('MyApp')
         console.log($sessionStorage.userToken);
         console.log($sessionStorage.personId);
 
+        if($sessionStorage.userToken === undefined){
+            $state.go("any");
+        }else{
+            var req = {
+                method: "GET",
+                url:'http://localhost:8080/sdu/api/user/getInfo?id='+$sessionStorage.personId
+            }
+
+            $http(req).then(function success(res){
+                var obj = res.data;
+                if(obj.isAdmin != true){
+                    $state.go("any");
+                }
+            }, function error(err){
+                console.log("Error call back");
+                console.log(err);
+            });
+        }
 
         var request = {
                 method: "GET",
@@ -52,6 +70,25 @@ angular.module('MyApp')
         console.log($sessionStorage.userToken);
         console.log($sessionStorage.personId);
 
+        if($sessionStorage.userToken === undefined){
+            $state.go("any");
+        }else{
+            var req = {
+                method: "GET",
+                url:'http://localhost:8080/sdu/api/user/getInfo?id='+$sessionStorage.personId
+            }
+
+            $http(req).then(function success(res){
+                var obj = res.data;
+                if(obj.isAdmin != true){
+                    $state.go("any");
+                }
+            }, function error(err){
+                console.log("Error call back");
+                console.log(err);
+            });
+        }
+
         var request = {
             method: "GET",
             url:'http://localhost:8080/sdu/api/lead/getNotAcceptedLeads'
@@ -71,6 +108,24 @@ angular.module('MyApp')
         console.log($sessionStorage.userToken);
         console.log($sessionStorage.personId);
 
+        if($sessionStorage.userToken === undefined){
+            $state.go("any");
+        }else{
+            var req = {
+                method: "GET",
+                url:'http://localhost:8080/sdu/api/user/getInfo?id='+$sessionStorage.personId
+            }
+
+            $http(req).then(function success(res){
+                var obj = res.data;
+                if(obj.isAdmin != true){
+                    $state.go("any");
+                }
+            }, function error(err){
+                console.log("Error call back");
+                console.log(err);
+            });
+        }
 
         var request = {
             method: "GET",
@@ -90,6 +145,25 @@ angular.module('MyApp')
         console.log("Check token");
         console.log($sessionStorage.userToken);
         console.log($sessionStorage.personId);
+
+        if($sessionStorage.userToken === undefined){
+            $state.go("any");
+        }else{
+            var req = {
+                method: "GET",
+                url:'http://localhost:8080/sdu/api/user/getInfo?id='+$sessionStorage.personId
+            }
+
+            $http(req).then(function success(res){
+                var obj = res.data;
+                if(obj.isAdmin != true){
+                    $state.go("any");
+                }
+            }, function error(err){
+                console.log("Error call back");
+                console.log(err);
+            });
+        }
 
         var request = {
             method: "GET",
