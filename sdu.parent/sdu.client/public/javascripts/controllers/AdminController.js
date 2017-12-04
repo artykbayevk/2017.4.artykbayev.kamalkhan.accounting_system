@@ -1,13 +1,17 @@
 angular.module('MyApp')
-    .controller('AdminUserListCtrl', ['$sessionStorage','$http','$scope','$state','$rootScope',function($sessionStorage,$http,$scope,$state,$rootScope) {
+    .controller('AdminUserListCtrl', ['$window','$sessionStorage','$http','$scope','$state','$rootScope',function($window,$sessionStorage,$http,$scope,$state,$rootScope) {
         console.log("Admin Users List Controller");
         console.log("Check token");
         console.log($sessionStorage.userToken);
         console.log($sessionStorage.personId);
 
+        $sessionStorage.showLogOut = true;
+        $scope.showLogOut = $sessionStorage.showLogOut;
+
         if($sessionStorage.userToken === undefined){
             $state.go("any");
         }else{
+            $rootScope.changeShowLogOut();
             var req = {
                 method: "GET",
                 url:'http://localhost:8080/sdu/api/user/getInfo?id='+$sessionStorage.personId
@@ -75,6 +79,10 @@ angular.module('MyApp')
         console.log("Check token");
         console.log($sessionStorage.userToken);
         console.log($sessionStorage.personId);
+
+        $sessionStorage.showLogOut = true;
+        $scope.showLogOut = $sessionStorage.showLogOut;
+
 
         if($sessionStorage.userToken === undefined){
             $state.go("any");
@@ -150,6 +158,14 @@ angular.module('MyApp')
         console.log("Check token");
         console.log($sessionStorage.userToken);
         console.log($sessionStorage.personId);
+
+        $sessionStorage.showLogOut = true;
+        $scope.showLogOut = $sessionStorage.showLogOut;
+
+
+        $sessionStorage.showLogOut = true;
+        $scope.showLogOut = $sessionStorage.showLogOut;
+
 
         if($sessionStorage.userToken === undefined){
             $state.go("any");
@@ -227,6 +243,11 @@ angular.module('MyApp')
         console.log("Check token");
         console.log($sessionStorage.userToken);
         console.log($sessionStorage.personId);
+
+
+        $sessionStorage.showLogOut = true;
+        $scope.showLogOut = $sessionStorage.showLogOut;
+
 
         if($sessionStorage.userToken === undefined){
             $state.go("any");

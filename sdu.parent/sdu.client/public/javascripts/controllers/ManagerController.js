@@ -1,13 +1,16 @@
 angular.module('MyApp')
-    .controller('ManagerNotActiveLeadCtrl', ['$sessionStorage','$http','$scope','$state','$rootScope',function($sessionStorage,$http,$scope,$state,$rootScope) {
+    .controller('ManagerNotActiveLeadCtrl', ['$window','$sessionStorage','$http','$scope','$state','$rootScope',function($window,$sessionStorage,$http,$scope,$state,$rootScope) {
         console.log("ManagerNotActiveLeadCtrl");
         console.log("Check token");
         console.log($sessionStorage.userToken);
         console.log($sessionStorage.personId);
 
+
+
         if($sessionStorage.personId == undefined){
             $state.go("any");
         }else{
+            $rootScope.changeShowLogOut();
             var req = {
                 method: "GET",
                 url:'http://localhost:8080/sdu/api/user/getInfo?id='+$sessionStorage.personId
@@ -45,6 +48,8 @@ angular.module('MyApp')
         console.log("Check token");
         console.log($sessionStorage.userToken);
         console.log($sessionStorage.personId);
+
+
 
         if($sessionStorage.personId == undefined){
             $state.go("any");

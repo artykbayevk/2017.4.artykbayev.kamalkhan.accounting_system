@@ -5,6 +5,12 @@ angular.module('MyApp')
         console.log($sessionStorage.userToken);
         console.log($sessionStorage.personId);
 
+
+        if($sessionStorage.personId === undefined){
+            $rootScope.changeMyShowLogout();
+        }
+
+
         $scope.login = function(){
             var data = {
                 "email":$scope.email,
@@ -62,6 +68,7 @@ angular.module('MyApp')
         console.log($sessionStorage.userToken);
         console.log($sessionStorage.personId);
 
+
         $scope.clientTypeList = ('Manager Client').split(' ').map(function (state) { return { abbrev: state }; });
         $scope.save_user = function(){
             var isManager = ($scope.clientType =='Manager' ? "1" : "0");
@@ -106,6 +113,7 @@ angular.module('MyApp')
     }])
     .controller('OwnPageCtrl', ['$sessionStorage','$http','$scope','$state','$rootScope',function($sessionStorage,$http,$scope,$state,$rootScope) {
         console.log("OwnPageCtrl");
+
 
 
         console.log("Check token");
@@ -202,4 +210,33 @@ angular.module('MyApp')
                 }
             });
         }
-}]);
+}])
+    .controller('NavCtrl', ['$sessionStorage','$http','$scope','$state','$rootScope',function($sessionStorage,$http,$scope,$state,$rootScope) {
+        console.log("NavCtrl");
+
+
+        console.log("Check token");
+        console.log($sessionStorage.userToken);
+        console.log($sessionStorage.personId);
+        $scope.id = $sessionStorage.personId;
+
+        if($sessionStorage.personId !== undefined){
+            $scope.showLogOut = true;
+            console.log($scope.showLogOut);
+        }
+
+        $rootScope.changeShowLogOut = function(){
+            $scope.showLogOut = true;
+        }
+
+        $rootScope.changeMyShowLogout = function(){
+            $scope.showLogOut = false;
+        }
+
+        $scope.logout_func = function(){
+            $sessionStorage.userToken = undefined;
+            $sessionStorage.personId = undefined;
+            $state.go("any");
+        }
+
+    }]);

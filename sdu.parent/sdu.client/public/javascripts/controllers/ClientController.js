@@ -1,14 +1,17 @@
 angular.module('MyApp')
-    .controller('ClientAllLeadsCtrl', ['$sessionStorage','$http','$scope','$state','$rootScope',function($sessionStorage,$http,$scope,$state,$rootScope) {
+    .controller('ClientAllLeadsCtrl', ['$window','$sessionStorage','$http','$scope','$state','$rootScope',function($window,$sessionStorage,$http,$scope,$state,$rootScope) {
         console.log("ClientAllLeadsCtrl");
         $scope.clientid = $sessionStorage.personId;
         console.log("Check token");
         console.log($sessionStorage.userToken);
         console.log($sessionStorage.personId);
 
+
+
         if($sessionStorage.personId === undefined){
             $state.go("any");
         }else{
+            $rootScope.changeShowLogOut();
             var req = {
                 method: "GET",
                 url:'http://localhost:8080/sdu/api/user/getInfo?id='+$sessionStorage.personId
@@ -72,6 +75,8 @@ angular.module('MyApp')
         console.log("Check token");
         console.log($sessionStorage.userToken);
         console.log($sessionStorage.personId);
+
+
 
         if($sessionStorage.personId === undefined){
             $state.go("any");
@@ -138,6 +143,8 @@ angular.module('MyApp')
         console.log("Check token");
         console.log($sessionStorage.userToken);
         console.log($sessionStorage.personId);
+
+
 
         if($sessionStorage.personId === undefined){
             $state.go("any");

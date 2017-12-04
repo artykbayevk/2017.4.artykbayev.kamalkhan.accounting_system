@@ -6,6 +6,7 @@ angular.module('MyApp')
         console.log($sessionStorage.personId);
 
 
+
         if($sessionStorage.personId === undefined){
             $state.go("any");
         }else{

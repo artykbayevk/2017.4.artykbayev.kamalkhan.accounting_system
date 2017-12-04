@@ -6,6 +6,7 @@ angular.module('MyApp')
         console.log($sessionStorage.personId);
 
 
+
         $scope.reg_company = function(){
             var data = {
                 companyid:"",
