@@ -108,24 +108,24 @@ public class UserRegisterImpl implements UserRegister {
     String isAccepted = obj.getString("isAccepted").equals("1") ? "true":"false";
     String isAdmin = "false";
 
-    String check = userDaoBeanGetter.get().checkEmail(email);
-    if(check!=null){
-      res = "email";
+
+    if(uuid.length() == 0){
+        String check = userDaoBeanGetter.get().checkEmail(email);
+        String companyName = companyDaoBeanGetter.get().getNameOfCompany(companyId);
+        if(check != null){
+            res = "email";
+        }else if(companyName == null){
+            res = "company";
+        }else{
+            uuid = RND.intStr(15);
+            userDaoBeanGetter.get().insertPerson(uuid, name, surname, email, password, tel_number, age, companyId, isAccepted, isAdmin, isManager);
+            res = "added";
+        }
     }else{
-      String companyName = companyDaoBeanGetter.get().getNameOfCompany(companyId);
-      if(companyName == null){
-        res = "company";
-      }else{
-          if(uuid.length() == 0){
-              uuid = RND.intStr(15);
-              userDaoBeanGetter.get().insertPerson(uuid, name, surname, email, password, tel_number, age, companyId, isAccepted, isAdmin, isManager);
-              res = "added";
-          }else{
-              userDaoBeanGetter.get().updatePerson(uuid, name, surname, email, password, tel_number, age, companyId);
-              res = "updated";
-          }
-      }
+        userDaoBeanGetter.get().updatePerson(uuid, name, surname, email, password, tel_number, age, companyId);
+        res = "updated";
     }
+
     return res;
   }
 

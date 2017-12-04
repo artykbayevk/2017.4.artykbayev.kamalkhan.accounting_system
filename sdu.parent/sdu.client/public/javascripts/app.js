@@ -3,6 +3,30 @@ angular.module('MyApp', ['ui.router','ngMaterial','ngMessages',"ngSanitize", 'ui
       // $locationProvider.html5Mode(true);
       $urlRouterProvider.otherwise('/');
 
+
+      // User Pages
+      // +
+      // +
+      // +
+      // -
+
+      // Manager Pages
+      // +
+      // +
+      // +
+
+      // Client Pages
+      // -
+      // -
+      // -
+
+      // Admin Pages
+      // +
+      // +
+      // +
+      // +
+
+
       $stateProvider
           .state('regView',{
               url:'/reg',

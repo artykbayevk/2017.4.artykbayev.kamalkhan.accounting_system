@@ -3,6 +3,7 @@ package kz.sdu.controller.controller;
 import kz.greetgo.depinject.core.Bean;
 import kz.greetgo.depinject.core.BeanGetter;
 import kz.greetgo.mvc.annotations.Mapping;
+import kz.greetgo.mvc.annotations.Par;
 import kz.greetgo.mvc.annotations.RequestInput;
 import kz.greetgo.mvc.annotations.ToJson;
 import kz.sdu.controller.model.LeadInfo;
@@ -35,4 +36,12 @@ public class LeadController implements Controller {
     public List<LeadInfo> getAllLeads(){
         return leadRegisterBeanGetter.get().getAllLeadList();
     }
+
+    @ToJson
+    @Mapping("/getAllMyNotAcceptedLeads")
+    public List<LeadInfo> getAllMyNotAcceptedLeads(@Par("managerid") String userid){ return leadRegisterBeanGetter.get().getAllMyNotAcceptedLeads(userid); }
+
+    @ToJson
+    @Mapping("/getAllMyAcceptedLeads")
+    public List<LeadInfo> getAllMyAcceptedLeads(@Par("managerid") String userid){ return leadRegisterBeanGetter.get().getAllMyAcceptedLeads(userid); }
 }

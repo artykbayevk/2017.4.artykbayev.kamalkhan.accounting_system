@@ -1,1 +1,38 @@
-managerActiveLeadsView
+<div class="wrapper">
+    <div class="navigation-bar"  >
+        <span class="navigation-bar-span">
+            <a type="button" ui-sref="managerLeadAdd" class="button button-add button-modified" >
+                <i class="icon-paper"></i>
+                <p style="margin-left:3px; margin-right:3px;">Создание</p>
+            </a>
+            <a type="button" class="button button-add button-modified" ui-sref="managerNotActiveLeads">
+                <i class="icon-clock"></i>
+                <p style="margin-left:3px;margin-right:3px;">В ожидании</p>
+            </a>
+        </span>
+        <span class="navigation-bar-span">
+            <a type="button" ui-sref="managerActiveLeads" class="button button-add button-modified" >
+                <i class="icon-briefcase"></i>
+                <p style="margin-left:3px;margin-right:3px;">Активные</p>
+            </a>
+            <a type="button" class="button button-add button-modified" ui-sref="ownPage">
+                <i class="icon-head" style="margin-left:3px;" ></i>
+                <p style="margin-left:5px;margin-right:3px;">Моя страница</p>
+            </a>
+        </span>
+    </div>
+
+    <div class="list-container">
+        <span class="login-title"><p>Активные заявки</p></span>
+        <md-list>
+            <md-list-item class="md-3-line" ng-repeat="item in my_accepted_leads_list">
+                <div class="md-list-item-text">
+                    <h3><i>Наименование</i>: {{item.name}} </h3>
+                    <p>Тип: {{item.type}}</p>
+                    <p><i>Менеджер</i>: {{item.managerid}}</p>
+                    <p>Клиент: {{item.clientid}}</p>
+                </div>
+            </md-list-item>
+        </md-list>
+    </div>
+</div>

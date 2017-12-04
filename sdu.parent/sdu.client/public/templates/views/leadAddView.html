@@ -1,5 +1,27 @@
 <div class="wrapper">
-    <span class="login-title">Регистрация компаний</p>
+    <div class="navigation-bar"  >
+        <span class="navigation-bar-span">
+            <a type="button" ui-sref="managerLeadAdd" class="button button-add button-modified" >
+                <i class="icon-paper"></i>
+                <p style="margin-left:3px; margin-right:3px;">Создание</p>
+            </a>
+            <a type="button" class="button button-add button-modified" ui-sref="managerNotActiveLeads">
+                <i class="icon-clock"></i>
+                <p style="margin-left:3px;margin-right:3px;">В ожидании</p>
+            </a>
+        </span>
+        <span class="navigation-bar-span">
+            <a type="button" ui-sref="managerActiveLeads" class="button button-add button-modified" >
+                <i class="icon-briefcase"></i>
+                <p style="margin-left:3px;margin-right:3px;">Активные</p>
+            </a>
+            <a type="button" class="button button-add button-modified" ui-sref="ownPage">
+                <i class="icon-head" style="margin-left:3px;" ></i>
+                <p style="margin-left:5px;margin-right:3px;">Моя страница</p>
+            </a>
+        </span>
+    </div>
+    <span class="login-title">Добавление заявки</p>
         <form class="login-form" method="post" ng-submit="add_lead()">
             <input class ="input" ng-model="name" type="text"  placeholder="Наименование заявки"><br>
             <select class = "select updated-select" ng-model = "leadType">

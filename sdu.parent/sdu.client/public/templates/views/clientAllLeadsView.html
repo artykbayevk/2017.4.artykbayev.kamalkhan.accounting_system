@@ -1,1 +1,47 @@
-clientAllLeadsView
+<div class="wrapper">
+    <div class="navigation-bar"  >
+        <span class="navigation-bar-span">
+            <a type="button" ui-sref="adminUsersList" class="button button-add button-modified" >
+                <i class="icon-head"></i>
+                <p style="margin-left:3px; margin-right:3px;">Пользователи</p>
+            </a>
+            <a type="button" class="button button-add button-modified" ui-sref="adminLeadsList">
+                <i class="icon-bar-graph"></i>
+                <p style="margin-left:3px;margin-right:3px;">Заявки</p>
+            </a>
+        </span>
+        <span class="navigation-bar-span">
+            <a type="button" ui-sref="adminCompanyList" class="button button-add button-modified" >
+                <i class="icon-briefcase"></i>
+                <p style="margin-left:3px;margin-right:3px;">Компании</p>
+            </a>
+            <a type="button" class="button button-add button-modified" ui-sref="adminLeadHistoryList">
+                <i class="icon-paper" style="margin-left:3px;" ></i>
+                <p style="margin-left:5px;margin-right:3px;">История заявок</p>
+            </a>
+        </span>
+    </div>
+
+    <div class="list-container">
+        <span class="login-title"><p>Все заявки</p></span>
+        <md-list>
+            <!--<md-list-item class="md-3-line" ng-repeat="item in not_accepted_leads_list">-->
+                <!--<div class="md-list-item-text">-->
+                    <!--<h3><i>Наименование</i>: {{item.name}} </h3>-->
+                    <!--<p>Тип: {{item.type}}</p>-->
+                    <!--<p><i>Менеджер</i>: {{item.managerid}}</p>-->
+                    <!--<a type="button" class="button myButton button-add"  ><i class="icon-check"></i></a>-->
+                    <!--<a type="button" class="button myButton button-add" ><i class="icon-cross" style="background: rgba(231,76,60,1)"></i></a>-->
+                <!--</div>-->
+            <!--</md-list-item>-->
+            <md-list-item class="md-3-line">
+                <div class="md-list-item-text">
+                    <h3><i>Наименование</i>: Непонятная заявка </h3>
+                    <p>Тип:Счет фактура</p>
+                    <p><i>Менеджер</i>: Менеджер </p>
+                    <a type="button" class="button myButton button-add"  ><i class="icon-check"></i></a>
+                </div>
+            </md-list-item>
+        </md-list>
+    </div>
+</div>

@@ -1,1 +1,37 @@
-OWN PAGE
+<div class="wrapper">
+    <div class="navigation-bar"  >
+        <span class="navigation-bar-span">
+            <a type="button" ui-sref="managerLeadAdd" class="button button-add button-modified" >
+                <i class="icon-paper"></i>
+                <p style="margin-left:3px; margin-right:3px;">Создание</p>
+            </a>
+            <a type="button" class="button button-add button-modified" ui-sref="managerNotActiveLeads">
+                <i class="icon-clock"></i>
+                <p style="margin-left:3px;margin-right:3px;">В ожидании</p>
+            </a>
+        </span>
+        <span class="navigation-bar-span">
+            <a type="button" ui-sref="managerActiveLeads" class="button button-add button-modified" >
+                <i class="icon-briefcase"></i>
+                <p style="margin-left:3px;margin-right:3px;">Активные</p>
+            </a>
+            <a type="button" class="button button-add button-modified" ui-sref="ownPage">
+                <i class="icon-head" style="margin-left:3px;" ></i>
+                <p style="margin-left:5px;margin-right:3px;">Моя страница</p>
+            </a>
+        </span>
+    </div>
+    <span class="login-title">Ваши персональные данные</p>
+        <form class="login-form" method="post" ng-submit="update_user()">
+            <input class ="input" ng-model="name" type="text"  placeholder="Ваше имя"><br>
+            <input class ="input" ng-model="surname" type="text"  placeholder="Ваша фамилия"><br>
+            <input class ="input" ng-model="age" type="text"  placeholder="Ваш возраст"><br>
+            <input class ="input" ng-model="telephone" type="text" ui-mask="+7(709)999-99-99"><br>
+            <input class ="input" ng-model="password" type="password" name="password" placeholder="Ваш пароль" ><br>
+            <p class="error-message">
+                Адрес почты неправильный!
+            </p>
+            <button class ="button button-login button-modified-two" type="submit">Обновить<i class="icon-arrow-right"></i></button>
+        </form>
+    </span>
+</div>
